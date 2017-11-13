@@ -9,12 +9,7 @@ import com.coffecheap.modelo.Tipo_transacciones;
 import com.coffecheap.dao.Tipo_transaccionesDao;
 
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.RequestScoped;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class Tipo_transaccionesBean {
 
   private Tipo_transacciones tipo_transacciones = new Tipo_transacciones();

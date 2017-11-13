@@ -3,11 +3,7 @@ package com.coffecheap.bean;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.model.SelectItem;
-import javax.faces.model.SelectItemGroup;
- 
-@ManagedBean
+
 public class MultiSelectView {
      
     private List<SelectItem> categories;    

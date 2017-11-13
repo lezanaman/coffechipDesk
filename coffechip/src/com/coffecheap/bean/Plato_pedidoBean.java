@@ -8,14 +8,8 @@ package com.coffecheap.bean;
 import com.coffecheap.dao.Plato_pedidoDao;
 import com.coffecheap.modelo.Plato_pedido;
 import java.util.List;
-import javax.inject.Named;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
 
-@Named(value = "plato_pedidoBean")
-@ManagedBean
-@ViewScoped
 public class Plato_pedidoBean {
     private Plato_pedido plapedido = new Plato_pedido();
     private List<Plato_pedido>lstPlapedido;

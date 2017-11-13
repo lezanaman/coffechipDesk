@@ -10,13 +10,7 @@ import com.coffecheap.modelo.Proveedor_productos;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import java.util.List;
-import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.RequestScoped;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class Orden_comprasBean {
     
     private Orden_compras orden_compras = new Orden_compras();

@@ -5,16 +5,7 @@ import com.coffecheap.modelo.Reserva;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-/**
- *
- * @author bryan
- */
-
-@ManagedBean
-@ViewScoped
 public class ReservaBean 
 {
     List<Reserva> lstReserva = new ArrayList();

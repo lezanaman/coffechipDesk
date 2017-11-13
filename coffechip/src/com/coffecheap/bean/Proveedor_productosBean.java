@@ -9,12 +9,7 @@ import com.coffecheap.modelo.Proveedor_productos;
 import com.coffecheap.dao.Proveedor_productosDao;
 
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.RequestScoped;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class Proveedor_productosBean {
 
   private Proveedor_productos proveedor_productos = new Proveedor_productos();

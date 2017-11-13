@@ -9,17 +9,7 @@ package com.coffecheap.bean;
 import com.coffecheap.modelo.Usuario;
 import java.io.IOException;
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 
-import javax.faces.context.FacesContext;
-
-/**
- *
- * @author medev
- */
-@ManagedBean
-@SessionScoped
 public class Verificar_login implements Serializable {
 
     Usuario usu=new Usuario();

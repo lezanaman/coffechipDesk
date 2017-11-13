@@ -8,11 +8,7 @@ package com.coffecheap.bean;
 import com.coffecheap.modelo.Pedido;
 import com.coffecheap.dao.Pedido_MostrarDao;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 
-@ManagedBean
-@RequestScoped
 public class Pedido_Mostrar_Bean {
 
   private Pedido pedido = new Pedido();

@@ -9,11 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class Transaccion_inventarioBean {
 
     Transaccion_inventario traInv = new Transaccion_inventario();

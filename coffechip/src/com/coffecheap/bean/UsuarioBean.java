@@ -9,11 +9,7 @@ import com.coffecheap.modelo.Usuario;
 import com.coffecheap.dao.UsuarioDao;
 
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class UsuarioBean {
 
   private Usuario usuario = new Usuario();

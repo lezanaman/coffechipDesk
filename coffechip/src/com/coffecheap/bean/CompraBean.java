@@ -8,11 +8,7 @@ import com.coffecheap.modelo.Producto;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class CompraBean extends Dao {
 
   Compra compra = new Compra();

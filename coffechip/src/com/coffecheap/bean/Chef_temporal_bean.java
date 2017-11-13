@@ -8,15 +8,7 @@ package com.coffecheap.bean;
 import com.coffecheap.dao.Chef_temporal_Dao;
 import com.coffecheap.modelo.Tem_chef;
 import java.util.ArrayList;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-/**
- *
- * @author javam
- */
-@ManagedBean
-@ViewScoped
 public class Chef_temporal_bean {
     ArrayList<Tem_chef> listchef=new ArrayList();
     Tem_chef chef=new Tem_chef();

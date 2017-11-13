@@ -8,16 +8,7 @@ import com.coffecheap.modelo.Control_mesa;
 import com.coffecheap.modelo.EstadoPago;
 import com.coffecheap.dao.Control_mesaDao;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-import javax.faces.application.FacesMessage;
-
-import javax.faces.context.FacesContext;
-import javax.faces.event.ActionEvent;
-
-@ManagedBean
-@ViewScoped
 public class Control_mesaBean {
 
   static public void addMessage(String summary) {

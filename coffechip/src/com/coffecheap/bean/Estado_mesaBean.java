@@ -9,12 +9,7 @@ import com.coffecheap.modelo.Estado_mesa;
 import com.coffecheap.dao.Estado_mesaDao;
 
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.RequestScoped;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class Estado_mesaBean {
 
   private Estado_mesa estado_mesa = new Estado_mesa();

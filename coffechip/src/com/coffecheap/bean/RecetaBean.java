@@ -8,16 +8,7 @@ package com.coffecheap.bean;
 import com.coffecheap.dao.RecetaDao;
 import com.coffecheap.modelo.Receta;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-
-/**
- *
- * @author medev
- */
-@ManagedBean
-@ViewScoped
 public class RecetaBean {
 private Receta receta = new Receta();
 private List<Receta>lstReceta;

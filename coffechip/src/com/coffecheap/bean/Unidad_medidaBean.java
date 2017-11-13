@@ -9,12 +9,7 @@ import com.coffecheap.modelo.Unidad_medida;
 import com.coffecheap.dao.Unidad_medidaDao;
 
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.RequestScoped;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class Unidad_medidaBean {
 
   private Unidad_medida unidad_medida = new Unidad_medida();

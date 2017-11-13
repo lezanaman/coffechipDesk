@@ -17,24 +17,7 @@ import java.util.logging.Logger;
 
 
 
-import javax.faces.context.FacesContext;
-import javax.faces.view.ViewScoped;
-import javax.inject.Named;
 
-
-import org.primefaces.context.RequestContext;
-
-
-
-
-/**
- *
- * @author medev
- */
-
-
-@Named
-@ViewScoped
 public class LoginBean implements Serializable{
 
   Usuario usu=new Usuario();

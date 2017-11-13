@@ -9,19 +9,7 @@ package com.coffecheap.bean;
 import com.coffecheap.dao.PlatoDao;
 import com.coffecheap.modelo.Plato;
 import java.util.List;
-import javax.inject.Named;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-
-
-/**
- *
- * @author medev
- */
-@Named(value = "platoBean")
-@ManagedBean
-@ViewScoped
 public class PlatoBean {
 private Plato plato = new Plato();
 private List<Plato>lstPlato;

@@ -3,11 +3,7 @@ package com.coffecheap.bean;
 import com.coffecheap.dao.ProveedorDao;
 import com.coffecheap.modelo.Proveedor;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
-@ManagedBean
-@ViewScoped
 public class ProveedorBean {
 
     Proveedor proveedor = new Proveedor();

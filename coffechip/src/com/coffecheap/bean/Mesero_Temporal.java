@@ -14,19 +14,7 @@ import com.coffecheap.modelo.Usuario;
 import java.util.ArrayList;
 
 import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 
-import javax.faces.context.FacesContext;
-
-
-
-/**
- *
- * @author medev
- */
-@ManagedBean
-@SessionScoped
 public class Mesero_Temporal implements Serializable {
     private Tipo_plato tplato=new Tipo_plato();
         private Tem_chef chef=new Tem_chef();
