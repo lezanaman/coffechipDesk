@@ -12,8 +12,8 @@ import java.util.List;
 public class Control_mesaBean {
 
   static public void addMessage(String summary) {
-    FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, null);
-    FacesContext.getCurrentInstance().addMessage(null, message);
+    //FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, null);
+    //FacesContext.getCurrentInstance().addMessage(null, message);
   }
 
   private Control_mesa control_mesa = new Control_mesa();

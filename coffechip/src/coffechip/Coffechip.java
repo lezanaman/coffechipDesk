@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package coffechip;
 
-/**
- *
- * @author bryan
- */
+import com.coffecheap.vista.MenuAdmin;
+import static java.awt.Frame.MAXIMIZED_BOTH;
+
 public class Coffechip {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        MenuAdmin menu = new MenuAdmin();
+        menu.setExtendedState(MAXIMIZED_BOTH);
+        menu.setLocationRelativeTo(menu);
+        menu.setVisible(true);
+
     }
-    
 }

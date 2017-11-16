@@ -9,6 +9,7 @@ import com.coffecheap.dao.Orden_comprasDao;
 import com.coffecheap.modelo.Proveedor_productos;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 
 public class Orden_comprasBean {

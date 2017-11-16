@@ -6,12 +6,12 @@ import javax.annotation.PostConstruct;
 
 public class MultiSelectView {
      
-    private List<SelectItem> categories;    
+    //private List<SelectItem> categories;    
     private String selection;
  
     @PostConstruct
     public void init() {
-        categories = new ArrayList<SelectItem>();
+        /*categories = new ArrayList<SelectItem>();
         SelectItemGroup group1 = new SelectItemGroup("Group 1");
         SelectItemGroup group2 = new SelectItemGroup("Group 2");
         SelectItemGroup group3 = new SelectItemGroup("Group 3");
@@ -58,8 +58,8 @@ public class MultiSelectView {
  
     public String getSelection() {
         return selection;
-    }
-    public void setSelection(String selection) {
+    }*/
+    /*public void setSelection(String selection) {
         this.selection = selection;
-    }
+    }*/}
 }
