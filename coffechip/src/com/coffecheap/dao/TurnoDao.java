@@ -8,7 +8,8 @@ import com.coffecheap.modelo.Turno;
 
 public class TurnoDao extends Dao{
 
-    public void Ingresar(Turno turno) throws Exception{
+    public String Ingresar(Turno turno) throws Exception{
+        String respuesta = null;
         try {
             this.Conectar();
             PreparedStatement st = this.getCon().prepareStatement("insert into turno values(?,?,?)");
@@ -16,6 +17,7 @@ public class TurnoDao extends Dao{
             st.setString(2, turno.getHorario_turno());
             st.setString(3, turno.getObservaciones());
             st.executeUpdate();
+            respuesta = "Registro Exitoso";
         } catch (Exception e) {
             throw e;
         }finally{
@@ -24,6 +26,7 @@ public class TurnoDao extends Dao{
             turno.setHorario_turno(null);
             turno.setObservaciones(null);
         }
+        return respuesta;
     }
     
     public void Eliminar(Turno turno) throws Exception{

@@ -5,6 +5,8 @@
  */
 package com.coffecheap.vista;
 
+import com.coffecheap.bean.CambiaPanel;
+
 /**
  *
  * @author javam
@@ -16,6 +18,7 @@ public class MenuAdmin extends javax.swing.JFrame {
      */
     public MenuAdmin() {
         initComponents();
+        panUsuario.setVisible(false);
     }
 
     /**
@@ -28,41 +31,71 @@ public class MenuAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         panPrincipal = new javax.swing.JPanel();
+        panUsuario = new javax.swing.JPanel();
+        btnGuardarUsuario = new javax.swing.JButton();
+        btnEliminarUsuario = new javax.swing.JButton();
         panEncabezado = new javax.swing.JPanel();
-        btnMenu = new javax.swing.JButton();
         panMenu = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnUsuario = new javax.swing.JButton();
+        panDatos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         panPrincipal.setLayout(null);
 
-        panEncabezado.setBackground(new java.awt.Color(0, 0, 0));
+        panUsuario.setBackground(new java.awt.Color(49, 59, 63));
+
+        btnGuardarUsuario.setText("Guardar");
+
+        btnEliminarUsuario.setText("Eliminar");
+
+        javax.swing.GroupLayout panUsuarioLayout = new javax.swing.GroupLayout(panUsuario);
+        panUsuario.setLayout(panUsuarioLayout);
+        panUsuarioLayout.setHorizontalGroup(
+            panUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panUsuarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnGuardarUsuario)
+                    .addComponent(btnEliminarUsuario))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        panUsuarioLayout.setVerticalGroup(
+            panUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panUsuarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnGuardarUsuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnEliminarUsuario)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        panPrincipal.add(panUsuario);
+        panUsuario.setBounds(0, 0, 100, 100);
+
+        panEncabezado.setBackground(new java.awt.Color(239, 243, 246));
         panEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnMenu.setBackground(new java.awt.Color(0, 0, 0));
-        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/coffecheap/imagenes/menu.png"))); // NOI18N
-        btnMenu.setBorder(null);
-        btnMenu.setContentAreaFilled(false);
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
-            }
-        });
-        panEncabezado.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
-
         panPrincipal.add(panEncabezado);
-        panEncabezado.setBounds(0, 0, 1930, 70);
+        panEncabezado.setBounds(250, 0, 1680, 70);
 
-        panMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panMenu.setBackground(new java.awt.Color(92, 102, 106));
+        panMenu.setLayout(null);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/coffecheap/imagenes/home.png"))); // NOI18N
-        jButton1.setText("jButton1");
-        panMenu.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 250, 40));
+        btnUsuario.setBackground(new java.awt.Color(49, 59, 63));
+        btnUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        btnUsuario.setText("Usuario");
+        btnUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panMenu.add(btnUsuario);
+        btnUsuario.setBounds(0, 90, 250, 40);
 
         panPrincipal.add(panMenu);
-        panMenu.setBounds(0, 70, 250, 960);
+        panMenu.setBounds(0, 0, 250, 1030);
+
+        panDatos.setBackground(new java.awt.Color(255, 255, 255));
+        panDatos.setLayout(new javax.swing.BoxLayout(panDatos, javax.swing.BoxLayout.LINE_AXIS));
+        panPrincipal.add(panDatos);
+        panDatos.setBounds(250, 70, 1680, 960);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,19 +110,6 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-    int posicion = panMenu.getX();
-        System.out.println("posicion X: " + posicion);
-        if (posicion > -1) {
-            Animacion.Animacion.mover_izquierda(0, -264, 2, 2, panMenu);
-            System.out.println("posicion X: " + posicion);
-        } else {
-            Animacion.Animacion.mover_derecha(-264, 0, 2, 2, panMenu);
-            System.out.println("posicion X: " + posicion);
-        }
-//Animacion.Animacion.mover_izquierda(WIDTH, WIDTH, ERROR, WIDTH, rootPane);
-    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,10 +147,13 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMenu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel panEncabezado;
-    private javax.swing.JPanel panMenu;
-    private javax.swing.JPanel panPrincipal;
+    public javax.swing.JButton btnEliminarUsuario;
+    public javax.swing.JButton btnGuardarUsuario;
+    public javax.swing.JButton btnUsuario;
+    public javax.swing.JPanel panDatos;
+    public javax.swing.JPanel panEncabezado;
+    public javax.swing.JPanel panMenu;
+    public javax.swing.JPanel panPrincipal;
+    public javax.swing.JPanel panUsuario;
     // End of variables declaration//GEN-END:variables
 }
