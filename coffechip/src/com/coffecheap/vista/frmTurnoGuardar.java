@@ -36,34 +36,32 @@ public class frmTurnoGuardar extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1570, 800));
-        setLayout(null);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtObservaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(txtObservaciones);
-        txtObservaciones.setBounds(760, 330, 230, 40);
+        add(txtObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 410, 230, 40));
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("Turno:");
-        add(lblTitulo);
-        lblTitulo.setBounds(800, 150, 79, 29);
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 230, -1, -1));
 
         lblObservaciones.setText("Observaciones:");
-        add(lblObservaciones);
-        lblObservaciones.setBounds(640, 340, 110, 14);
+        add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 420, 110, -1));
 
         lblHorario.setText("Horario de Turno:");
-        add(lblHorario);
-        lblHorario.setBounds(630, 270, 100, 14);
+        add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 350, 100, -1));
 
         btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnGuardar.setText("Guardar");
-        add(btnGuardar);
-        btnGuardar.setBounds(860, 410, 120, 40);
+        add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 490, 120, 40));
 
-        txtHorario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
+        try {
+            txtHorario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## a ##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         txtHorario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(txtHorario);
-        txtHorario.setBounds(760, 260, 230, 40);
+        add(txtHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 340, 230, 40));
     }// </editor-fold>//GEN-END:initComponents
 
 

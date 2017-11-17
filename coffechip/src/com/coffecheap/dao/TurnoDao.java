@@ -12,10 +12,9 @@ public class TurnoDao extends Dao{
         String respuesta = null;
         try {
             this.Conectar();
-            PreparedStatement st = this.getCon().prepareStatement("insert into turno values(?,?,?)");
-            st.setInt(1, turno.getId_turno());
-            st.setString(2, turno.getHorario_turno());
-            st.setString(3, turno.getObservaciones());
+            PreparedStatement st = this.getCon().prepareStatement("insert into turno values(0,?,?)");
+            st.setString(1, turno.getHorario_turno());
+            st.setString(2, turno.getObservaciones());
             st.executeUpdate();
             respuesta = "Registro Exitoso";
         } catch (Exception e) {

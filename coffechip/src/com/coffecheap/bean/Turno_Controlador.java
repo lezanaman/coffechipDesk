@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class Turno_Controlador implements ActionListener {
 
@@ -27,12 +28,17 @@ public class Turno_Controlador implements ActionListener {
             this.turno.setHorario_turno(this.vistaturno.txtHorario.getText());
             this.turno.setObservaciones(this.vistaturno.txtObservaciones.getText());
 
-            String respuesta = turnodao.Ingresar(turno);
-            if (respuesta != null) {
-                System.out.println(respuesta);
+            if (this.vistaturno.txtHorario.getText().equals("  :   a   :  ") || this.vistaturno.txtObservaciones.getText().length() == 0) {
+                JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
             } else {
-                System.out.println(respuesta);
+                String respuesta = turnodao.Ingresar(turno);
+                if (respuesta != null) {
+                    JOptionPane.showMessageDialog(null, respuesta);
+                    Limpiar();
+
+                }
             }
+
         } catch (Exception e) {
             try {
                 throw e;
@@ -48,10 +54,13 @@ public class Turno_Controlador implements ActionListener {
         String evento = e.getActionCommand();
 
         if (evento.equals("Guardar")) {
-            System.out.println("1");
             Guardar();
-            System.out.println("2");
         }
+    }
+
+    public void Limpiar() {
+        this.vistaturno.txtHorario.setText(null);
+        this.vistaturno.txtObservaciones.setText(null);
     }
 
 }
