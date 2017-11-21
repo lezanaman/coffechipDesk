@@ -39,21 +39,21 @@ public class frmTurnoGuardar extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtObservaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(txtObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 410, 230, 40));
+        add(txtObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 230, 40));
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("Turno:");
-        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 230, -1, -1));
+        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, -1, -1));
 
         lblObservaciones.setText("Observaciones:");
-        add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 420, 110, -1));
+        add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 110, -1));
 
         lblHorario.setText("Horario de Turno:");
-        add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 350, 100, -1));
+        add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 100, -1));
 
         btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnGuardar.setText("Guardar");
-        add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 490, 120, 40));
+        add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, 120, 40));
 
         try {
             txtHorario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## a ##:##")));
@@ -61,7 +61,7 @@ public class frmTurnoGuardar extends javax.swing.JPanel {
             ex.printStackTrace();
         }
         txtHorario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(txtHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 340, 230, 40));
+        add(txtHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 230, 40));
     }// </editor-fold>//GEN-END:initComponents
 
 

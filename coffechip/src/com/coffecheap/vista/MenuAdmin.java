@@ -18,7 +18,9 @@ public class MenuAdmin extends javax.swing.JFrame {
      */
     public MenuAdmin() {
         initComponents();
-        panUsuario.setVisible(false);
+        panTurno.setVisible(false);
+        panProveedor.setVisible(false);
+        panCompra.setVisible(false);
     }
 
     /**
@@ -31,12 +33,25 @@ public class MenuAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         panPrincipal = new javax.swing.JPanel();
-        panUsuario = new javax.swing.JPanel();
-        btnGuardarUsuario = new javax.swing.JButton();
-        btnEliminarUsuario = new javax.swing.JButton();
+        panCompra = new javax.swing.JPanel();
+        btnGuardarCompra = new javax.swing.JButton();
+        btnEliminarCompra = new javax.swing.JButton();
+        btnModificarCompra = new javax.swing.JButton();
+        panProveedor = new javax.swing.JPanel();
+        btnGuardarProveedor = new javax.swing.JButton();
+        btnEliminarProveedor = new javax.swing.JButton();
+        btnModificarProveedor = new javax.swing.JButton();
+        panTurno = new javax.swing.JPanel();
+        btnGuardarTurno = new javax.swing.JButton();
+        btnEliminarTurno = new javax.swing.JButton();
+        btnModificarTurno = new javax.swing.JButton();
         panEncabezado = new javax.swing.JPanel();
         panMenu = new javax.swing.JPanel();
+        btnTurno = new javax.swing.JButton();
+        btnProveedor = new javax.swing.JButton();
+        btnCompra = new javax.swing.JButton();
         btnUsuario = new javax.swing.JButton();
+        btnCliente = new javax.swing.JButton();
         panDatos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,35 +59,62 @@ public class MenuAdmin extends javax.swing.JFrame {
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         panPrincipal.setLayout(null);
 
-        panUsuario.setBackground(new java.awt.Color(49, 59, 63));
+        panCompra.setBackground(new java.awt.Color(49, 59, 63));
+        panCompra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        panCompra.setLayout(null);
 
-        btnGuardarUsuario.setText("Guardar");
+        btnGuardarCompra.setText("Guardar");
+        panCompra.add(btnGuardarCompra);
+        btnGuardarCompra.setBounds(20, 10, 80, 23);
 
-        btnEliminarUsuario.setText("Eliminar");
+        btnEliminarCompra.setText("Eliminar");
+        panCompra.add(btnEliminarCompra);
+        btnEliminarCompra.setBounds(20, 40, 80, 23);
 
-        javax.swing.GroupLayout panUsuarioLayout = new javax.swing.GroupLayout(panUsuario);
-        panUsuario.setLayout(panUsuarioLayout);
-        panUsuarioLayout.setHorizontalGroup(
-            panUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panUsuarioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnGuardarUsuario)
-                    .addComponent(btnEliminarUsuario))
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
-        panUsuarioLayout.setVerticalGroup(
-            panUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panUsuarioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnGuardarUsuario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnEliminarUsuario)
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
+        btnModificarCompra.setText("Modificar");
+        panCompra.add(btnModificarCompra);
+        btnModificarCompra.setBounds(10, 70, 100, 23);
 
-        panPrincipal.add(panUsuario);
-        panUsuario.setBounds(0, 0, 100, 100);
+        panPrincipal.add(panCompra);
+        panCompra.setBounds(0, 0, 120, 110);
+
+        panProveedor.setBackground(new java.awt.Color(49, 59, 63));
+        panProveedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        panProveedor.setLayout(null);
+
+        btnGuardarProveedor.setText("Guardar");
+        panProveedor.add(btnGuardarProveedor);
+        btnGuardarProveedor.setBounds(20, 10, 80, 23);
+
+        btnEliminarProveedor.setText("Eliminar");
+        panProveedor.add(btnEliminarProveedor);
+        btnEliminarProveedor.setBounds(20, 40, 80, 23);
+
+        btnModificarProveedor.setText("Modificar");
+        panProveedor.add(btnModificarProveedor);
+        btnModificarProveedor.setBounds(10, 70, 100, 23);
+
+        panPrincipal.add(panProveedor);
+        panProveedor.setBounds(0, 0, 120, 110);
+
+        panTurno.setBackground(new java.awt.Color(49, 59, 63));
+        panTurno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        panTurno.setLayout(null);
+
+        btnGuardarTurno.setText("Guardar");
+        panTurno.add(btnGuardarTurno);
+        btnGuardarTurno.setBounds(20, 10, 80, 23);
+
+        btnEliminarTurno.setText("Eliminar");
+        panTurno.add(btnEliminarTurno);
+        btnEliminarTurno.setBounds(20, 40, 80, 23);
+
+        btnModificarTurno.setText("Modificar");
+        panTurno.add(btnModificarTurno);
+        btnModificarTurno.setBounds(10, 70, 100, 23);
+
+        panPrincipal.add(panTurno);
+        panTurno.setBounds(0, 0, 120, 110);
 
         panEncabezado.setBackground(new java.awt.Color(239, 243, 246));
         panEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -82,12 +124,40 @@ public class MenuAdmin extends javax.swing.JFrame {
         panMenu.setBackground(new java.awt.Color(92, 102, 106));
         panMenu.setLayout(null);
 
+        btnTurno.setBackground(new java.awt.Color(49, 59, 63));
+        btnTurno.setForeground(new java.awt.Color(255, 255, 255));
+        btnTurno.setText("Turno");
+        btnTurno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panMenu.add(btnTurno);
+        btnTurno.setBounds(0, 210, 250, 40);
+
+        btnProveedor.setBackground(new java.awt.Color(49, 59, 63));
+        btnProveedor.setForeground(new java.awt.Color(255, 255, 255));
+        btnProveedor.setText("Proveedor");
+        btnProveedor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panMenu.add(btnProveedor);
+        btnProveedor.setBounds(0, 260, 250, 40);
+
+        btnCompra.setBackground(new java.awt.Color(49, 59, 63));
+        btnCompra.setForeground(new java.awt.Color(255, 255, 255));
+        btnCompra.setText("Compra");
+        btnCompra.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panMenu.add(btnCompra);
+        btnCompra.setBounds(0, 310, 250, 40);
+
         btnUsuario.setBackground(new java.awt.Color(49, 59, 63));
         btnUsuario.setForeground(new java.awt.Color(255, 255, 255));
         btnUsuario.setText("Usuario");
         btnUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         panMenu.add(btnUsuario);
-        btnUsuario.setBounds(0, 90, 250, 40);
+        btnUsuario.setBounds(0, 110, 250, 40);
+
+        btnCliente.setBackground(new java.awt.Color(49, 59, 63));
+        btnCliente.setForeground(new java.awt.Color(255, 255, 255));
+        btnCliente.setText("Cliente");
+        btnCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panMenu.add(btnCliente);
+        btnCliente.setBounds(0, 160, 250, 40);
 
         panPrincipal.add(panMenu);
         panMenu.setBounds(0, 0, 250, 1030);
@@ -147,13 +217,26 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnEliminarUsuario;
-    public javax.swing.JButton btnGuardarUsuario;
+    public javax.swing.JButton btnCliente;
+    public javax.swing.JButton btnCompra;
+    public javax.swing.JButton btnEliminarCompra;
+    public javax.swing.JButton btnEliminarProveedor;
+    public javax.swing.JButton btnEliminarTurno;
+    public javax.swing.JButton btnGuardarCompra;
+    public javax.swing.JButton btnGuardarProveedor;
+    public javax.swing.JButton btnGuardarTurno;
+    public javax.swing.JButton btnModificarCompra;
+    public javax.swing.JButton btnModificarProveedor;
+    public javax.swing.JButton btnModificarTurno;
+    public javax.swing.JButton btnProveedor;
+    public javax.swing.JButton btnTurno;
     public javax.swing.JButton btnUsuario;
+    public javax.swing.JPanel panCompra;
     public javax.swing.JPanel panDatos;
     public javax.swing.JPanel panEncabezado;
     public javax.swing.JPanel panMenu;
     public javax.swing.JPanel panPrincipal;
-    public javax.swing.JPanel panUsuario;
+    public javax.swing.JPanel panProveedor;
+    public javax.swing.JPanel panTurno;
     // End of variables declaration//GEN-END:variables
 }

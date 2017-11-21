@@ -4,7 +4,7 @@ import com.coffecheap.dao.ProveedorDao;
 import com.coffecheap.modelo.Proveedor;
 import java.util.List;
 
-public class ProveedorBean {
+public class Proveedor_Controlador {
 
     Proveedor proveedor = new Proveedor();
     List <Proveedor> listar;
@@ -26,7 +26,7 @@ public class ProveedorBean {
     }
 
     
-    public ProveedorBean() {
+    public Proveedor_Controlador() {
     }
     
     public void Ingresar() throws Exception{
