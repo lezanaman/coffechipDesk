@@ -26,34 +26,27 @@ public class frmTurnoGuardar extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        txtObservaciones = new javax.swing.JTextField();
+        panPrincipal = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
-        lblObservaciones = new javax.swing.JLabel();
-        lblHorario = new javax.swing.JLabel();
-        btnGuardar = new javax.swing.JButton();
         txtHorario = new javax.swing.JFormattedTextField();
+        lblHorario = new javax.swing.JLabel();
+        lblObservaciones = new javax.swing.JLabel();
+        txtObservaciones = new javax.swing.JTextField();
+        btnGuardar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1570, 800));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new java.awt.GridBagLayout());
 
-        txtObservaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(txtObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 230, 40));
+        panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panPrincipal.setLayout(null);
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitulo.setText("Turno:");
-        add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, -1, -1));
-
-        lblObservaciones.setText("Observaciones:");
-        add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 110, -1));
-
-        lblHorario.setText("Horario de Turno:");
-        add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 100, -1));
-
-        btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnGuardar.setText("Guardar");
-        add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 430, 120, 40));
+        panPrincipal.add(lblTitulo);
+        lblTitulo.setBounds(450, 20, 79, 29);
 
         try {
             txtHorario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## a ##:##")));
@@ -61,7 +54,33 @@ public class frmTurnoGuardar extends javax.swing.JPanel {
             ex.printStackTrace();
         }
         txtHorario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        add(txtHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 230, 40));
+        panPrincipal.add(txtHorario);
+        txtHorario.setBounds(370, 80, 230, 40);
+
+        lblHorario.setText("Horario de Turno:");
+        panPrincipal.add(lblHorario);
+        lblHorario.setBounds(240, 90, 100, 14);
+
+        lblObservaciones.setText("Observaciones:");
+        panPrincipal.add(lblObservaciones);
+        lblObservaciones.setBounds(250, 160, 110, 14);
+
+        txtObservaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        panPrincipal.add(txtObservaciones);
+        txtObservaciones.setBounds(370, 150, 230, 40);
+
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnGuardar.setText("Guardar");
+        panPrincipal.add(btnGuardar);
+        btnGuardar.setBounds(470, 230, 120, 40);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 909;
+        gridBagConstraints.ipady = 459;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -70,6 +89,7 @@ public class frmTurnoGuardar extends javax.swing.JPanel {
     private javax.swing.JLabel lblHorario;
     private javax.swing.JLabel lblObservaciones;
     private javax.swing.JLabel lblTitulo;
+    private javax.swing.JPanel panPrincipal;
     public javax.swing.JFormattedTextField txtHorario;
     public javax.swing.JTextField txtObservaciones;
     // End of variables declaration//GEN-END:variables

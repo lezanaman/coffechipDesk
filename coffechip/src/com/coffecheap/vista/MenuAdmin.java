@@ -52,6 +52,8 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnCompra = new javax.swing.JButton();
         btnUsuario = new javax.swing.JButton();
         btnCliente = new javax.swing.JButton();
+        btnMesa = new javax.swing.JButton();
+        btnProducto = new javax.swing.JButton();
         panDatos = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -159,6 +161,20 @@ public class MenuAdmin extends javax.swing.JFrame {
         panMenu.add(btnCliente);
         btnCliente.setBounds(0, 160, 250, 40);
 
+        btnMesa.setBackground(new java.awt.Color(49, 59, 63));
+        btnMesa.setForeground(new java.awt.Color(255, 255, 255));
+        btnMesa.setText("Mesa");
+        btnMesa.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panMenu.add(btnMesa);
+        btnMesa.setBounds(0, 360, 250, 40);
+
+        btnProducto.setBackground(new java.awt.Color(49, 59, 63));
+        btnProducto.setForeground(new java.awt.Color(255, 255, 255));
+        btnProducto.setText("Producto");
+        btnProducto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        panMenu.add(btnProducto);
+        btnProducto.setBounds(0, 410, 250, 40);
+
         panPrincipal.add(panMenu);
         panMenu.setBounds(0, 0, 250, 1030);
 
@@ -225,9 +241,11 @@ public class MenuAdmin extends javax.swing.JFrame {
     public javax.swing.JButton btnGuardarCompra;
     public javax.swing.JButton btnGuardarProveedor;
     public javax.swing.JButton btnGuardarTurno;
+    public javax.swing.JButton btnMesa;
     public javax.swing.JButton btnModificarCompra;
     public javax.swing.JButton btnModificarProveedor;
     public javax.swing.JButton btnModificarTurno;
+    public javax.swing.JButton btnProducto;
     public javax.swing.JButton btnProveedor;
     public javax.swing.JButton btnTurno;
     public javax.swing.JButton btnUsuario;

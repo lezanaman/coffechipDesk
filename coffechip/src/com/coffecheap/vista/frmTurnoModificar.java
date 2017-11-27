@@ -26,8 +26,9 @@ public class frmTurnoModificar extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
+        panPrincipal = new javax.swing.JPanel();
         lblCodigo = new javax.swing.JLabel();
         lblObservaciones = new javax.swing.JLabel();
         txtHorarioMod = new javax.swing.JFormattedTextField();
@@ -38,14 +39,17 @@ public class frmTurnoModificar extends javax.swing.JPanel {
         scpPrincipal = new javax.swing.JScrollPane();
         tblTurnoModificar = new javax.swing.JTable();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new java.awt.GridBagLayout());
+
+        panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblCodigo.setText("Codigo:");
-        jPanel1.add(lblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 80, -1));
+        panPrincipal.add(lblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 80, -1));
 
         lblObservaciones.setText("Observaciones:");
-        jPanel1.add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 100, -1));
+        panPrincipal.add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 100, -1));
 
         try {
             txtHorarioMod.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## a ##:##")));
@@ -53,20 +57,20 @@ public class frmTurnoModificar extends javax.swing.JPanel {
             ex.printStackTrace();
         }
         txtHorarioMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jPanel1.add(txtHorarioMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 230, 40));
+        panPrincipal.add(txtHorarioMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 230, 40));
 
         lblHorario.setText("Horario de Turno:");
-        jPanel1.add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 100, -1));
+        panPrincipal.add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 100, -1));
 
         txtCodigoMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jPanel1.add(txtCodigoMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 230, 40));
+        panPrincipal.add(txtCodigoMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 230, 40));
 
         txtObservacionesMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jPanel1.add(txtObservacionesMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 230, 40));
+        panPrincipal.add(txtObservacionesMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 230, 40));
 
         btnModificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnModificar.setText("Modificar");
-        jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 120, 40));
+        panPrincipal.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 120, 40));
 
         tblTurnoModificar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -81,27 +85,25 @@ public class frmTurnoModificar extends javax.swing.JPanel {
         ));
         scpPrincipal.setViewportView(tblTurnoModificar);
 
-        jPanel1.add(scpPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 910, 200));
+        panPrincipal.add(scpPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 910, 200));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 977, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1005, Short.MAX_VALUE)
-        );
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 27;
+        gridBagConstraints.ipady = 99;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 11, 0);
+        add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnModificar;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblCodigo;
     private javax.swing.JLabel lblHorario;
     private javax.swing.JLabel lblObservaciones;
+    private javax.swing.JPanel panPrincipal;
     private javax.swing.JScrollPane scpPrincipal;
     public javax.swing.JTable tblTurnoModificar;
     public javax.swing.JTextField txtCodigoMod;

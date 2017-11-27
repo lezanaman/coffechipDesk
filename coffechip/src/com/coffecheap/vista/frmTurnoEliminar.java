@@ -27,27 +27,28 @@ public class frmTurnoEliminar extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        panPrincipal = new javax.swing.JPanel();
         lblIngreso = new javax.swing.JLabel();
         txtCodigo = new javax.swing.JTextField();
         btnEliminar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblTurno = new javax.swing.JTable();
 
-        setLayout(null);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new java.awt.GridBagLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblIngreso.setText("Ingrese El Codigo a Eliminar");
-        jPanel1.add(lblIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, 190, -1));
+        panPrincipal.add(lblIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 190, -1));
 
         txtCodigo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 210, 30));
+        panPrincipal.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 210, 30));
 
         btnEliminar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnEliminar.setText("Eliminar");
-        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 110, -1));
+        panPrincipal.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 110, -1));
 
         tblTurno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -62,18 +63,17 @@ public class frmTurnoEliminar extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblTurno);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 920, 180));
+        panPrincipal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 920, 220));
 
-        add(jPanel1);
-        jPanel1.setBounds(0, 0, 1060, 900);
+        add(panPrincipal, new java.awt.GridBagConstraints());
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnEliminar;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblIngreso;
+    private javax.swing.JPanel panPrincipal;
     public javax.swing.JTable tblTurno;
     public javax.swing.JTextField txtCodigo;
     // End of variables declaration//GEN-END:variables
