@@ -58,7 +58,7 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panPrincipal.setBackground(new java.awt.Color(153, 255, 51));
         panPrincipal.setLayout(null);
 
         panCompra.setBackground(new java.awt.Color(49, 59, 63));
@@ -121,7 +121,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         panEncabezado.setBackground(new java.awt.Color(239, 243, 246));
         panEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panPrincipal.add(panEncabezado);
-        panEncabezado.setBounds(250, 0, 1680, 70);
+        panEncabezado.setBounds(250, 0, 1180, 70);
 
         panMenu.setBackground(new java.awt.Color(92, 102, 106));
         panMenu.setLayout(null);
@@ -176,22 +176,22 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnProducto.setBounds(0, 410, 250, 40);
 
         panPrincipal.add(panMenu);
-        panMenu.setBounds(0, 0, 250, 1030);
+        panMenu.setBounds(0, 0, 250, 870);
 
         panDatos.setBackground(new java.awt.Color(255, 255, 255));
         panDatos.setLayout(new javax.swing.BoxLayout(panDatos, javax.swing.BoxLayout.LINE_AXIS));
         panPrincipal.add(panDatos);
-        panDatos.setBounds(250, 70, 1680, 960);
+        panDatos.setBounds(250, 70, 1180, 800);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1928, Short.MAX_VALUE)
+            .addComponent(panPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 1435, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
+            .addComponent(panPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
         );
 
         pack();

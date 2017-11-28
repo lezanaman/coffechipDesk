@@ -12,7 +12,7 @@ public class Coffechip {
         
         
         
-        menu.setExtendedState(MAXIMIZED_BOTH);
+        //menu.setExtendedState(MAXIMIZED_BOTH);
         menu.setLocationRelativeTo(menu);
         menu.setVisible(true);
 
