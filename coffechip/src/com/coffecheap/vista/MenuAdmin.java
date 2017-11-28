@@ -32,20 +32,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panPrincipal = new javax.swing.JPanel();
-        panCompra = new javax.swing.JPanel();
-        btnGuardarCompra = new javax.swing.JButton();
-        btnEliminarCompra = new javax.swing.JButton();
-        btnModificarCompra = new javax.swing.JButton();
-        panProveedor = new javax.swing.JPanel();
-        btnGuardarProveedor = new javax.swing.JButton();
-        btnEliminarProveedor = new javax.swing.JButton();
-        btnModificarProveedor = new javax.swing.JButton();
-        panTurno = new javax.swing.JPanel();
-        btnGuardarTurno = new javax.swing.JButton();
-        btnEliminarTurno = new javax.swing.JButton();
-        btnModificarTurno = new javax.swing.JButton();
-        panEncabezado = new javax.swing.JPanel();
+        panDatos = new javax.swing.JPanel();
         panMenu = new javax.swing.JPanel();
         btnTurno = new javax.swing.JButton();
         btnProveedor = new javax.swing.JButton();
@@ -54,74 +41,24 @@ public class MenuAdmin extends javax.swing.JFrame {
         btnCliente = new javax.swing.JButton();
         btnMesa = new javax.swing.JButton();
         btnProducto = new javax.swing.JButton();
-        panDatos = new javax.swing.JPanel();
+        panEncabezado = new javax.swing.JPanel();
+        panProveedor = new javax.swing.JPanel();
+        btnGuardarProveedor = new javax.swing.JButton();
+        btnEliminarProveedor = new javax.swing.JButton();
+        btnModificarProveedor = new javax.swing.JButton();
+        panTurno = new javax.swing.JPanel();
+        btnGuardarTurno = new javax.swing.JButton();
+        btnEliminarTurno = new javax.swing.JButton();
+        btnModificarTurno = new javax.swing.JButton();
+        panCompra = new javax.swing.JPanel();
+        btnGuardarCompra = new javax.swing.JButton();
+        btnEliminarCompra = new javax.swing.JButton();
+        btnModificarCompra = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panPrincipal.setBackground(new java.awt.Color(153, 255, 51));
-        panPrincipal.setLayout(null);
-
-        panCompra.setBackground(new java.awt.Color(49, 59, 63));
-        panCompra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        panCompra.setLayout(null);
-
-        btnGuardarCompra.setText("Guardar");
-        panCompra.add(btnGuardarCompra);
-        btnGuardarCompra.setBounds(20, 10, 80, 23);
-
-        btnEliminarCompra.setText("Eliminar");
-        panCompra.add(btnEliminarCompra);
-        btnEliminarCompra.setBounds(20, 40, 80, 23);
-
-        btnModificarCompra.setText("Modificar");
-        panCompra.add(btnModificarCompra);
-        btnModificarCompra.setBounds(10, 70, 100, 23);
-
-        panPrincipal.add(panCompra);
-        panCompra.setBounds(0, 0, 120, 110);
-
-        panProveedor.setBackground(new java.awt.Color(49, 59, 63));
-        panProveedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        panProveedor.setLayout(null);
-
-        btnGuardarProveedor.setText("Guardar");
-        panProveedor.add(btnGuardarProveedor);
-        btnGuardarProveedor.setBounds(20, 10, 80, 23);
-
-        btnEliminarProveedor.setText("Eliminar");
-        panProveedor.add(btnEliminarProveedor);
-        btnEliminarProveedor.setBounds(20, 40, 80, 23);
-
-        btnModificarProveedor.setText("Modificar");
-        panProveedor.add(btnModificarProveedor);
-        btnModificarProveedor.setBounds(10, 70, 100, 23);
-
-        panPrincipal.add(panProveedor);
-        panProveedor.setBounds(0, 0, 120, 110);
-
-        panTurno.setBackground(new java.awt.Color(49, 59, 63));
-        panTurno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        panTurno.setLayout(null);
-
-        btnGuardarTurno.setText("Guardar");
-        panTurno.add(btnGuardarTurno);
-        btnGuardarTurno.setBounds(20, 10, 80, 23);
-
-        btnEliminarTurno.setText("Eliminar");
-        panTurno.add(btnEliminarTurno);
-        btnEliminarTurno.setBounds(20, 40, 80, 23);
-
-        btnModificarTurno.setText("Modificar");
-        panTurno.add(btnModificarTurno);
-        btnModificarTurno.setBounds(10, 70, 100, 23);
-
-        panPrincipal.add(panTurno);
-        panTurno.setBounds(0, 0, 120, 110);
-
-        panEncabezado.setBackground(new java.awt.Color(239, 243, 246));
-        panEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panPrincipal.add(panEncabezado);
-        panEncabezado.setBounds(250, 0, 1180, 70);
+        panDatos.setBackground(new java.awt.Color(255, 255, 255));
+        panDatos.setLayout(new javax.swing.BoxLayout(panDatos, javax.swing.BoxLayout.LINE_AXIS));
 
         panMenu.setBackground(new java.awt.Color(92, 102, 106));
         panMenu.setLayout(null);
@@ -175,23 +112,87 @@ public class MenuAdmin extends javax.swing.JFrame {
         panMenu.add(btnProducto);
         btnProducto.setBounds(0, 410, 250, 40);
 
-        panPrincipal.add(panMenu);
-        panMenu.setBounds(0, 0, 250, 870);
+        panEncabezado.setBackground(new java.awt.Color(239, 243, 246));
+        panEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panDatos.setBackground(new java.awt.Color(255, 255, 255));
-        panDatos.setLayout(new javax.swing.BoxLayout(panDatos, javax.swing.BoxLayout.LINE_AXIS));
-        panPrincipal.add(panDatos);
-        panDatos.setBounds(250, 70, 1180, 800);
+        panProveedor.setBackground(new java.awt.Color(49, 59, 63));
+        panProveedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        panProveedor.setLayout(null);
+
+        btnGuardarProveedor.setText("Guardar");
+        panProveedor.add(btnGuardarProveedor);
+        btnGuardarProveedor.setBounds(20, 10, 80, 23);
+
+        btnEliminarProveedor.setText("Eliminar");
+        panProveedor.add(btnEliminarProveedor);
+        btnEliminarProveedor.setBounds(20, 40, 80, 23);
+
+        btnModificarProveedor.setText("Modificar");
+        panProveedor.add(btnModificarProveedor);
+        btnModificarProveedor.setBounds(10, 70, 100, 23);
+
+        panTurno.setBackground(new java.awt.Color(49, 59, 63));
+        panTurno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        panTurno.setLayout(null);
+
+        btnGuardarTurno.setText("Guardar");
+        panTurno.add(btnGuardarTurno);
+        btnGuardarTurno.setBounds(20, 10, 80, 23);
+
+        btnEliminarTurno.setText("Eliminar");
+        panTurno.add(btnEliminarTurno);
+        btnEliminarTurno.setBounds(20, 40, 80, 23);
+
+        btnModificarTurno.setText("Modificar");
+        panTurno.add(btnModificarTurno);
+        btnModificarTurno.setBounds(10, 70, 100, 23);
+
+        panCompra.setBackground(new java.awt.Color(49, 59, 63));
+        panCompra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        panCompra.setLayout(null);
+
+        btnGuardarCompra.setText("Guardar");
+        panCompra.add(btnGuardarCompra);
+        btnGuardarCompra.setBounds(20, 10, 80, 23);
+
+        btnEliminarCompra.setText("Eliminar");
+        panCompra.add(btnEliminarCompra);
+        btnEliminarCompra.setBounds(20, 40, 80, 23);
+
+        btnModificarCompra.setText("Modificar");
+        panCompra.add(btnModificarCompra);
+        btnModificarCompra.setBounds(10, 70, 100, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 1435, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(2, 2, 2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panEncabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
+                    .addComponent(panDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(3, 3, 3))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panTurno, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(panEncabezado, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(panDatos, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)))
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -253,7 +254,6 @@ public class MenuAdmin extends javax.swing.JFrame {
     public javax.swing.JPanel panDatos;
     public javax.swing.JPanel panEncabezado;
     public javax.swing.JPanel panMenu;
-    public javax.swing.JPanel panPrincipal;
     public javax.swing.JPanel panProveedor;
     public javax.swing.JPanel panTurno;
     // End of variables declaration//GEN-END:variables
