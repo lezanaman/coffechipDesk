@@ -79,16 +79,35 @@ public class MenuAdmin_Controlador implements ActionListener {
         }
 
         if (evento.equals("Turno")) {
+            int x = this.vistamenu.btnTurno.getX();
+            int y = this.vistamenu.btnTurno.getY();
+            
+            System.out.println("x: " + x);
+            System.out.println("y: "+ y);
+            
+            int x2 = this.vistamenu.panTurno.getX();
+            int y2= this.vistamenu.panTurno.getY();
+            
+            System.out.println("x del panel: " + x2);
+            System.out.println("y del panel: " + y2);
+            
             if (this.vistamenu.panTurno.requestFocusInWindow() == false) {
-
+                System.out.println("1");
                 if (this.vistamenu.panProveedor.requestFocusInWindow() == true || this.vistamenu.panCompra.requestFocusInWindow() == true) {
+                    System.out.println("2");
                     this.vistamenu.panProveedor.setVisible(false);
                     this.vistamenu.panCompra.setVisible(false);
                     this.vistamenu.panTurno.setVisible(true);
                     this.vistamenu.panTurno.setLocation(250, 210);
                 } else {
+                    System.out.println("3");
                     this.vistamenu.panTurno.setVisible(true);
-                    this.vistamenu.panTurno.setLocation(250, 210);
+                    this.vistamenu.panTurno.setLocation(25, 30);
+                    int x3 = this.vistamenu.panTurno.getX();
+                    int y3 = this.vistamenu.panTurno.getY();
+                    
+                    System.out.println("vista del panel en x: " + x3);
+                    System.out.println("vista del panel en y: " + y3);
                 }
             } else {
                 this.vistamenu.panTurno.setVisible(false);
