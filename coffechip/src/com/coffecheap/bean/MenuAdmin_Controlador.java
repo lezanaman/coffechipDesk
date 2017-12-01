@@ -2,17 +2,25 @@ package com.coffecheap.bean;
 
 import com.coffecheap.dao.TurnoDao;
 import com.coffecheap.vista.MenuAdmin;
+import com.coffecheap.vista.MenuAdminDos;
 import com.coffecheap.vista.frmTurnoGuardar;
 import com.coffecheap.vista.frmTurnoEliminar;
 import com.coffecheap.vista.frmTurnoModificar;
+import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import javax.swing.JPanel;
 
-public class MenuAdmin_Controlador implements ActionListener {
+public class MenuAdmin_Controlador implements MouseListener {
 
-    MenuAdmin vistamenu = new MenuAdmin();
+    //MenuAdmin vistamenu = new MenuAdmin();
+    MenuAdminDos vistamenu = new MenuAdminDos();
 
-    public MenuAdmin_Controlador(MenuAdmin menu) {
+    /*public MenuAdmin_Controlador(MenuAdmin menu) {
         this.vistamenu = menu;
 
         //Turno
@@ -40,79 +48,20 @@ public class MenuAdmin_Controlador implements ActionListener {
         this.vistamenu.btnCompra.addActionListener(this);
 
         
+
+
+    }*/
+
+    void setColor(JPanel panel) {
+        panel.setBackground(new Color(66, 83, 111));
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
+    void resetColor(JPanel panel) {
+        panel.setBackground(new Color(37, 47, 65));
+    }
+
+    /*public void actionPerformed(ActionEvent e) {
         String evento = e.getActionCommand();
-
-        if (evento.equals("Compra")) {
-            if (this.vistamenu.btnCompra.requestFocusInWindow() == false) {
-                if (this.vistamenu.panTurno.requestFocusInWindow() == true || this.vistamenu.panProveedor.requestFocusInWindow() == true) {
-                    this.vistamenu.panTurno.setVisible(false);
-                    this.vistamenu.panProveedor.setVisible(false);
-                    this.vistamenu.panCompra.setVisible(true);
-                    this.vistamenu.panCompra.setLocation(250, 310);
-                } else {
-                    this.vistamenu.panCompra.setVisible(true);
-                    this.vistamenu.panCompra.setLocation(250, 310);
-                }
-            } else {
-                this.vistamenu.btnCompra.setVisible(false);
-            }
-        }
-
-        if (evento.equals("Proveedor")) {
-            if (this.vistamenu.panProveedor.requestFocusInWindow() == false) {
-                if (this.vistamenu.panTurno.requestFocusInWindow() == true || this.vistamenu.btnCompra.requestFocusInWindow() == true) {
-                    this.vistamenu.panTurno.setVisible(false);
-                    this.vistamenu.panCompra.setVisible(false);
-                    this.vistamenu.panProveedor.setVisible(true);
-                    this.vistamenu.panProveedor.setLocation(250, 260);
-                } else {
-                    this.vistamenu.panProveedor.setVisible(true);
-                    this.vistamenu.panProveedor.setLocation(250, 260);
-                }
-            } else {
-                this.vistamenu.panProveedor.setVisible(false);
-            }
-        }
-
-        if (evento.equals("Turno")) {
-            int x = this.vistamenu.btnTurno.getX();
-            int y = this.vistamenu.btnTurno.getY();
-            
-            System.out.println("x: " + x);
-            System.out.println("y: "+ y);
-            
-            int x2 = this.vistamenu.panTurno.getX();
-            int y2= this.vistamenu.panTurno.getY();
-            
-            System.out.println("x del panel: " + x2);
-            System.out.println("y del panel: " + y2);
-            
-            if (this.vistamenu.panTurno.requestFocusInWindow() == false) {
-                System.out.println("1");
-                if (this.vistamenu.panProveedor.requestFocusInWindow() == true || this.vistamenu.panCompra.requestFocusInWindow() == true) {
-                    System.out.println("2");
-                    this.vistamenu.panProveedor.setVisible(false);
-                    this.vistamenu.panCompra.setVisible(false);
-                    this.vistamenu.panTurno.setVisible(true);
-                    this.vistamenu.panTurno.setLocation(250, 210);
-                } else {
-                    System.out.println("3");
-                    this.vistamenu.panTurno.setVisible(true);
-                    this.vistamenu.panTurno.setLocation(25, 30);
-                    int x3 = this.vistamenu.panTurno.getX();
-                    int y3 = this.vistamenu.panTurno.getY();
-                    
-                    System.out.println("vista del panel en x: " + x3);
-                    System.out.println("vista del panel en y: " + y3);
-                }
-            } else {
-                this.vistamenu.panTurno.setVisible(false);
-            }
-        }
 
         if (evento.equals("GuardarTurno")) {
             TurnoDao dao = new TurnoDao();
@@ -121,8 +70,8 @@ public class MenuAdmin_Controlador implements ActionListener {
             frmTurnoModificar vistamodi = new frmTurnoModificar();
             Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
             new CambiaPanel(this.vistamenu.panDatos, vistaturno);
-            this.vistamenu.panTurno.setVisible(false);
         }
+        
         if (evento.equals("EliminarTurno")) {
             TurnoDao dao = new TurnoDao();
             frmTurnoGuardar vistaturno = new frmTurnoGuardar();
@@ -131,7 +80,6 @@ public class MenuAdmin_Controlador implements ActionListener {
             Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
             controlador.MostrarD();
             new CambiaPanel(this.vistamenu.panDatos, vistaturnodos);
-            this.vistamenu.panTurno.setVisible(false);
         }
 
         if (evento.equals("ModificarTurno")) {
@@ -142,8 +90,40 @@ public class MenuAdmin_Controlador implements ActionListener {
             Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
             controlador.MostrarDM();
             new CambiaPanel(this.vistamenu.panDatos, vistamodi);
-            this.vistamenu.panTurno.setVisible(false);
         }
+        
+        
+    }*/
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("kjdsfklajskladñf");
+        //Component hola = e.getComponent().;        
+        if (e.getSource().equals(vistamenu.btnCompra.getUIClassID())) {
+            System.out.println("viendo esos datos en el if");
+        }
+        
+        /*if () {
+            System.out.println("hola a todos");
+        } */       
     }
 
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
 }

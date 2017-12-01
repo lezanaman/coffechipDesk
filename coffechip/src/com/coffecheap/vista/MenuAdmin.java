@@ -5,8 +5,6 @@
  */
 package com.coffecheap.vista;
 
-import com.coffecheap.bean.CambiaPanel;
-
 /**
  *
  * @author javam
@@ -14,13 +12,10 @@ import com.coffecheap.bean.CambiaPanel;
 public class MenuAdmin extends javax.swing.JFrame {
 
     /**
-     * Creates new form MenuAdmin
+     * Creates new form MenuAdminDos
      */
     public MenuAdmin() {
         initComponents();
-        panTurno.setVisible(false);
-        panProveedor.setVisible(false);
-        panCompra.setVisible(false);
     }
 
     /**
@@ -32,172 +27,109 @@ public class MenuAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panMenu = new javax.swing.JPanel();
-        btnTurno = new javax.swing.JButton();
-        btnProveedor = new javax.swing.JButton();
-        btnCompra = new javax.swing.JButton();
-        btnUsuario = new javax.swing.JButton();
-        btnCliente = new javax.swing.JButton();
-        btnMesa = new javax.swing.JButton();
-        btnProducto = new javax.swing.JButton();
-        panTurno = new javax.swing.JPanel();
-        btnGuardarTurno = new javax.swing.JButton();
-        btnEliminarTurno = new javax.swing.JButton();
-        btnModificarTurno = new javax.swing.JButton();
-        panEncabezado = new javax.swing.JPanel();
         panDatos = new javax.swing.JPanel();
-        panProveedor = new javax.swing.JPanel();
-        btnGuardarProveedor = new javax.swing.JButton();
-        btnEliminarProveedor = new javax.swing.JButton();
-        btnModificarProveedor = new javax.swing.JButton();
-        panCompra = new javax.swing.JPanel();
-        btnGuardarCompra = new javax.swing.JButton();
-        btnEliminarCompra = new javax.swing.JButton();
-        btnModificarCompra = new javax.swing.JButton();
+        menuBar = new javax.swing.JMenuBar();
+        btnProveedor = new javax.swing.JMenu();
+        btnGuardarProveedor = new javax.swing.JMenuItem();
+        btnEliminarProveedor = new javax.swing.JMenuItem();
+        btnModificarProveedor = new javax.swing.JMenuItem();
+        deleteMenuItem = new javax.swing.JMenuItem();
+        btnCompra = new javax.swing.JMenu();
+        contentMenuItem = new javax.swing.JMenuItem();
+        aboutMenuItem = new javax.swing.JMenuItem();
+        btnTurno = new javax.swing.JMenu();
+        btnGuardarTurno = new javax.swing.JMenuItem();
+        btnEliminarTurno = new javax.swing.JMenuItem();
+        btnModificarTurno = new javax.swing.JMenuItem();
+        exitMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        panMenu.setBackground(new java.awt.Color(92, 102, 106));
-        panMenu.setLayout(null);
-
-        btnTurno.setBackground(new java.awt.Color(49, 59, 63));
-        btnTurno.setForeground(new java.awt.Color(255, 255, 255));
-        btnTurno.setText("Turno");
-        btnTurno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panMenu.add(btnTurno);
-        btnTurno.setBounds(0, 210, 250, 40);
-
-        btnProveedor.setBackground(new java.awt.Color(49, 59, 63));
-        btnProveedor.setForeground(new java.awt.Color(255, 255, 255));
-        btnProveedor.setText("Proveedor");
-        btnProveedor.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panMenu.add(btnProveedor);
-        btnProveedor.setBounds(0, 260, 250, 40);
-
-        btnCompra.setBackground(new java.awt.Color(49, 59, 63));
-        btnCompra.setForeground(new java.awt.Color(255, 255, 255));
-        btnCompra.setText("Compra");
-        btnCompra.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panMenu.add(btnCompra);
-        btnCompra.setBounds(0, 310, 250, 40);
-
-        btnUsuario.setBackground(new java.awt.Color(49, 59, 63));
-        btnUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        btnUsuario.setText("Usuario");
-        btnUsuario.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panMenu.add(btnUsuario);
-        btnUsuario.setBounds(0, 110, 250, 40);
-
-        btnCliente.setBackground(new java.awt.Color(49, 59, 63));
-        btnCliente.setForeground(new java.awt.Color(255, 255, 255));
-        btnCliente.setText("Cliente");
-        btnCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panMenu.add(btnCliente);
-        btnCliente.setBounds(0, 160, 250, 40);
-
-        btnMesa.setBackground(new java.awt.Color(49, 59, 63));
-        btnMesa.setForeground(new java.awt.Color(255, 255, 255));
-        btnMesa.setText("Mesa");
-        btnMesa.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panMenu.add(btnMesa);
-        btnMesa.setBounds(0, 360, 250, 40);
-
-        btnProducto.setBackground(new java.awt.Color(49, 59, 63));
-        btnProducto.setForeground(new java.awt.Color(255, 255, 255));
-        btnProducto.setText("Producto");
-        btnProducto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        panMenu.add(btnProducto);
-        btnProducto.setBounds(0, 410, 250, 40);
-
-        panTurno.setBackground(new java.awt.Color(49, 59, 63));
-        panTurno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        panTurno.setLayout(null);
-
-        btnGuardarTurno.setText("Guardar");
-        panTurno.add(btnGuardarTurno);
-        btnGuardarTurno.setBounds(20, 10, 80, 23);
-
-        btnEliminarTurno.setText("Eliminar");
-        panTurno.add(btnEliminarTurno);
-        btnEliminarTurno.setBounds(20, 40, 80, 23);
-
-        btnModificarTurno.setText("Modificar");
-        panTurno.add(btnModificarTurno);
-        btnModificarTurno.setBounds(10, 70, 100, 23);
-
-        panMenu.add(panTurno);
-        panTurno.setBounds(0, 760, 120, 110);
-
-        panEncabezado.setBackground(new java.awt.Color(239, 243, 246));
-        panEncabezado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panDatos.setBackground(new java.awt.Color(255, 255, 255));
         panDatos.setLayout(new javax.swing.BoxLayout(panDatos, javax.swing.BoxLayout.LINE_AXIS));
 
-        panProveedor.setBackground(new java.awt.Color(49, 59, 63));
-        panProveedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        panProveedor.setLayout(null);
+        menuBar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        menuBar.setPreferredSize(new java.awt.Dimension(153, 30));
 
+        btnProveedor.setMnemonic('e');
+        btnProveedor.setText("Proveedor");
+
+        btnGuardarProveedor.setMnemonic('t');
         btnGuardarProveedor.setText("Guardar");
-        panProveedor.add(btnGuardarProveedor);
-        btnGuardarProveedor.setBounds(20, 10, 80, 23);
+        btnProveedor.add(btnGuardarProveedor);
 
+        btnEliminarProveedor.setMnemonic('y');
         btnEliminarProveedor.setText("Eliminar");
-        panProveedor.add(btnEliminarProveedor);
-        btnEliminarProveedor.setBounds(20, 40, 80, 23);
+        btnProveedor.add(btnEliminarProveedor);
 
+        btnModificarProveedor.setMnemonic('p');
         btnModificarProveedor.setText("Modificar");
-        panProveedor.add(btnModificarProveedor);
-        btnModificarProveedor.setBounds(10, 70, 100, 23);
+        btnProveedor.add(btnModificarProveedor);
 
-        panCompra.setBackground(new java.awt.Color(49, 59, 63));
-        panCompra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        panCompra.setLayout(null);
+        deleteMenuItem.setMnemonic('d');
+        deleteMenuItem.setText("Delete");
+        btnProveedor.add(deleteMenuItem);
 
-        btnGuardarCompra.setText("Guardar");
-        panCompra.add(btnGuardarCompra);
-        btnGuardarCompra.setBounds(20, 10, 80, 23);
+        menuBar.add(btnProveedor);
 
-        btnEliminarCompra.setText("Eliminar");
-        panCompra.add(btnEliminarCompra);
-        btnEliminarCompra.setBounds(20, 40, 80, 23);
+        btnCompra.setMnemonic('h');
+        btnCompra.setText("Compra");
 
-        btnModificarCompra.setText("Modificar");
-        panCompra.add(btnModificarCompra);
-        btnModificarCompra.setBounds(10, 70, 100, 23);
+        contentMenuItem.setMnemonic('c');
+        contentMenuItem.setText("Contents");
+        btnCompra.add(contentMenuItem);
+
+        aboutMenuItem.setMnemonic('a');
+        aboutMenuItem.setText("About");
+        btnCompra.add(aboutMenuItem);
+
+        menuBar.add(btnCompra);
+
+        btnTurno.setMnemonic('f');
+        btnTurno.setText("Turno");
+
+        btnGuardarTurno.setMnemonic('o');
+        btnGuardarTurno.setText("Guardar");
+        btnTurno.add(btnGuardarTurno);
+
+        btnEliminarTurno.setMnemonic('s');
+        btnEliminarTurno.setText("Eliminar");
+        btnTurno.add(btnEliminarTurno);
+
+        btnModificarTurno.setMnemonic('a');
+        btnModificarTurno.setText("Modificar");
+        btnTurno.add(btnModificarTurno);
+
+        exitMenuItem.setMnemonic('x');
+        exitMenuItem.setText("Exit");
+        exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitMenuItemActionPerformed(evt);
+            }
+        });
+        btnTurno.add(exitMenuItem);
+
+        menuBar.add(btnTurno);
+
+        setJMenuBar(menuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panEncabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
-                    .addComponent(panDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(3, 3, 3))
+            .addComponent(panDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(panEncabezado, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(panDatos, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)))
-                .addGap(0, 0, 0))
+            .addComponent(panDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exitMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,6 +157,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MenuAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -235,27 +168,21 @@ public class MenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnCliente;
-    public javax.swing.JButton btnCompra;
-    public javax.swing.JButton btnEliminarCompra;
-    public javax.swing.JButton btnEliminarProveedor;
-    public javax.swing.JButton btnEliminarTurno;
-    public javax.swing.JButton btnGuardarCompra;
-    public javax.swing.JButton btnGuardarProveedor;
-    public javax.swing.JButton btnGuardarTurno;
-    public javax.swing.JButton btnMesa;
-    public javax.swing.JButton btnModificarCompra;
-    public javax.swing.JButton btnModificarProveedor;
-    public javax.swing.JButton btnModificarTurno;
-    public javax.swing.JButton btnProducto;
-    public javax.swing.JButton btnProveedor;
-    public javax.swing.JButton btnTurno;
-    public javax.swing.JButton btnUsuario;
-    public javax.swing.JPanel panCompra;
+    private javax.swing.JMenuItem aboutMenuItem;
+    public javax.swing.JMenu btnCompra;
+    public javax.swing.JMenuItem btnEliminarProveedor;
+    public javax.swing.JMenuItem btnEliminarTurno;
+    public javax.swing.JMenuItem btnGuardarProveedor;
+    public javax.swing.JMenuItem btnGuardarTurno;
+    public javax.swing.JMenuItem btnModificarProveedor;
+    public javax.swing.JMenuItem btnModificarTurno;
+    public javax.swing.JMenu btnProveedor;
+    public javax.swing.JMenu btnTurno;
+    private javax.swing.JMenuItem contentMenuItem;
+    private javax.swing.JMenuItem deleteMenuItem;
+    private javax.swing.JMenuItem exitMenuItem;
+    private javax.swing.JMenuBar menuBar;
     public javax.swing.JPanel panDatos;
-    public javax.swing.JPanel panEncabezado;
-    public javax.swing.JPanel panMenu;
-    public javax.swing.JPanel panProveedor;
-    public javax.swing.JPanel panTurno;
     // End of variables declaration//GEN-END:variables
+
 }
