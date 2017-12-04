@@ -21,48 +21,14 @@ public class MenuAdmin_Controlador implements MouseListener {
 
     public MenuAdmin_Controlador(MenuAdmin menuadmindos) {
         vistamenu = menuadmindos;
-        vistamenu.btnCompra.addMouseListener(this);
-        vistamenu.lblCompra.addMouseListener(this);
-        vistamenu.btnProveedor.addMouseListener(this); 
-        vistamenu.lblProveedor.addMouseListener(this);
-        vistamenu.btnTurno.addMouseListener(this);
-        vistamenu.lblTurno.addMouseListener(this);
-        
+        vistamenu.btnCompraGuardar.addMouseListener(this);
+        vistamenu.lblCompraGuardar.addMouseListener(this);
+        vistamenu.btnCompraEliminar.addMouseListener(this);
+        vistamenu.lblCompraEliminar.addMouseListener(this);
+        vistamenu.btnCompraModificar.addMouseListener(this);
+        vistamenu.lblCompraModificar.addMouseListener(this);
+
     }
-    
-    /*public MenuAdmin_Controlador(MenuAdmin menu) {
-        this.vistamenu = menu;
-
-        //Turno
-        this.vistamenu.btnTurno.setActionCommand("Turno");
-        this.vistamenu.btnTurno.addActionListener(this);
-        this.vistamenu.btnGuardarTurno.setActionCommand("GuardarTurno");
-        this.vistamenu.btnGuardarTurno.addActionListener(this);
-        this.vistamenu.btnEliminarTurno.setActionCommand("EliminarTurno");
-        this.vistamenu.btnEliminarTurno.addActionListener(this);
-        this.vistamenu.btnModificarTurno.setActionCommand("ModificarTurno");
-        this.vistamenu.btnModificarTurno.addActionListener(this);
-        
-        //Proveedor
-        this.vistamenu.btnProveedor.setActionCommand("Proveedor");
-        this.vistamenu.btnProveedor.addActionListener(this);
-        this.vistamenu.btnGuardarProveedor.setActionCommand("GuardarProveedor");
-        this.vistamenu.btnGuardarProveedor.addActionListener(this);
-        this.vistamenu.btnEliminarProveedor.setActionCommand("EliminarProveedor");
-        this.vistamenu.btnEliminarProveedor.addActionListener(this);
-        this.vistamenu.btnModificarProveedor.setActionCommand("ModificarProveedor");
-        this.vistamenu.btnModificarProveedor.addActionListener(this);
-        
-        //Compra
-        this.vistamenu.btnCompra.setActionCommand("Compra");
-        this.vistamenu.btnCompra.addActionListener(this);
-
-        
-
-
-    }*/
-
-    
 
     /*public void actionPerformed(ActionEvent e) {
         String evento = e.getActionCommand();
@@ -98,7 +64,6 @@ public class MenuAdmin_Controlador implements MouseListener {
         
         
     }*/
-    
     void setColor(JPanel panel) {
         panel.setBackground(new Color(66, 83, 111));
     }
@@ -106,47 +71,59 @@ public class MenuAdmin_Controlador implements MouseListener {
     void resetColor(JPanel panel) {
         panel.setBackground(new Color(37, 47, 65));
     }
-    
+
     @Override
     public void mouseClicked(MouseEvent e) {
-        if (e.getSource() == vistamenu.btnCompra || e.getSource() == vistamenu.lblCompra) {
-            resetColor(vistamenu.btnProveedor);
-            setColor(vistamenu.btnCompra);
-            resetColor(vistamenu.btnTurno);
-            System.out.println("uno");
-        }
-        if (e.getSource()==vistamenu.btnProveedor || e.getSource() == vistamenu.lblProveedor) {
-            setColor(vistamenu.btnProveedor);
-            resetColor(vistamenu.btnCompra);
-            resetColor(vistamenu.btnTurno);
-            System.out.println("dos");
-        }
-        if (e.getSource()==vistamenu.btnTurno || e.getSource() == vistamenu.lblTurno) {
-            resetColor(vistamenu.btnProveedor);
-            resetColor(vistamenu.btnCompra);
-            setColor(vistamenu.btnTurno);
-            System.out.println("tres");
-        }
         
-        
-                    
-        
-        
-            
-        
-        
+
         //System.out.println("viendo datos: " + e.getSource());
         //Component hola = e.getComponent().;        
-        
-        
         /*if () {
             System.out.println("hola a todos");
-        } */       
+        } */
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        
+        if (e.getSource() == vistamenu.btnCompraGuardar || e.getSource() == vistamenu.lblCompraGuardar) {
+            resetColor(vistamenu.btnCompraEliminar);
+            setColor(vistamenu.btnCompraGuardar);
+            resetColor(vistamenu.btnCompraModificar);
+            System.out.println("uno");
+
+            TurnoDao dao = new TurnoDao();
+            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
+            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
+            frmTurnoModificar vistamodi = new frmTurnoModificar();
+            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
+            new CambiaPanel(this.vistamenu.panDatos, vistaturno);
+        }
+        if (e.getSource() == vistamenu.btnCompraEliminar || e.getSource() == vistamenu.lblCompraEliminar) {
+            setColor(vistamenu.btnCompraEliminar);
+            resetColor(vistamenu.btnCompraGuardar);
+            resetColor(vistamenu.btnCompraModificar);
+            
+            TurnoDao dao = new TurnoDao();
+            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
+            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
+            frmTurnoModificar vistamodi = new frmTurnoModificar();
+            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
+            controlador.MostrarD();
+            new CambiaPanel(this.vistamenu.panDatos, vistaturnodos);
+        }
+        if (e.getSource() == vistamenu.btnCompraModificar || e.getSource() == vistamenu.lblCompraModificar) {
+            resetColor(vistamenu.btnCompraEliminar);
+            resetColor(vistamenu.btnCompraGuardar);
+            setColor(vistamenu.btnCompraModificar);
+            
+            TurnoDao dao = new TurnoDao();
+            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
+            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
+            frmTurnoModificar vistamodi = new frmTurnoModificar();
+            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
+            controlador.MostrarDM();
+            new CambiaPanel(this.vistamenu.panDatos, vistamodi);
+        }
     }
 
     @Override
