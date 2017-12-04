@@ -5,7 +5,7 @@
  */
 package com.coffecheap.vista;
 
-import com.coffecheap.bean.Jbutton;
+//import com.coffecheap.bean.Jbutton;
 
 /**
  *
@@ -84,9 +84,9 @@ public class frmMesaControl extends javax.swing.JPanel {
   private javax.swing.JPanel jPanel1;
   // End of variables declaration//GEN-END:variables
 
-  public void add(Jbutton boton) {
+  /*public void add(Jbutton boton) {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-  }
+  }*/
 
 }
 

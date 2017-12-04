@@ -27,7 +27,7 @@ public class Mesa_Control_Controlador implements ActionListener {
       //En la parte izquierda de una asignación solo puede haber el nombre de una variable
       // Jbutton miboton + x = new Jbutton();
       Jbutton botonlocal = new Jbutton();
-      MC.add(botonlocal);
+      //MC.add(botonlocal);
 
       HashMap<String, JButton> botones = new HashMap<String, JButton>();
       int i;
@@ -35,8 +35,8 @@ public class Mesa_Control_Controlador implements ActionListener {
       for (i = 1; i <= 10; i++) {
 
         Jbutton boton = new Jbutton();
-        botones.put("boton" + i, boton);
-        MC.add(boton);
+        //botones.put("boton" + i, boton);
+        //MC.add(boton);
       }
 
       /* 
@@ -54,7 +54,7 @@ public class Mesa_Control_Controlador implements ActionListener {
   public void actionPerformed(ActionEvent e) {
     String evento = e.getActionCommand();
 
-    if (evento.equals("Guardar")) {
+    /*if (evento.equals("Guardar")) {
       Guardar();
     }
 
@@ -66,12 +66,12 @@ public class Mesa_Control_Controlador implements ActionListener {
     if (evento.equals("Modificar")) {
       ModificarD();
       MostrarDM();
-    }
+    }*/
 
   }
 
   public void Limpiar() {
-    this.vistaturnoelim.txtCodigo.setText(null);
+    //this.vistaturnoelim.txtCodigo.setText(null);
 
   }
 

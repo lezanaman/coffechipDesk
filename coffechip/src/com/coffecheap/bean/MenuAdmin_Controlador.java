@@ -2,7 +2,6 @@ package com.coffecheap.bean;
 
 import com.coffecheap.dao.TurnoDao;
 import com.coffecheap.vista.MenuAdmin;
-import com.coffecheap.vista.MenuAdminDos;
 import com.coffecheap.vista.frmTurnoGuardar;
 import com.coffecheap.vista.frmTurnoEliminar;
 import com.coffecheap.vista.frmTurnoModificar;
@@ -18,8 +17,19 @@ import javax.swing.JPanel;
 public class MenuAdmin_Controlador implements MouseListener {
 
     //MenuAdmin vistamenu = new MenuAdmin();
-    MenuAdminDos vistamenu = new MenuAdminDos();
+    MenuAdmin vistamenu = new MenuAdmin();
 
+    public MenuAdmin_Controlador(MenuAdmin menuadmindos) {
+        vistamenu = menuadmindos;
+        vistamenu.btnCompra.addMouseListener(this);
+        vistamenu.lblCompra.addMouseListener(this);
+        vistamenu.btnProveedor.addMouseListener(this); 
+        vistamenu.lblProveedor.addMouseListener(this);
+        vistamenu.btnTurno.addMouseListener(this);
+        vistamenu.lblTurno.addMouseListener(this);
+        
+    }
+    
     /*public MenuAdmin_Controlador(MenuAdmin menu) {
         this.vistamenu = menu;
 
@@ -52,13 +62,7 @@ public class MenuAdmin_Controlador implements MouseListener {
 
     }*/
 
-    void setColor(JPanel panel) {
-        panel.setBackground(new Color(66, 83, 111));
-    }
-
-    void resetColor(JPanel panel) {
-        panel.setBackground(new Color(37, 47, 65));
-    }
+    
 
     /*public void actionPerformed(ActionEvent e) {
         String evento = e.getActionCommand();
@@ -94,13 +98,46 @@ public class MenuAdmin_Controlador implements MouseListener {
         
         
     }*/
+    
+    void setColor(JPanel panel) {
+        panel.setBackground(new Color(66, 83, 111));
+    }
+
+    void resetColor(JPanel panel) {
+        panel.setBackground(new Color(37, 47, 65));
+    }
+    
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println("kjdsfklajskladñf");
-        //Component hola = e.getComponent().;        
-        if (e.getSource().equals(vistamenu.btnCompra.getUIClassID())) {
-            System.out.println("viendo esos datos en el if");
+        if (e.getSource() == vistamenu.btnCompra || e.getSource() == vistamenu.lblCompra) {
+            resetColor(vistamenu.btnProveedor);
+            setColor(vistamenu.btnCompra);
+            resetColor(vistamenu.btnTurno);
+            System.out.println("uno");
         }
+        if (e.getSource()==vistamenu.btnProveedor || e.getSource() == vistamenu.lblProveedor) {
+            setColor(vistamenu.btnProveedor);
+            resetColor(vistamenu.btnCompra);
+            resetColor(vistamenu.btnTurno);
+            System.out.println("dos");
+        }
+        if (e.getSource()==vistamenu.btnTurno || e.getSource() == vistamenu.lblTurno) {
+            resetColor(vistamenu.btnProveedor);
+            resetColor(vistamenu.btnCompra);
+            setColor(vistamenu.btnTurno);
+            System.out.println("tres");
+        }
+        
+        
+                    
+        
+        
+            
+        
+        
+        //System.out.println("viendo datos: " + e.getSource());
+        //Component hola = e.getComponent().;        
+        
         
         /*if () {
             System.out.println("hola a todos");
@@ -109,7 +146,7 @@ public class MenuAdmin_Controlador implements MouseListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
-
+        
     }
 
     @Override
