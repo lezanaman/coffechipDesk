@@ -1,3 +1,5 @@
+package com.coffecheap.bean;
+
 
 
 import com.coffecheap.bean.*;

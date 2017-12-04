@@ -35,60 +35,53 @@ public class frmProveedorGuardar extends javax.swing.JPanel {
         txtEmail = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(267, 444, 34, 14);
+        jLabel1.setBounds(250, 160, 34, 14);
 
         txtNombre.setText("jTextField1");
         jPanel1.add(txtNombre);
-        txtNombre.setBounds(366, 438, 59, 20);
+        txtNombre.setBounds(350, 150, 59, 20);
 
         txtNit.setText("jTextField2");
         jPanel1.add(txtNit);
-        txtNit.setBounds(366, 484, 59, 20);
+        txtNit.setBounds(350, 200, 59, 20);
 
         txtTelefono.setText("jTextField3");
         jPanel1.add(txtTelefono);
-        txtTelefono.setBounds(366, 522, 59, 20);
+        txtTelefono.setBounds(350, 240, 59, 20);
 
         txtEmail.setText("jTextField4");
         jPanel1.add(txtEmail);
-        txtEmail.setBounds(366, 560, 59, 20);
+        txtEmail.setBounds(350, 280, 59, 20);
 
         txtDireccion.setText("jTextField5");
         jPanel1.add(txtDireccion);
-        txtDireccion.setBounds(366, 598, 59, 20);
+        txtDireccion.setBounds(350, 310, 59, 20);
 
         jTextField6.setText("jTextField6");
         jPanel1.add(jTextField6);
-        jTextField6.setBounds(366, 636, 59, 20);
-
-        jLabel2.setBackground(new java.awt.Color(204, 255, 102));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/coffecheap/imagenes/about.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(210, 60, 310, 360);
+        jTextField6.setBounds(350, 350, 59, 20);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField txtDireccion;

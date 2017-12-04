@@ -35,6 +35,11 @@ public class MenuAdmin_Controlador implements MouseListener {
         vistamenu.lblCompraEliminar.addMouseListener(this);
         vistamenu.btnCompraModificar.addMouseListener(this);
         vistamenu.lblCompraModificar.addMouseListener(this);
+        
+        
+        vistamenu.btnProveedorGuardar.addMouseListener(this);
+        vistamenu.btnProveedorEliminar.addMouseListener(this);
+        vistamenu.btnProveedorModificar.addMouseListener(this);
     }
 
     /*public void actionPerformed(ActionEvent e) {
@@ -114,8 +119,9 @@ public class MenuAdmin_Controlador implements MouseListener {
             resetColor(vistamenu.btnEstadoMesaEliminar);
             resetColor(vistamenu.btnEstadoMesaModificar);
             
-            
-            
+            resetColor(vistamenu.btnProveedorGuardar);
+            resetColor(vistamenu.btnProveedorEliminar);
+            resetColor(vistamenu.btnProveedorModificar);
 
             TurnoDao dao = new TurnoDao();
             frmTurnoGuardar vistaturno = new frmTurnoGuardar();
@@ -144,6 +150,10 @@ public class MenuAdmin_Controlador implements MouseListener {
             resetColor(vistamenu.btnEstadoMesaGuardar);
             resetColor(vistamenu.btnEstadoMesaEliminar);
             resetColor(vistamenu.btnEstadoMesaModificar);
+            
+            resetColor(vistamenu.btnProveedorGuardar);
+            resetColor(vistamenu.btnProveedorEliminar);
+            resetColor(vistamenu.btnProveedorModificar);
             
             TurnoDao dao = new TurnoDao();
             frmTurnoGuardar vistaturno = new frmTurnoGuardar();
@@ -174,6 +184,10 @@ public class MenuAdmin_Controlador implements MouseListener {
             resetColor(vistamenu.btnEstadoMesaEliminar);
             resetColor(vistamenu.btnEstadoMesaModificar);
             
+            resetColor(vistamenu.btnProveedorGuardar);
+            resetColor(vistamenu.btnProveedorEliminar);
+            resetColor(vistamenu.btnProveedorModificar);
+            
             TurnoDao dao = new TurnoDao();
             frmTurnoGuardar vistaturno = new frmTurnoGuardar();
             frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
@@ -182,6 +196,86 @@ public class MenuAdmin_Controlador implements MouseListener {
             controlador.MostrarDM();
             new CambiaPanel(this.vistamenu.panDatos, vistamodi);
         }
+        
+        if (e.getSource() == vistamenu.btnProveedorGuardar || e.getSource() == vistamenu.lblProveedorGuardar) {
+            resetColor(vistamenu.btnTurnoGuardar);
+            resetColor(vistamenu.btnTurnoModificar);
+            resetColor(vistamenu.btnTurnoEliminar);
+            
+            resetColor(vistamenu.btnCompraEliminar);
+            resetColor(vistamenu.btnCompraModificar);
+            resetColor(vistamenu.btnCompraGuardar);
+            
+            resetColor(vistamenu.btnClienteModificar);
+            resetColor(vistamenu.btnClienteEliminar);
+            resetColor(vistamenu.btnClienteGuardar);
+            
+            resetColor(vistamenu.btnUsuarioGuardar);
+            resetColor(vistamenu.btnUsuarioEliminar);
+            resetColor(vistamenu.btnUsuarioModificar);
+            
+            resetColor(vistamenu.btnEstadoMesaGuardar);
+            resetColor(vistamenu.btnEstadoMesaEliminar);
+            resetColor(vistamenu.btnEstadoMesaModificar);
+            
+            setColor(vistamenu.btnProveedorGuardar);
+            resetColor(vistamenu.btnProveedorEliminar);
+            resetColor(vistamenu.btnProveedorModificar);
+        }
+        
+        
+        if (e.getSource() == vistamenu.btnProveedorEliminar || e.getSource() == vistamenu.lblProveedorEliminar) {
+            resetColor(vistamenu.btnTurnoGuardar);
+            resetColor(vistamenu.btnTurnoModificar);
+            resetColor(vistamenu.btnTurnoEliminar);
+            
+            resetColor(vistamenu.btnCompraEliminar);
+            resetColor(vistamenu.btnCompraModificar);
+            resetColor(vistamenu.btnCompraGuardar);
+            
+            resetColor(vistamenu.btnClienteModificar);
+            resetColor(vistamenu.btnClienteEliminar);
+            resetColor(vistamenu.btnClienteGuardar);
+            
+            resetColor(vistamenu.btnUsuarioGuardar);
+            resetColor(vistamenu.btnUsuarioEliminar);
+            resetColor(vistamenu.btnUsuarioModificar);
+            
+            resetColor(vistamenu.btnEstadoMesaGuardar);
+            resetColor(vistamenu.btnEstadoMesaEliminar);
+            resetColor(vistamenu.btnEstadoMesaModificar);
+            
+            resetColor(vistamenu.btnProveedorGuardar);
+            setColor(vistamenu.btnProveedorEliminar);
+            resetColor(vistamenu.btnProveedorModificar);
+        }
+        
+        if (e.getSource() == vistamenu.btnProveedorModificar || e.getSource() == vistamenu.lblProveedorModificar) {
+            resetColor(vistamenu.btnTurnoGuardar);
+            resetColor(vistamenu.btnTurnoModificar);
+            resetColor(vistamenu.btnTurnoEliminar);
+            
+            resetColor(vistamenu.btnCompraEliminar);
+            resetColor(vistamenu.btnCompraModificar);
+            resetColor(vistamenu.btnCompraGuardar);
+            
+            resetColor(vistamenu.btnClienteModificar);
+            resetColor(vistamenu.btnClienteEliminar);
+            resetColor(vistamenu.btnClienteGuardar);
+            
+            resetColor(vistamenu.btnUsuarioGuardar);
+            resetColor(vistamenu.btnUsuarioEliminar);
+            resetColor(vistamenu.btnUsuarioModificar);
+            
+            resetColor(vistamenu.btnEstadoMesaGuardar);
+            resetColor(vistamenu.btnEstadoMesaEliminar);
+            resetColor(vistamenu.btnEstadoMesaModificar);
+            
+            resetColor(vistamenu.btnProveedorGuardar);
+            resetColor(vistamenu.btnProveedorEliminar);
+            setColor(vistamenu.btnProveedorModificar);
+        }
+        
     }
 
     @Override
