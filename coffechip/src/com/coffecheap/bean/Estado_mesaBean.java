@@ -10,6 +10,7 @@ import com.coffecheap.dao.Estado_mesaDao;
 
 import java.util.List;
 
+
 public class Estado_mesaBean {
 
   private Estado_mesa estado_mesa = new Estado_mesa();
