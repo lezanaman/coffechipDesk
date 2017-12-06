@@ -74,7 +74,7 @@ public class Estado_mesa_Controlador {
         
         try {
             dao = new ProveedorDao();
-            listar = dao.Mostrar();
+           // listar = dao.Mostrar();
         } catch (Exception e) {
             throw e;
         }

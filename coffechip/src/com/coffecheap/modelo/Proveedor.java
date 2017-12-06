@@ -7,7 +7,7 @@ public class Proveedor {
     int id_proveedor = 0;
     String nombre = null;
     String nit = null;
-    String telefono = null;
+    int telefono =0;
     String mail = null;
     String direccion = null;
 
@@ -41,11 +41,11 @@ public class Proveedor {
         this.nit = nit;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 

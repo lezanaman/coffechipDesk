@@ -29,10 +29,11 @@ public class frmProveedorEliminar extends javax.swing.JPanel {
         java.awt.GridBagConstraints gridBagConstraints;
 
         panPrincipal = new javax.swing.JPanel();
-        lblTitulo = new javax.swing.JLabel();
         lblCodigo = new javax.swing.JLabel();
         txtCodigo = new javax.swing.JTextField();
         btnEliminar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblEliminar = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1570, 800));
@@ -41,14 +42,9 @@ public class frmProveedorEliminar extends javax.swing.JPanel {
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         panPrincipal.setLayout(null);
 
-        lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitulo.setText("Turno:");
-        panPrincipal.add(lblTitulo);
-        lblTitulo.setBounds(450, 20, 79, 29);
-
         lblCodigo.setText("Codigo:");
         panPrincipal.add(lblCodigo);
-        lblCodigo.setBounds(310, 90, 110, 14);
+        lblCodigo.setBounds(320, 60, 110, 14);
 
         txtCodigo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -57,19 +53,36 @@ public class frmProveedorEliminar extends javax.swing.JPanel {
             }
         });
         panPrincipal.add(txtCodigo);
-        txtCodigo.setBounds(370, 80, 230, 40);
+        txtCodigo.setBounds(380, 50, 230, 40);
 
         btnEliminar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnEliminar.setText("Eliminar");
         panPrincipal.add(btnEliminar);
-        btnEliminar.setBounds(470, 230, 120, 40);
+        btnEliminar.setBounds(630, 140, 120, 40);
+
+        tblEliminar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tblEliminar);
+
+        panPrincipal.add(jScrollPane1);
+        jScrollPane1.setBounds(10, 220, 890, 230);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 909;
-        gridBagConstraints.ipady = 459;
+        gridBagConstraints.ipady = 539;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 1, 0);
         add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -84,9 +97,10 @@ public class frmProveedorEliminar extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnEliminar;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCodigo;
-    private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel panPrincipal;
+    public javax.swing.JTable tblEliminar;
     public javax.swing.JTextField txtCodigo;
     // End of variables declaration//GEN-END:variables
 }

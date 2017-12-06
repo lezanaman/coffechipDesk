@@ -67,7 +67,7 @@ public class TurnoDao extends Dao {
         return respuesta;
     }
 
-    public ResultSet VerDatos() throws Exception {
+     public ResultSet VerDatos() throws Exception {
         ResultSet rs;
 
         try {

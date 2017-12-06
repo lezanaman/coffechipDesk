@@ -29,12 +29,21 @@ public class frmProveedorModificar extends javax.swing.JPanel {
         java.awt.GridBagConstraints gridBagConstraints;
 
         panPrincipal = new javax.swing.JPanel();
-        lblTitulo = new javax.swing.JLabel();
-        txtHorario = new javax.swing.JFormattedTextField();
-        lblHorario = new javax.swing.JLabel();
-        lblObservaciones = new javax.swing.JLabel();
-        txtObservaciones = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
+        txtTelefono = new javax.swing.JFormattedTextField();
+        lblTelefono = new javax.swing.JLabel();
+        lblNit = new javax.swing.JLabel();
+        txtNit = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        lblNombre = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
+        lblEmail = new javax.swing.JLabel();
+        lblDireccion = new javax.swing.JLabel();
+        txtDireccion = new javax.swing.JTextField();
+        btnModificar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblModificar = new javax.swing.JTable();
+        txtCodigo = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1570, 800));
@@ -43,54 +52,112 @@ public class frmProveedorModificar extends javax.swing.JPanel {
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         panPrincipal.setLayout(null);
 
-        lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitulo.setText("Turno:");
-        panPrincipal.add(lblTitulo);
-        lblTitulo.setBounds(450, 20, 79, 29);
-
         try {
-            txtHorario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## a ##:##")));
+            txtTelefono.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("########")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        txtHorario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        panPrincipal.add(txtHorario);
-        txtHorario.setBounds(370, 80, 230, 40);
+        txtTelefono.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtTelefono);
+        txtTelefono.setBounds(420, 240, 220, 40);
 
-        lblHorario.setText("Horario de Turno:");
-        panPrincipal.add(lblHorario);
-        lblHorario.setBounds(240, 90, 100, 14);
+        lblTelefono.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblTelefono.setText("Telefono");
+        panPrincipal.add(lblTelefono);
+        lblTelefono.setBounds(340, 250, 80, 14);
 
-        lblObservaciones.setText("Observaciones:");
-        panPrincipal.add(lblObservaciones);
-        lblObservaciones.setBounds(250, 160, 110, 14);
+        lblNit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblNit.setText("Nit");
+        panPrincipal.add(lblNit);
+        lblNit.setBounds(360, 190, 60, 14);
 
-        txtObservaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        panPrincipal.add(txtObservaciones);
-        txtObservaciones.setBounds(370, 150, 230, 40);
+        txtNit.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtNit);
+        txtNit.setBounds(420, 180, 220, 40);
 
-        btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnGuardar.setText("Guardar");
-        panPrincipal.add(btnGuardar);
-        btnGuardar.setBounds(470, 230, 120, 40);
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtNombre);
+        txtNombre.setBounds(420, 120, 220, 40);
+
+        lblNombre.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblNombre.setText("Nombre");
+        panPrincipal.add(lblNombre);
+        lblNombre.setBounds(340, 130, 100, 14);
+
+        txtEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtEmail);
+        txtEmail.setBounds(420, 300, 220, 40);
+
+        lblEmail.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblEmail.setText("Email");
+        panPrincipal.add(lblEmail);
+        lblEmail.setBounds(360, 310, 60, 14);
+
+        lblDireccion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDireccion.setText("Direccion");
+        panPrincipal.add(lblDireccion);
+        lblDireccion.setBounds(350, 370, 90, 14);
+
+        txtDireccion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtDireccion);
+        txtDireccion.setBounds(420, 360, 220, 40);
+
+        btnModificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnModificar.setText("Modificar");
+        panPrincipal.add(btnModificar);
+        btnModificar.setBounds(590, 440, 120, 40);
+
+        tblModificar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tblModificar);
+
+        panPrincipal.add(jScrollPane1);
+        jScrollPane1.setBounds(10, 520, 890, 260);
+        panPrincipal.add(txtCodigo);
+        txtCodigo.setBounds(420, 60, 220, 40);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("Codigo");
+        panPrincipal.add(jLabel1);
+        jLabel1.setBounds(340, 70, 60, 20);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 909;
-        gridBagConstraints.ipady = 459;
+        gridBagConstraints.ipady = 829;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 143, 0);
         add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel lblHorario;
-    private javax.swing.JLabel lblObservaciones;
-    private javax.swing.JLabel lblTitulo;
+    public javax.swing.JButton btnModificar;
+    public javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblNit;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblTelefono;
     private javax.swing.JPanel panPrincipal;
-    public javax.swing.JFormattedTextField txtHorario;
-    public javax.swing.JTextField txtObservaciones;
+    public javax.swing.JTable tblModificar;
+    public javax.swing.JTextField txtCodigo;
+    public javax.swing.JTextField txtDireccion;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextField txtNit;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JFormattedTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }
