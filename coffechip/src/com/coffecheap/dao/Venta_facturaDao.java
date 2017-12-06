@@ -5,6 +5,7 @@
  */
 package com.coffecheap.dao;
 
+import com.coffecheap.modelo.Cliente;
 import com.coffecheap.modelo.Venta_factura;
 import com.coffecheap.modelo.Proveedor_productos;
 
@@ -194,7 +195,7 @@ public class Venta_facturaDao extends Dao {
     return estado;
   }
 
-  public void registrar_venta(Venta_factura VF, int mesa) throws Exception {
+  public void registrar_venta(Venta_factura VF, int mesa, int clienteid) throws Exception {
     int idPedido = 0;
     double TenToT = 0.0;
     try {
@@ -247,8 +248,8 @@ public class Venta_facturaDao extends Dao {
 //      System.out.println("sql.Date: " + sqlDate);
 //      System.out.println("sql.Time: " + sqlTime);
 //      System.out.println("sql.Timestamp: " + sqlTimestamp);
-      PreparedStatement st = this.getCon().prepareStatement("INSERT INTO `venta_factura` (`nit_empresa`, `subtotal`, `iva`, `propina`, `total`, `fecha_emision`, `id_pedido`) "
-              + "VALUES (?, ?, ?, ?, ?, ?, ?);");
+      PreparedStatement st = this.getCon().prepareStatement("INSERT INTO `venta_factura` (`nit_empresa`, `subtotal`, `iva`, `propina`, `total`, `fecha_emision`, `id_pedido`, `id_cliente`) "
+              + "VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
 
       st.setString(1, VF.getNit_empresa());
       st.setDouble(2, VF.getSubtotal());
@@ -257,6 +258,7 @@ public class Venta_facturaDao extends Dao {
       st.setDouble(5, VF.getTotal());
       st.setTimestamp(6, VF.getFecha_emision());
       st.setInt(7, idPedido);
+      st.setInt(8, clienteid);
 
       System.out.println("DAO");
       System.out.println("ID " + VF.getId_venta_factura());
@@ -274,7 +276,20 @@ public class Venta_facturaDao extends Dao {
       throw ex;
     } finally {
       this.Desconecar();
+      VF.setId_venta_factura(0);
+      VF.setNit_empresa(null);
+      VF.setSubtotal(0.0);
+      VF.setIva(0.0);
+      VF.setPropina(0.0);
+      VF.setTotal(0.0);
+      VF.setFecha_emision(null);
+      VF.getPedido().setId_pedido(0);
 
+      Cliente cli = new Cliente();
+      cli.setId_cliente(0);
+      cli.setNit_cliente(null);
+      cli.setNombre(null);
+      cli.setDireccion(null);
     }
 
   }

@@ -42,7 +42,7 @@ public class ReservaBean
                         
                         
                        dao = new ReservaDao();
-                       dao.registrar(reserva);
+                       //dao.registrar(reserva);
                        
         } catch (Exception e) {
             System.out.println(e);
