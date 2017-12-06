@@ -31,11 +31,8 @@ public class Turno_Controlador implements ActionListener {
         this.vistaturnomodi = vistamodi;
         this.turnodao = turnodao;
         this.vistaturnomodi.btnModificar.addActionListener(this);
-        this.vistaturnomodi.btnModificar.setActionCommand("Modificar");
         this.vistaturnoelim.btnEliminar.addActionListener(this);
-        this.vistaturnoelim.btnEliminar.setActionCommand("Eliminar");
         this.vistaturno.btnGuardar.addActionListener(this);
-        this.vistaturno.btnGuardar.setActionCommand("Guardar");
     }
 
     public void MostrarD() {
@@ -79,12 +76,12 @@ public class Turno_Controlador implements ActionListener {
     public void Guardar() {
 
         try {
-            this.turno.setHorario_turno(this.vistaturno.txtHorario.getText());
-            this.turno.setObservaciones(this.vistaturno.txtObservaciones.getText());
 
             if (this.vistaturno.txtHorario.getText().equals("  :   a   :  ") || this.vistaturno.txtObservaciones.getText().length() == 0) {
                 JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
             } else {
+                this.turno.setHorario_turno(this.vistaturno.txtHorario.getText());
+                this.turno.setObservaciones(this.vistaturno.txtObservaciones.getText());
                 String respuesta = turnodao.Ingresar(turno);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
@@ -105,13 +102,13 @@ public class Turno_Controlador implements ActionListener {
 
     public void ModificarD() {
         try {
-            this.turno.setId_turno(Integer.parseInt(this.vistaturnomodi.txtCodigoMod.getText()));
-            this.turno.setHorario_turno(this.vistaturnomodi.txtHorarioMod.getText());
-            this.turno.setObservaciones(this.vistaturnomodi.txtObservacionesMod.getText());
 
-            if (this.vistaturnomodi.txtHorarioMod.getText().equals("  :   a   :  ") || this.vistaturnomodi.txtObservacionesMod.getText().length() == 0 || this.vistaturnomodi.txtCodigoMod.getText().length()==0) {
+            if (this.vistaturnomodi.txtHorarioMod.getText().equals("  :   a   :  ") || this.vistaturnomodi.txtObservacionesMod.getText().length() == 0 || this.vistaturnomodi.txtCodigoMod.getText().length() == 0) {
                 JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
             } else {
+                this.turno.setId_turno(Integer.parseInt(this.vistaturnomodi.txtCodigoMod.getText()));
+                this.turno.setHorario_turno(this.vistaturnomodi.txtHorarioMod.getText());
+                this.turno.setObservaciones(this.vistaturnomodi.txtObservacionesMod.getText());
                 String respuesta = turnodao.Modificar(turno);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
@@ -132,10 +129,11 @@ public class Turno_Controlador implements ActionListener {
     public void Eliminar() {
 
         try {
-            this.turno.setId_turno(Integer.parseInt(this.vistaturnoelim.txtCodigo.getText()));
+            
             if (this.vistaturnoelim.txtCodigo.getText().length() == 0) {
                 JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
             } else {
+                this.turno.setId_turno(Integer.parseInt(this.vistaturnoelim.txtCodigo.getText()));
                 String respuesta = turnodao.Eliminar(turno);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
@@ -154,18 +152,17 @@ public class Turno_Controlador implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String evento = e.getActionCommand();
 
-        if (evento.equals("Guardar")) {
+        if (e.getSource() == vistaturno.btnGuardar) {
             Guardar();
         }
 
-        if (evento.equals("Eliminar")) {
+        if (e.getSource() == vistaturnoelim.btnEliminar) {
             Eliminar();
             MostrarD();
         }
 
-        if (evento.equals("Modificar")) {
+        if (e.getSource() == vistaturnomodi.btnModificar) {
             ModificarD();
             MostrarDM();
         }

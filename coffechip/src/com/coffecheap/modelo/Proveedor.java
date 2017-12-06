@@ -1,42 +1,21 @@
- package com.coffecheap.modelo;
+package com.coffecheap.modelo;
 
 import java.util.Objects;
 
-public class Proveedor 
-{
-    int id_proveedor = 0; 
+public class Proveedor {
+
+    int id_proveedor = 0;
     String nombre = null;
     String nit = null;
-    int telefono = 0;
+    String telefono = null;
     String mail = null;
     String direccion = null;
 
     public Proveedor() {
+        
     }
 
-    public String getNit() {
-        return nit;
-    }
-
-    public void setNit(String nit) {
-        this.nit = nit;
-    }
-
-    public Proveedor(int id_provedor) {
-        this.id_proveedor = id_provedor;
-    }
-
-    public Proveedor(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Proveedor(int id_provedor, String nombre, int telefono, String mail, String direccion) {
-        this.id_proveedor = id_provedor;
-        this.nombre = nombre;
-        this.telefono = telefono;
-        this.mail = mail;
-        this.direccion = direccion;
-    }
+    
     
     public int getId_proveedor() {
         return id_proveedor;
@@ -54,11 +33,19 @@ public class Proveedor
         this.nombre = nombre;
     }
 
-    public int getTelefono() {
+    public String getNit() {
+        return nit;
+    }
+
+    public void setNit(String nit) {
+        this.nit = nit;
+    }
+
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -80,12 +67,13 @@ public class Proveedor
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 71 * hash + this.id_proveedor;
-        hash = 71 * hash + Objects.hashCode(this.nombre);
-        hash = 71 * hash + this.telefono;
-        hash = 71 * hash + Objects.hashCode(this.mail);
-        hash = 71 * hash + Objects.hashCode(this.direccion);
+        int hash = 7;
+        hash = 23 * hash + this.id_proveedor;
+        hash = 23 * hash + Objects.hashCode(this.nombre);
+        hash = 23 * hash + Objects.hashCode(this.nit);
+        hash = 23 * hash + Objects.hashCode(this.telefono);
+        hash = 23 * hash + Objects.hashCode(this.mail);
+        hash = 23 * hash + Objects.hashCode(this.direccion);
         return hash;
     }
 
@@ -104,10 +92,13 @@ public class Proveedor
         if (this.id_proveedor != other.id_proveedor) {
             return false;
         }
-        if (this.telefono != other.telefono) {
+        if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
-        if (!Objects.equals(this.nombre, other.nombre)) {
+        if (!Objects.equals(this.nit, other.nit)) {
+            return false;
+        }
+        if (!Objects.equals(this.telefono, other.telefono)) {
             return false;
         }
         if (!Objects.equals(this.mail, other.mail)) {
@@ -118,6 +109,7 @@ public class Proveedor
 
     @Override
     public String toString() {
-        return "Proveedor{" + "id_provedor=" + id_proveedor + ", nombre=" + nombre + ", telefono=" + telefono + ", mail=" + mail + ", direccion=" + direccion + '}';
-    }
+        return "Proveedor{" + "id_proveedor=" + id_proveedor + ", nombre=" + nombre + ", nit=" + nit + ", telefono=" + telefono + ", mail=" + mail + ", direccion=" + direccion + '}';
+    }   
+   
 }

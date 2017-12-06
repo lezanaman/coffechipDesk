@@ -2,79 +2,62 @@ package com.coffecheap.bean;
 
 import com.coffecheap.dao.ProveedorDao;
 import com.coffecheap.modelo.Proveedor;
-import java.util.List;
+import com.coffecheap.vista.frmProveedorEliminar;
+import com.coffecheap.vista.frmProveedorGuardar;
+import com.coffecheap.vista.frmProveedorModificar;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
-public class Proveedor_Controlador {
+public class Proveedor_Controlador implements ActionListener {
 
+    frmProveedorGuardar vistaguardar = new frmProveedorGuardar();
+    frmProveedorModificar vistamodificar = new frmProveedorModificar();
+    frmProveedorEliminar vistaeliminar = new frmProveedorEliminar();
+    ProveedorDao dao = new ProveedorDao();
     Proveedor proveedor = new Proveedor();
-    List <Proveedor> listar;
 
-    public Proveedor getProveedor() {
-        return proveedor;
+    public Proveedor_Controlador(frmProveedorGuardar vistaguardar, frmProveedorModificar vistamodificar, frmProveedorEliminar vistaeliminar, ProveedorDao dao) {
+
+        this.vistaguardar = vistaguardar;
+        this.vistamodificar = vistamodificar;
+        this.vistaeliminar = vistaeliminar;
+
+        this.vistaguardar.btnGuardar.addActionListener(this);
+
     }
 
-    public void setProveedor(Proveedor proveedor) {
-        this.proveedor = proveedor;
-    }
+    public void Guardar() {
 
-    public List<Proveedor> getListar() {
-        return listar;
-    }
-
-    public void setListar(List<Proveedor> listar) {
-        this.listar = listar;
-    }
-
-    
-    public Proveedor_Controlador() {
-    }
-    
-    public void Ingresar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-            dao.Ingresar(proveedor);
-        } catch (Exception e) {
-            throw e;
+        if (this.vistaguardar.txtNombre.getText() == null || this.vistaguardar.txtNit.getText() == null) {
+            JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
+        } else {
+            try {
+                proveedor.setNombre(this.vistaguardar.txtNombre.getText());
+                proveedor.setNit(this.vistaguardar.txtNit.getText());
+                proveedor.setTelefono(this.vistaguardar.txtTelefono.getText());
+                proveedor.setMail(this.vistaguardar.txtEmail.getText());
+                proveedor.setDireccion(this.vistaguardar.txtDireccion.getText());
+                dao.Ingresar(proveedor);
+                JOptionPane.showMessageDialog(null, "Ingresado Correctamente");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
         }
+
     }
-    
-    public void Eliminar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-            dao.Borrar(proveedor);
-        } catch (Exception e) {
-            throw e;
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == vistaguardar.btnGuardar) {
+            Guardar();
         }
+        
+        /*if (e.getSource() == ) {
+            
+        }*/
+
     }
-    
-    public void Modificar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-            dao.Editar(proveedor);
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-    
-    public void Mostrar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-            listar = dao.Mostrar();
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-    
+
 }

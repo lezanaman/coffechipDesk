@@ -12,7 +12,7 @@ package com.coffecheap.vista;
 public class frmProveedorEliminar extends javax.swing.JPanel {
 
     /**
-     * Creates new form frmCompraGuardar
+     * Creates new form frmTurno
      */
     public frmProveedorEliminar() {
         initComponents();
@@ -26,50 +26,67 @@ public class frmProveedorEliminar extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         panPrincipal = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblCodigo = new javax.swing.JLabel();
+        txtCodigo = new javax.swing.JTextField();
+        btnEliminar = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1570, 800));
+        setLayout(new java.awt.GridBagLayout());
 
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panPrincipal.setLayout(null);
 
-        jLabel1.setText("jLabel1");
+        lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitulo.setText("Turno:");
+        panPrincipal.add(lblTitulo);
+        lblTitulo.setBounds(450, 20, 79, 29);
 
-        javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
-        panPrincipal.setLayout(panPrincipalLayout);
-        panPrincipalLayout.setHorizontalGroup(
-            panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panPrincipalLayout.createSequentialGroup()
-                .addGap(232, 232, 232)
-                .addComponent(jLabel1)
-                .addContainerGap(552, Short.MAX_VALUE))
-        );
-        panPrincipalLayout.setVerticalGroup(
-            panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panPrincipalLayout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(jLabel1)
-                .addContainerGap(433, Short.MAX_VALUE))
-        );
+        lblCodigo.setText("Codigo:");
+        panPrincipal.add(lblCodigo);
+        lblCodigo.setBounds(310, 90, 110, 14);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        txtCodigo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCodigoKeyTyped(evt);
+            }
+        });
+        panPrincipal.add(txtCodigo);
+        txtCodigo.setBounds(370, 80, 230, 40);
+
+        btnEliminar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnEliminar.setText("Eliminar");
+        panPrincipal.add(btnEliminar);
+        btnEliminar.setBounds(470, 230, 120, 40);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 909;
+        gridBagConstraints.ipady = 459;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped
+        char c = evt.getKeyChar();
+
+        if (c < '0' || c > '9') {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCodigoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JButton btnEliminar;
+    private javax.swing.JLabel lblCodigo;
+    private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel panPrincipal;
+    public javax.swing.JTextField txtCodigo;
     // End of variables declaration//GEN-END:variables
 }

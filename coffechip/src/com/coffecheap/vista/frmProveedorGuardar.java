@@ -7,12 +7,12 @@ package com.coffecheap.vista;
 
 /**
  *
- * @author user
+ * @author javam
  */
 public class frmProveedorGuardar extends javax.swing.JPanel {
 
     /**
-     * Creates new form frmProveedorGuardar
+     * Creates new form frmTurno
      */
     public frmProveedorGuardar() {
         initComponents();
@@ -26,68 +26,107 @@ public class frmProveedorGuardar extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        panPrincipal = new javax.swing.JPanel();
+        lblNombre = new javax.swing.JLabel();
+        lblNit = new javax.swing.JLabel();
+        btnGuardar = new javax.swing.JButton();
+        lblTelefono = new javax.swing.JLabel();
+        lblEmail = new javax.swing.JLabel();
+        lblDireccion = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         txtNit = new javax.swing.JTextField();
-        txtTelefono = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JFormattedTextField();
         txtEmail = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(null);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1570, 800));
+        setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(250, 160, 34, 14);
+        panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panPrincipal.setLayout(null);
 
-        txtNombre.setText("jTextField1");
-        jPanel1.add(txtNombre);
-        txtNombre.setBounds(350, 150, 59, 20);
+        lblNombre.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblNombre.setText("Nombre");
+        panPrincipal.add(lblNombre);
+        lblNombre.setBounds(340, 40, 100, 14);
 
-        txtNit.setText("jTextField2");
-        jPanel1.add(txtNit);
-        txtNit.setBounds(350, 200, 59, 20);
+        lblNit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblNit.setText("Nit");
+        panPrincipal.add(lblNit);
+        lblNit.setBounds(360, 100, 60, 14);
 
-        txtTelefono.setText("jTextField3");
-        jPanel1.add(txtTelefono);
-        txtTelefono.setBounds(350, 240, 59, 20);
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnGuardar.setText("Guardar");
+        panPrincipal.add(btnGuardar);
+        btnGuardar.setBounds(580, 390, 120, 40);
 
-        txtEmail.setText("jTextField4");
-        jPanel1.add(txtEmail);
-        txtEmail.setBounds(350, 280, 59, 20);
+        lblTelefono.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblTelefono.setText("Telefono");
+        panPrincipal.add(lblTelefono);
+        lblTelefono.setBounds(340, 160, 80, 14);
 
-        txtDireccion.setText("jTextField5");
-        jPanel1.add(txtDireccion);
-        txtDireccion.setBounds(350, 310, 59, 20);
+        lblEmail.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblEmail.setText("Email");
+        panPrincipal.add(lblEmail);
+        lblEmail.setBounds(360, 220, 60, 14);
 
-        jTextField6.setText("jTextField6");
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(350, 350, 59, 20);
+        lblDireccion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblDireccion.setText("Direccion");
+        panPrincipal.add(lblDireccion);
+        lblDireccion.setBounds(350, 280, 90, 14);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
-        );
+        txtNombre.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtNombre);
+        txtNombre.setBounds(420, 30, 220, 40);
+
+        txtNit.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtNit);
+        txtNit.setBounds(420, 90, 220, 40);
+
+        try {
+            txtTelefono.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtTelefono.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtTelefono.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtTelefono);
+        txtTelefono.setBounds(420, 150, 220, 40);
+
+        txtEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtEmail);
+        txtEmail.setBounds(420, 210, 220, 40);
+
+        txtDireccion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        panPrincipal.add(txtDireccion);
+        txtDireccion.setBounds(420, 270, 220, 40);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 979;
+        gridBagConstraints.ipady = 579;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 1, 33);
+        add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtNit;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtTelefono;
+    public javax.swing.JButton btnGuardar;
+    private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblNit;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblTelefono;
+    private javax.swing.JPanel panPrincipal;
+    public javax.swing.JTextField txtDireccion;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextField txtNit;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JFormattedTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }

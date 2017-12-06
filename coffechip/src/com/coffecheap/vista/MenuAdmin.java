@@ -20,7 +20,7 @@ public class MenuAdmin extends javax.swing.JFrame {
      */
     public MenuAdmin() {
         initComponents();
-        
+        jspMenuLateral.getVerticalScrollBar().setUnitIncrement(16);
     }
 
     /**
@@ -1290,7 +1290,7 @@ public class MenuAdmin extends javax.swing.JFrame {
             .addGroup(panAtrasLayout.createSequentialGroup()
                 .addComponent(panNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jspMenuLateral))
+                .addComponent(jspMenuLateral, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

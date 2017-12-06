@@ -1,7 +1,11 @@
 package com.coffecheap.bean;
 
+import com.coffecheap.dao.ProveedorDao;
 import com.coffecheap.dao.TurnoDao;
 import com.coffecheap.vista.MenuAdmin;
+import com.coffecheap.vista.frmProveedorEliminar;
+import com.coffecheap.vista.frmProveedorGuardar;
+import com.coffecheap.vista.frmProveedorModificar;
 import com.coffecheap.vista.frmTurnoGuardar;
 import com.coffecheap.vista.frmTurnoEliminar;
 import com.coffecheap.vista.frmTurnoModificar;
@@ -221,6 +225,13 @@ public class MenuAdmin_Controlador implements MouseListener {
             setColor(vistamenu.btnProveedorGuardar);
             resetColor(vistamenu.btnProveedorEliminar);
             resetColor(vistamenu.btnProveedorModificar);
+            ProveedorDao dao = new ProveedorDao();
+            frmProveedorGuardar vistaguardar = new frmProveedorGuardar();
+            frmProveedorEliminar vistaeliminar = new frmProveedorEliminar();
+            frmProveedorModificar vistamodificar = new frmProveedorModificar();
+            Proveedor_Controlador controlador = new Proveedor_Controlador(vistaguardar, vistamodificar, vistaeliminar, dao);
+            new CambiaPanel(this.vistamenu.panDatos, vistaguardar);
+            
         }
         
         
@@ -248,6 +259,13 @@ public class MenuAdmin_Controlador implements MouseListener {
             resetColor(vistamenu.btnProveedorGuardar);
             setColor(vistamenu.btnProveedorEliminar);
             resetColor(vistamenu.btnProveedorModificar);
+            
+            ProveedorDao dao = new ProveedorDao();
+            frmProveedorGuardar vistaguardar = new frmProveedorGuardar();
+            frmProveedorEliminar vistaeliminar = new frmProveedorEliminar();
+            frmProveedorModificar vistamodificar = new frmProveedorModificar();
+            Proveedor_Controlador controlador = new Proveedor_Controlador(vistaguardar, vistamodificar, vistaeliminar, dao);
+            new CambiaPanel(this.vistamenu.panDatos, vistaeliminar);
         }
         
         if (e.getSource() == vistamenu.btnProveedorModificar || e.getSource() == vistamenu.lblProveedorModificar) {
