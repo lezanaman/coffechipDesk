@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import com.coffecheap.modelo.Compra;
+import com.coffecheap.modelo.Orden_compras;
 import com.coffecheap.modelo.Producto;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -71,13 +72,10 @@ public class CompraDao extends Dao {
             st.setInt(5, compra.getNo_fac());
             st.setString(6, compra.getSerie());
 
-            System.out.println("año: " + compra.getFechaEntrega().substring(6, 10));
-            System.out.println("mes: " + compra.getFechaEntrega().substring(3, 5));
-            System.out.println("dia: " + compra.getFechaEntrega().substring(0, 2));
-            String fecha = compra.getFechaEntrega().substring(6, 10) + "-" + compra.getFechaEntrega().substring(3, 5) + "-"
-                    + compra.getFechaEntrega().substring(0, 2);
-            System.out.println("Fecha completa: " + fecha);
-            st.setString(7, fecha);
+            /*String fecha = compra.getFechaEntrega().substring(6, 10) + "-" + compra.getFechaEntrega().substring(3, 5) + "-"
+                    + compra.getFechaEntrega().substring(0, 2);*/
+
+            //st.setString(7, fecha);
             st.setInt(8, compra.getId_compras());
             st.executeUpdate();
         } catch (Exception e) {
@@ -138,7 +136,7 @@ public class CompraDao extends Dao {
                 compra.setCosto(rs.getInt("compra.costo"));
                 compra.setNo_fac(rs.getInt("compra.no_factura"));
                 compra.setSerie(rs.getString("compra.serie"));
-                compra.setFechaEntrega(rs.getString("compra.fecha_entregacompra"));
+                //compra.setFechaEntrega(rs.getString("compra.fecha_entregacompra"));
                 lista.add(compra);
             }
         } catch (Exception e) {
@@ -197,7 +195,31 @@ public class CompraDao extends Dao {
         return numero;
     }
 
-    /*public int CodigoProducto(int codigo) throws Exception {
+    public ResultSet ListarOrdenCompras() throws Exception {
+        ResultSet lista;
+        
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareCall("SELECT * FROM orden_compras");
+            lista = st.executeQuery();
+        } catch (Exception ex) {
+            throw ex;
+        }
+        return lista;
+    }
+    
+    public ResultSet ListarProducto() throws Exception{
+        ResultSet rs;
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareStatement("select * from producto");
+            rs = st.executeQuery();
+        } catch (Exception e) {
+            throw e;
+        }
+        return rs;
+    }
+        /*public int CodigoProducto(int codigo) throws Exception {
 
         int numero = 0;
         ResultSet rs;
@@ -220,8 +242,7 @@ public class CompraDao extends Dao {
         }
         return numero;
     }*/
-
-    /*public int CantidadProducto(int codigo) throws Exception {
+        /*public int CantidadProducto(int codigo) throws Exception {
 
         int numero = 0;
         ResultSet rs;
@@ -248,7 +269,7 @@ public class CompraDao extends Dao {
     public void ActualizarExistencia(int cantidad, int codigo) {
         try {
             this.Conectar();
-            PreparedStatement st = this.getCon().prepareStatement("update producto set existencia ="+cantidad+" where id_producto=" + codigo);
+            PreparedStatement st = this.getCon().prepareStatement("update producto set existencia =" + cantidad + " where id_producto=" + codigo);
             st.executeUpdate();
 
         } catch (Exception e) {
@@ -266,7 +287,7 @@ public class CompraDao extends Dao {
         }
     }
 
-   /* public int CantidadEnTabla(int codigo) throws Exception {
+    /* public int CantidadEnTabla(int codigo) throws Exception {
 
         int numero = 0;
         ResultSet rs;
@@ -289,7 +310,6 @@ public class CompraDao extends Dao {
         }
         return numero;
     }*/
-
     public void ActualizacionProductos(int codigo, int cantidad) throws Exception {
 
         try {

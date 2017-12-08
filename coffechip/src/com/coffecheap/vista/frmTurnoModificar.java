@@ -63,6 +63,11 @@ public class frmTurnoModificar extends javax.swing.JPanel {
         panPrincipal.add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 100, -1));
 
         txtCodigoMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtCodigoMod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCodigoModKeyTyped(evt);
+            }
+        });
         panPrincipal.add(txtCodigoMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 230, 40));
 
         txtObservacionesMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -96,6 +101,14 @@ public class frmTurnoModificar extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 11, 0);
         add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtCodigoModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoModKeyTyped
+        char c = evt.getKeyChar();
+        
+        if (c < '0' || c > '9') {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCodigoModKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

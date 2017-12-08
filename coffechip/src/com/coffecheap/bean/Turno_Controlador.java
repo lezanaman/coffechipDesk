@@ -24,8 +24,7 @@ public class Turno_Controlador implements ActionListener {
     JTable tblturno;
     ResultSet rs;
 
-    public Turno_Controlador(frmTurnoGuardar vistaturno, frmTurnoEliminar vistaeliminar,
-            frmTurnoModificar vistamodi, TurnoDao turnodao) {
+    public Turno_Controlador(frmTurnoGuardar vistaturno, frmTurnoEliminar vistaeliminar,frmTurnoModificar vistamodi, TurnoDao turnodao) {
         this.vistaturno = vistaturno;
         this.vistaturnoelim = vistaeliminar;
         this.vistaturnomodi = vistamodi;

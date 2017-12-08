@@ -1,8 +1,12 @@
 package com.coffecheap.bean;
 
+import com.coffecheap.dao.CompraDao;
 import com.coffecheap.dao.ProveedorDao;
 import com.coffecheap.dao.TurnoDao;
 import com.coffecheap.vista.MenuAdmin;
+import com.coffecheap.vista.frmCompraEliminar;
+import com.coffecheap.vista.frmCompraGuardar;
+import com.coffecheap.vista.frmCompraModificar;
 import com.coffecheap.vista.frmProveedorEliminar;
 import com.coffecheap.vista.frmProveedorGuardar;
 import com.coffecheap.vista.frmProveedorModificar;
@@ -161,6 +165,20 @@ public class MenuAdmin_Controlador implements MouseListener {
             Proveedor_Controlador controlador = new Proveedor_Controlador(vistaguardar, vistamodificar, vistaeliminar, dao);
             controlador.MostrarM();
             new CambiaPanel(this.vistamenu.panDatos, vistamodificar);
+        }
+        
+        if (e.getSource() == vistamenu.btnCompraGuardar || e.getSource() == vistamenu.lblCompraGuardar) {
+            this.Limpiar();
+            setColor(vistamenu.btnCompraGuardar);
+            frmCompraGuardar vistaguardar = new frmCompraGuardar();
+            frmCompraModificar vistamodificar = new frmCompraModificar();
+            frmCompraEliminar vistaeliminar = new frmCompraEliminar();
+            CompraDao dao = new CompraDao();
+            Compra_Controlador controlador = new Compra_Controlador(vistaguardar, vistaeliminar, vistamodificar, dao);
+            controlador.Orden();
+            controlador.Producto();
+            new CambiaPanel(this.vistamenu.panDatos, vistaguardar);
+            
         }
 
     }

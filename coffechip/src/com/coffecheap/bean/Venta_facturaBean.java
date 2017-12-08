@@ -114,7 +114,7 @@ public class Venta_facturaBean {
     try {
 
       dao = new Venta_facturaDao();
-      dao.registrar_venta(venta_factura, mesa);
+     // dao.registrar_venta(venta_factura, mesa);
 
     } catch (Exception e) {
       System.out.println(e);

@@ -84,7 +84,7 @@ public class UsuarioBean {
 
     try {
       dao = new UsuarioDao();
-      lstUsuarioMe = dao.listarMe();
+      //lstUsuarioMe = dao.listarMe();
     } catch (Exception e) {
       throw e;
     }
@@ -96,7 +96,7 @@ public class UsuarioBean {
 
     try {
       dao = new UsuarioDao();
-      lstUsuarioChef = dao.listarChef();
+      //lstUsuarioChef = dao.listarChef();
     } catch (Exception e) {
       throw e;
     }

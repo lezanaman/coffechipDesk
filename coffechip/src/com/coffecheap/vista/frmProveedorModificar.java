@@ -123,6 +123,12 @@ public class frmProveedorModificar extends javax.swing.JPanel {
 
         panPrincipal.add(jScrollPane1);
         jScrollPane1.setBounds(10, 520, 890, 260);
+
+        txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCodigoKeyTyped(evt);
+            }
+        });
         panPrincipal.add(txtCodigo);
         txtCodigo.setBounds(420, 60, 220, 40);
 
@@ -140,6 +146,14 @@ public class frmProveedorModificar extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 143, 0);
         add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped
+        char c = evt.getKeyChar();
+        
+        if (c < '0' || c > '9') {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCodigoKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
