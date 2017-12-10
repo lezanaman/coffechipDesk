@@ -46,7 +46,7 @@ public class Tipo_productoBean {
 
   }
 
-  public void listar() throws Exception {
+ /* public void listar() throws Exception {
     Tipo_productoDao dao;
 
     try {
@@ -56,7 +56,7 @@ public class Tipo_productoBean {
       throw e;
     }
 
-  }
+  }*/
 
   public void modificar(Tipo_producto mar) throws Exception {
     System.out.println("*******************************************************Modificar");

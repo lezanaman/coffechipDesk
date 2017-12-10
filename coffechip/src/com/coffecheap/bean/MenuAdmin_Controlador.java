@@ -114,7 +114,7 @@ public class MenuAdmin_Controlador implements MouseListener {
             Tipo_productoDao dao= new Tipo_productoDao();
             TipoProductoBean cons=new TipoProductoBean(frm3, dao, frm2, frm);
             cons.MostrarD();
-        new CambiaPanel(this.vistamenu.panDatos, frm2);
+            new CambiaPanel(this.vistamenu.panDatos, frm2);
    }
 
 
