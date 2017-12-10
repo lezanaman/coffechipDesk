@@ -12,7 +12,7 @@ package com.coffecheap.vista;
 public class frmEstado_mesaModificar extends javax.swing.JPanel {
 
     /**
-     * Creates new form frmTurnoModificar
+     * Creates new form frmEstado_mesaModificar
      */
     public frmEstado_mesaModificar() {
         initComponents();
@@ -31,13 +31,12 @@ public class frmEstado_mesaModificar extends javax.swing.JPanel {
     panPrincipal = new javax.swing.JPanel();
     lblCodigo = new javax.swing.JLabel();
     lblObservaciones = new javax.swing.JLabel();
-    txtHorarioMod = new javax.swing.JFormattedTextField();
-    lblHorario = new javax.swing.JLabel();
     txtCodigoMod = new javax.swing.JTextField();
-    txtObservacionesMod = new javax.swing.JTextField();
+    txtNombreMod = new javax.swing.JTextField();
     btnModificar = new javax.swing.JButton();
     scpPrincipal = new javax.swing.JScrollPane();
-    tblTurnoModificar = new javax.swing.JTable();
+    tblEstado_mesaModificar = new javax.swing.JTable();
+    lblTitulo = new javax.swing.JLabel();
 
     setBackground(new java.awt.Color(255, 255, 255));
     setLayout(new java.awt.GridBagLayout());
@@ -46,33 +45,22 @@ public class frmEstado_mesaModificar extends javax.swing.JPanel {
     panPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
     lblCodigo.setText("Codigo:");
-    panPrincipal.add(lblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 80, -1));
+    panPrincipal.add(lblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 80, -1));
 
-    lblObservaciones.setText("Observaciones:");
+    lblObservaciones.setText("Nombre:");
     panPrincipal.add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 100, -1));
 
-    try {
-      txtHorarioMod.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## a ##:##")));
-    } catch (java.text.ParseException ex) {
-      ex.printStackTrace();
-    }
-    txtHorarioMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-    panPrincipal.add(txtHorarioMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 230, 40));
-
-    lblHorario.setText("Horario de Turno:");
-    panPrincipal.add(lblHorario, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 100, -1));
-
     txtCodigoMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-    panPrincipal.add(txtCodigoMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 230, 40));
+    panPrincipal.add(txtCodigoMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 230, 40));
 
-    txtObservacionesMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-    panPrincipal.add(txtObservacionesMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 230, 40));
+    txtNombreMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+    panPrincipal.add(txtNombreMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 230, 40));
 
     btnModificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
     btnModificar.setText("Modificar");
     panPrincipal.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 120, 40));
 
-    tblTurnoModificar.setModel(new javax.swing.table.DefaultTableModel(
+    tblEstado_mesaModificar.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
         {null, null, null, null},
         {null, null, null, null},
@@ -83,9 +71,13 @@ public class frmEstado_mesaModificar extends javax.swing.JPanel {
         "Title 1", "Title 2", "Title 3", "Title 4"
       }
     ));
-    scpPrincipal.setViewportView(tblTurnoModificar);
+    scpPrincipal.setViewportView(tblEstado_mesaModificar);
 
-    panPrincipal.add(scpPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 910, 200));
+    panPrincipal.add(scpPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 910, 200));
+
+    lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+    lblTitulo.setText("Estado Mesa");
+    panPrincipal.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
 
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
@@ -101,13 +93,12 @@ public class frmEstado_mesaModificar extends javax.swing.JPanel {
   // Variables declaration - do not modify//GEN-BEGIN:variables
   public javax.swing.JButton btnModificar;
   private javax.swing.JLabel lblCodigo;
-  private javax.swing.JLabel lblHorario;
   private javax.swing.JLabel lblObservaciones;
+  private javax.swing.JLabel lblTitulo;
   private javax.swing.JPanel panPrincipal;
   private javax.swing.JScrollPane scpPrincipal;
-  public javax.swing.JTable tblTurnoModificar;
+  public javax.swing.JTable tblEstado_mesaModificar;
   public javax.swing.JTextField txtCodigoMod;
-  public javax.swing.JFormattedTextField txtHorarioMod;
-  public javax.swing.JTextField txtObservacionesMod;
+  public javax.swing.JTextField txtNombreMod;
   // End of variables declaration//GEN-END:variables
 }

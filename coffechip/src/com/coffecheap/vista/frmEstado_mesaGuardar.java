@@ -12,7 +12,7 @@ package com.coffecheap.vista;
 public class frmEstado_mesaGuardar extends javax.swing.JPanel {
 
     /**
-     * Creates new form frmTurno
+     * Creates new form frmEstado_mesa
      */
     public frmEstado_mesaGuardar() {
         initComponents();
@@ -30,10 +30,8 @@ public class frmEstado_mesaGuardar extends javax.swing.JPanel {
 
     panPrincipal = new javax.swing.JPanel();
     lblTitulo = new javax.swing.JLabel();
-    txtHorario = new javax.swing.JFormattedTextField();
-    lblHorario = new javax.swing.JLabel();
-    lblObservaciones = new javax.swing.JLabel();
-    txtObservaciones = new javax.swing.JTextField();
+    lblNombre = new javax.swing.JLabel();
+    txtNombreGuardar = new javax.swing.JTextField();
     btnGuardar = new javax.swing.JButton();
 
     setBackground(new java.awt.Color(255, 255, 255));
@@ -44,35 +42,23 @@ public class frmEstado_mesaGuardar extends javax.swing.JPanel {
     panPrincipal.setLayout(null);
 
     lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-    lblTitulo.setText("Turno:");
+    lblTitulo.setText("Estado Mesa");
     panPrincipal.add(lblTitulo);
-    lblTitulo.setBounds(450, 20, 79, 29);
+    lblTitulo.setBounds(400, 30, 180, 29);
 
-    try {
-      txtHorario.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:## a ##:##")));
-    } catch (java.text.ParseException ex) {
-      ex.printStackTrace();
-    }
-    txtHorario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-    panPrincipal.add(txtHorario);
-    txtHorario.setBounds(370, 80, 230, 40);
+    lblNombre.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+    lblNombre.setText("Nombre Estado");
+    panPrincipal.add(lblNombre);
+    lblNombre.setBounds(250, 140, 110, 19);
 
-    lblHorario.setText("Horario de Turno:");
-    panPrincipal.add(lblHorario);
-    lblHorario.setBounds(240, 90, 100, 16);
-
-    lblObservaciones.setText("Observaciones:");
-    panPrincipal.add(lblObservaciones);
-    lblObservaciones.setBounds(250, 160, 110, 16);
-
-    txtObservaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-    panPrincipal.add(txtObservaciones);
-    txtObservaciones.setBounds(370, 150, 230, 40);
+    txtNombreGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+    panPrincipal.add(txtNombreGuardar);
+    txtNombreGuardar.setBounds(370, 130, 230, 40);
 
     btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
     btnGuardar.setText("Guardar");
     panPrincipal.add(btnGuardar);
-    btnGuardar.setBounds(470, 230, 120, 40);
+    btnGuardar.setBounds(410, 220, 120, 40);
 
     gridBagConstraints = new java.awt.GridBagConstraints();
     gridBagConstraints.gridx = 0;
@@ -86,11 +72,9 @@ public class frmEstado_mesaGuardar extends javax.swing.JPanel {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   public javax.swing.JButton btnGuardar;
-  private javax.swing.JLabel lblHorario;
-  private javax.swing.JLabel lblObservaciones;
+  private javax.swing.JLabel lblNombre;
   private javax.swing.JLabel lblTitulo;
   private javax.swing.JPanel panPrincipal;
-  public javax.swing.JFormattedTextField txtHorario;
-  public javax.swing.JTextField txtObservaciones;
+  public javax.swing.JTextField txtNombreGuardar;
   // End of variables declaration//GEN-END:variables
 }

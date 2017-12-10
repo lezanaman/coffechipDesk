@@ -1,83 +1,160 @@
 package com.coffecheap.bean;
 
+import com.coffecheap.dao.Estado_mesaDao;
+import com.coffecheap.modelo.Estado_mesa;
+import com.coffecheap.vista.frmEstado_mesaEliminar;
+import com.coffecheap.vista.frmEstado_mesaGuardar;
+import com.coffecheap.vista.frmEstado_mesaModificar;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
+public class Estado_mesa_Controlador implements ActionListener {
 
-import com.coffecheap.bean.*;
-import com.coffecheap.dao.ProveedorDao;
-import com.coffecheap.modelo.Proveedor;
-import java.util.List;
+  frmEstado_mesaGuardar vistaestado_mesa = new frmEstado_mesaGuardar();
+  frmEstado_mesaEliminar vistaestado_mesaelim = new frmEstado_mesaEliminar();
+  frmEstado_mesaModificar vistaestado_mesamodi = new frmEstado_mesaModificar();
+  Estado_mesaDao estado_mesadao = new Estado_mesaDao();
+  Estado_mesa estado_mesa = new Estado_mesa();
+  JTable tblestado_mesa;
+  ResultSet rs;
 
-public class Estado_mesa_Controlador {
+  public Estado_mesa_Controlador(frmEstado_mesaGuardar vistaestado_mesa, frmEstado_mesaEliminar vistaeliminar, frmEstado_mesaModificar vistamodi, Estado_mesaDao estado_mesadao) {
+    this.vistaestado_mesa = vistaestado_mesa;
+    this.vistaestado_mesaelim = vistaeliminar;
+    this.vistaestado_mesamodi = vistamodi;
+    this.estado_mesadao = estado_mesadao;
+    this.vistaestado_mesamodi.btnModificar.addActionListener(this);
+    this.vistaestado_mesaelim.btnEliminar.addActionListener(this);
+    this.vistaestado_mesa.btnGuardar.addActionListener(this);
+  }
 
-    Proveedor proveedor = new Proveedor();
-    List <Proveedor> listar;
+  public void Mostrar() {
+    DefaultTableModel dfm = new DefaultTableModel();
+    tblestado_mesa = this.vistaestado_mesaelim.tblEstado_mesaEliminar;
+    tblestado_mesa.setModel(dfm);
 
-    public Proveedor getProveedor() {
-        return proveedor;
+    tblestado_mesa = this.vistaestado_mesamodi.tblEstado_mesaModificar;
+    tblestado_mesa.setModel(dfm);
+
+    dfm.setColumnIdentifiers(new Object[]{"No. Codigo", "Nombre"});
+
+    try {
+      rs = estado_mesadao.listar();
+
+      while (rs.next()) {
+        dfm.addRow(new Object[]{rs.getInt(1), rs.getString(2)});
+      }
+    } catch (Exception ex) {
+      System.out.println(ex);
     }
+  }
 
-    public void setProveedor(Proveedor proveedor) {
-        this.proveedor = proveedor;
-    }
+  public void Guardar() {
+    try {
 
-    public List<Proveedor> getListar() {
-        return listar;
-    }
+      if (this.vistaestado_mesa.txtNombreGuardar.getText().length() == 0) {
+        JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
+      } else {
+        this.estado_mesa.setNombre(this.vistaestado_mesa.txtNombreGuardar.getText());
 
-    public void setListar(List<Proveedor> listar) {
-        this.listar = listar;
-    }
+        String respuesta = estado_mesadao.registrar(estado_mesa);
+        if (respuesta != null) {
+          JOptionPane.showMessageDialog(null, respuesta);
+          Limpiar();
 
-    
-    public Estado_mesa_Controlador() {
-    }
-    
-    public void Ingresar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-            dao.Ingresar(proveedor);
-        } catch (Exception e) {
-            throw e;
         }
+      }
+
+    } catch (Exception e) {
+      try {
+        throw e;
+      } catch (Exception ex) {
+        Logger.getLogger(Estado_mesa_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
-    
-    public void Eliminar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-            dao.Borrar(proveedor);
-        } catch (Exception e) {
-            throw e;
+  }
+
+  public void ModificarD() {
+    try {
+
+      if (this.vistaestado_mesamodi.txtNombreMod.getText().length() == 0 || this.vistaestado_mesamodi.txtCodigoMod.getText().length() == 0) {
+        JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
+      } else {
+        this.estado_mesa.setId_estado(Integer.parseInt(this.vistaestado_mesamodi.txtCodigoMod.getText()));
+        this.estado_mesa.setNombre(this.vistaestado_mesamodi.txtNombreMod.getText());
+        String respuesta = estado_mesadao.modificar(estado_mesa);
+        if (respuesta != null) {
+          JOptionPane.showMessageDialog(null, respuesta);
+          Limpiar();
+
         }
+      }
+
+    } catch (Exception e) {
+      try {
+        throw e;
+      } catch (Exception ex) {
+        Logger.getLogger(Estado_mesa_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
-    
-    public void Modificar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-            dao.Editar(proveedor);
-        } catch (Exception e) {
-            throw e;
+  }
+
+  public void Eliminar() {
+
+    try {
+
+      if (this.vistaestado_mesaelim.txtCodigoElimar.getText().length() == 0) {
+        JOptionPane.showMessageDialog(null, "Ingrese todos los parametros que se le solicitan");
+      } else {
+        this.estado_mesa.setId_estado(Integer.parseInt(this.vistaestado_mesaelim.txtCodigoElimar.getText()));
+        String respuesta = estado_mesadao.eliminar(estado_mesa);
+        if (respuesta != null) {
+          JOptionPane.showMessageDialog(null, respuesta);
+          Limpiar();
+
         }
+      }
+    } catch (Exception e) {
+      try {
+        throw e;
+      } catch (Exception ex) {
+        Logger.getLogger(Estado_mesa_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }
-    
-    public void Mostrar() throws Exception{
-        
-        ProveedorDao dao;
-        
-        try {
-            dao = new ProveedorDao();
-           // listar = dao.Mostrar();
-        } catch (Exception e) {
-            throw e;
-        }
+  }
+
+  @Override
+  public void actionPerformed(ActionEvent e) {
+
+    if (e.getSource() == vistaestado_mesa.btnGuardar) {
+      Guardar();
     }
+
+    if (e.getSource() == vistaestado_mesaelim.btnEliminar) {
+      Eliminar();
+      Mostrar();
+    }
+
+    if (e.getSource() == vistaestado_mesamodi.btnModificar) {
+      ModificarD();
+      Mostrar();
+    }
+
+  }
+
+  public void Limpiar() {
+    this.vistaestado_mesaelim.txtCodigoElimar.setText(null);    
     
+    this.vistaestado_mesa.txtNombreGuardar.setText(null);
+      
+    this.vistaestado_mesamodi.txtCodigoMod.setText(null);
+    this.vistaestado_mesamodi.txtNombreMod.setText(null);
+  }
+
 }

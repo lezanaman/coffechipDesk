@@ -17,56 +17,46 @@ import java.util.List;
  */
 public class Estado_mesaDao extends Dao {
 
-  public void registrar(Estado_mesa Tt) throws Exception {
-
+  public String registrar(Estado_mesa Tt) throws Exception {
+    String respuesta = null;
     try {
       this.Conectar();
       PreparedStatement st = this.getCon().prepareStatement("insert into estado_mesa values(?,?);");
 
       st.setInt(1, Tt.getId_estado());
       st.setString(2, Tt.getNombre());
-
       st.executeUpdate();
+      respuesta = "Registro Exitoso";
 
     } catch (Exception ex) {
       throw ex;
     } finally {
       this.Desconecar();
+      Tt.setId_estado(0);
+      Tt.setNombre(null);
 
     }
-
+    return respuesta;
   }
 
-  public List<Estado_mesa> listar() throws Exception {
-    List<Estado_mesa> lista;
+  public ResultSet listar() throws Exception {
+
     ResultSet rs;
 
     try {
       this.Conectar();
-      PreparedStatement st = this.getCon().prepareCall("SELECT *FROM estado_mesa");
+      PreparedStatement st = this.getCon().prepareStatement("SELECT *FROM estado_mesa");
       rs = st.executeQuery();
-      lista = new ArrayList();
-      while (rs.next()) {
-        Estado_mesa tt = new Estado_mesa();
 
-        tt.setId_estado(rs.getInt(1));
-        tt.setNombre(rs.getString(2));
-
-        lista.add(tt);
-      }
-
-    } catch (Exception ex) {
-      throw ex;
-    } finally {
-      this.Desconecar();
+    } catch (Exception e) {
+      throw e;
     }
-
-    return lista;
-
+    return rs;
   }
 
-  public void modificar(Estado_mesa tt) throws Exception {
+  public String modificar(Estado_mesa tt) throws Exception {
     System.out.println("*******************************************************modificar dao");
+    String respuesta = null;
     try {
       this.Conectar();
       PreparedStatement st = this.getCon().prepareStatement("UPDATE  estado_mesa SET id_estado_mesa=?, nombre=? WHERE id_estado=?;");
@@ -74,33 +64,36 @@ public class Estado_mesaDao extends Dao {
       st.setInt(1, tt.getId_estado());
       st.setString(2, tt.getNombre());
       st.setInt(3, tt.getId_estado());
-
       st.executeUpdate();
+      respuesta = "Modicado Correctamente";
 
     } catch (Exception ex) {
       throw ex;
     } finally {
       this.Desconecar();
-
+      tt.setId_estado(0);
+      tt.setNombre(null);
     }
-
+    return respuesta;
   }
 
-  public void eliminar(Estado_mesa pac) throws Exception {
+  public String eliminar(Estado_mesa pac) throws Exception {
+    String respuesta = null;
     System.out.println("*******************************************************eliminar dao");
     try {
       this.Conectar();
       PreparedStatement st = this.getCon().prepareStatement("DELETE FROM estado_mesa WHERE id_estado=?;");
       st.setInt(1, pac.getId_estado());
       st.executeUpdate();
+      respuesta = "Registro Eliminado Exitosamente";
 
     } catch (Exception ex) {
       throw ex;
     } finally {
       this.Desconecar();
-
+      pac.setId_estado(0);
     }
-
+    return respuesta;
   }
 
 }
