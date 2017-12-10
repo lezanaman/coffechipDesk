@@ -2,6 +2,7 @@ package com.coffecheap.bean;
 
 import com.coffecheap.dao.CompraDao;
 import com.coffecheap.dao.ProveedorDao;
+import com.coffecheap.dao.Tipo_productoDao;
 import com.coffecheap.dao.TurnoDao;
 import com.coffecheap.vista.MenuAdmin;
 import com.coffecheap.vista.frmCompraEliminar;
@@ -90,7 +91,33 @@ public class MenuAdmin_Controlador implements MouseListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
+//        if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
+//
+//            this.Limpiar();
+//            setColor(vistamenu.btnTurnoGuardar);
+//            TurnoDao dao = new TurnoDao();
+//            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
+//            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
+//            frmTurnoModificar vistamodi = new frmTurnoModificar();
+//            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
+//            new CambiaPanel(this.vistamenu.panDatos, vistaturno);
+//        }
+
+   if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
+
+            frmTurnoGuardar frm= new frmTurnoGuardar();
+            frmTurnoModificar frm2= new frmTurnoModificar();
+            frmTurnoEliminar frm3= new frmTurnoEliminar();
+            Tipo_productoDao dao= new Tipo_productoDao();
+            TipoProductoBean cons=new TipoProductoBean(frm3, dao, frm2, frm);
+        }
+
+
+
+
+
+
+             if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
 
             this.Limpiar();
             setColor(vistamenu.btnTurnoGuardar);
@@ -101,18 +128,7 @@ public class MenuAdmin_Controlador implements MouseListener {
             Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
             new CambiaPanel(this.vistamenu.panDatos, vistaturno);
         }
-        if (e.getSource() == vistamenu.btnTurnoEliminar || e.getSource() == vistamenu.lblTurnoEliminar) {
-            
-            this.Limpiar();
-            setColor(vistamenu.btnTurnoEliminar);
-            TurnoDao dao = new TurnoDao();
-            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
-            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
-            frmTurnoModificar vistamodi = new frmTurnoModificar();
-            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
-            controlador.MostrarD();
-            new CambiaPanel(this.vistamenu.panDatos, vistaturnodos);
-        }
+     
         if (e.getSource() == vistamenu.btnTurnoModificar || e.getSource() == vistamenu.lblTurnoModificar) {
             this.Limpiar();
             setColor(vistamenu.btnTurnoModificar);

@@ -17,90 +17,85 @@ import java.util.List;
  */
 public class Tipo_productoDao extends Dao {
 
-  public void registrar(Tipo_producto Tt) throws Exception {
+    public String registrar(Tipo_producto Tt) throws Exception {
+   String respuesta = null;
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareStatement("insert into tipo_producto values(?);");
 
-    try {
-      this.Conectar();
-      PreparedStatement st = this.getCon().prepareStatement("insert into tipo_producto values(?,?);");
+           
+            st.setString(1, Tt.getNombre());
 
-      st.setInt(1, Tt.getId_tipo());
-      st.setString(2, Tt.getNombre());
+            st.executeUpdate();
+ respuesta = "Registro Exitoso";
+        } catch (Exception ex) {
+            throw ex;
+        } finally {
+            this.Desconecar();
+  
+        }
+return respuesta;
+    }
 
-      st.executeUpdate();
+    public ResultSet listar() throws Exception {
+        List<Tipo_producto> lista;
+        ResultSet rs;
 
-    } catch (Exception ex) {
-      throw ex;
-    } finally {
-      this.Desconecar();
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareCall("SELECT *FROM tipo_producto");
+            rs = st.executeQuery();
+
+        } catch (Exception ex) {
+            throw ex;
+        } finally {
+            this.Desconecar();
+        }
+
+        return rs;
 
     }
 
-  }
+    public String modificar(Tipo_producto tt) throws Exception {
+         String respuesta=null;
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareStatement("UPDATE  tipo_producto SET id_tipo=?, nombre_tipo=? WHERE id_tipo=?;");
 
-  public List<Tipo_producto> listar() throws Exception {
-    List<Tipo_producto> lista;
-    ResultSet rs;
+            st.setInt(1, tt.getId_tipo());
+            st.setString(2, tt.getNombre());
+            st.setInt(3, tt.getId_tipo());
 
-    try {
-      this.Conectar();
-      PreparedStatement st = this.getCon().prepareCall("SELECT *FROM tipo_producto");
-      rs = st.executeQuery();
-      lista = new ArrayList();
-      while (rs.next()) {
-        Tipo_producto tt = new Tipo_producto();
-
-        tt.setId_tipo(rs.getInt(1));
-        tt.setNombre(rs.getString(2));
-
-        lista.add(tt);
-      }
-
-    } catch (Exception ex) {
-      throw ex;
-    } finally {
-      this.Desconecar();
+            st.executeUpdate();
+   respuesta = "Modicado Correctamente";
+        } catch (Exception ex) {
+            throw ex;
+        } finally {
+            this.Desconecar();
+ tt.setId_tipo(0);
+            tt.setNombre(null);
+            
+        }
+return respuesta;
     }
 
-    return lista;
+  
 
-  }
+    public String eliminar(Tipo_producto pac) throws Exception {
+        String respuesta = null;
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareStatement("DELETE FROM tipo_producto WHERE id_tipo_producto=?;");
+            st.setInt(1, pac.getId_tipo());
+            st.executeUpdate();
+            respuesta = "Registro Eliminado Exitosamente";
+        } catch (Exception ex) {
+            throw ex;
+        } finally {
+            this.Desconecar();
 
-  public void modificar(Tipo_producto tt) throws Exception {
-    System.out.println("*******************************************************modificar dao");
-    try {
-      this.Conectar();
-      PreparedStatement st = this.getCon().prepareStatement("UPDATE  tipo_producto SET id_tipo=?, nombre_tipo=? WHERE id_tipo=?;");
-
-      st.setInt(1, tt.getId_tipo());
-      st.setString(2, tt.getNombre());
-      st.setInt(3, tt.getId_tipo());
-
-      st.executeUpdate();
-
-    } catch (Exception ex) {
-      throw ex;
-    } finally {
-      this.Desconecar();
-
+        }
+        return respuesta;
     }
-
-  }
-
-  public void eliminar(Tipo_producto pac) throws Exception {
-    System.out.println("*******************************************************eliminar dao");
-    try {
-      this.Conectar();
-      PreparedStatement st = this.getCon().prepareStatement("DELETE FROM tipo_producto WHERE id_tipo_producto=?;");
-      st.setInt(1, pac.getId_tipo());
-      st.executeUpdate();
-
-    } catch (Exception ex) {
-      throw ex;
-    } finally {
-      this.Desconecar();
-
-    }
-
-  }
 
 }
