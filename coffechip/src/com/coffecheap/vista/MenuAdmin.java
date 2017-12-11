@@ -6,6 +6,7 @@
 package com.coffecheap.vista;
 
 import com.coffecheap.bean.MenuAdmin_Controlador;
+import com.coffecheap.bean.Proveedor_Controlador;
 import java.awt.Color;
 import javax.swing.JPanel;
 
@@ -33,6 +34,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         panDatos = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         panEncabezado = new javax.swing.JPanel();
         lblTituloEncabezado = new javax.swing.JLabel();
         panAtras = new javax.swing.JPanel();
@@ -126,6 +128,14 @@ public class MenuAdmin extends javax.swing.JFrame {
         panDatos.setBackground(new java.awt.Color(255, 255, 255));
         panDatos.setLayout(new javax.swing.BoxLayout(panDatos, javax.swing.BoxLayout.LINE_AXIS));
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        panDatos.add(jButton1);
+
         panEncabezado.setBackground(new java.awt.Color(239, 243, 246));
 
         lblTituloEncabezado.setFont(new java.awt.Font("Viner Hand ITC", 1, 40)); // NOI18N
@@ -136,7 +146,7 @@ public class MenuAdmin extends javax.swing.JFrame {
         panEncabezado.setLayout(panEncabezadoLayout);
         panEncabezadoLayout.setHorizontalGroup(
             panEncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblTituloEncabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 948, Short.MAX_VALUE)
+            .addComponent(lblTituloEncabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 922, Short.MAX_VALUE)
         );
         panEncabezadoLayout.setVerticalGroup(
             panEncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,23 +163,6 @@ public class MenuAdmin extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Viner Hand ITC", 0, 36)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(204, 204, 204));
         lblTitulo.setText("CoffeCream");
-
-        javax.swing.GroupLayout panNombreLayout = new javax.swing.GroupLayout(panNombre);
-        panNombre.setLayout(panNombreLayout);
-        panNombreLayout.setHorizontalGroup(
-            panNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panNombreLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblTitulo)
-                .addContainerGap())
-        );
-        panNombreLayout.setVerticalGroup(
-            panNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panNombreLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
 
         jspMenuLateral.setBackground(new java.awt.Color(36, 47, 65));
         jspMenuLateral.setBorder(null);
@@ -1276,21 +1269,40 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         jspMenuLateral.setViewportView(panMenu);
 
+        javax.swing.GroupLayout panNombreLayout = new javax.swing.GroupLayout(panNombre);
+        panNombre.setLayout(panNombreLayout);
+        panNombreLayout.setHorizontalGroup(
+            panNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panNombreLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTitulo)
+                .addContainerGap())
+            .addGroup(panNombreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jspMenuLateral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        panNombreLayout.setVerticalGroup(
+            panNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panNombreLayout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jspMenuLateral, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout panAtrasLayout = new javax.swing.GroupLayout(panAtras);
         panAtras.setLayout(panAtrasLayout);
         panAtrasLayout.setHorizontalGroup(
             panAtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panAtrasLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jspMenuLateral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panAtrasLayout.setVerticalGroup(
             panAtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panAtrasLayout.createSequentialGroup()
                 .addComponent(panNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jspMenuLateral, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1315,6 +1327,15 @@ public class MenuAdmin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        frmProveedorModificar vistaCli = new frmProveedorModificar();
+        
+       // Proveedor_Controlador controlaCli = new Proveedor_Controlador(vistaCli);
+        
+        
+        vistaCli.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
    
     /**
@@ -1378,6 +1399,7 @@ public class MenuAdmin extends javax.swing.JFrame {
     public javax.swing.JPanel btnUsuarioEliminar;
     public javax.swing.JPanel btnUsuarioGuardar;
     public javax.swing.JPanel btnUsuarioModificar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
