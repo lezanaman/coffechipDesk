@@ -324,4 +324,20 @@ public class CompraDao extends Dao {
         }
     }
 
+    public int CodigoProducto(String nombre) throws Exception{
+        int respuesta = 0;
+        ResultSet rs;
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareStatement("select id_producto from producto where nombre_producto='"+nombre+"';");
+            rs  = st.executeQuery();
+            while (rs.next()) {
+                respuesta = rs.getInt("id_producto");
+            }
+        } catch (Exception e) {
+            throw e;
+        }
+        return respuesta;
+    }
+    
 }

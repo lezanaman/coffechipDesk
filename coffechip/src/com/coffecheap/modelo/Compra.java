@@ -13,13 +13,13 @@ public class Compra {
     int costo;
     int no_fac;
     String serie;
-    Date fechaEntrega;
+    String fechaEntrega;
     boolean dato;
 
     public Compra() {
     }
 
-    public Compra(boolean dato, int identifi, int orden, String producto, int cantidad, int costo, int no_fac, String serie, Date fechaEntrega) {
+    public Compra(boolean dato, int identifi, int orden, String producto, int cantidad, int costo, int no_fac, String serie, String fechaEntrega) {
         this.dato = dato;
         this.identificacion = identifi;
         this.Ocompras.id_orden_compras = orden;
@@ -111,11 +111,11 @@ public class Compra {
         this.serie = serie;
     }
 
-    public Date getFechaEntrega() {
+    public String getFechaEntrega() {
         return fechaEntrega;
     }
 
-    public void setFechaEntrega(Date fechaEntrega) {
+    public void setFechaEntrega(String fechaEntrega) {
         this.fechaEntrega = fechaEntrega;
     }
 

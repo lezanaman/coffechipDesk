@@ -30,6 +30,7 @@ public class frmCompraGuardar extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         panPrincipal = new javax.swing.JPanel();
         cmbNoOrden = new javax.swing.JComboBox<>();
@@ -48,8 +49,8 @@ public class frmCompraGuardar extends javax.swing.JPanel {
         jdcFecha = new com.toedter.calendar.JDateChooser();
         btnIngresar = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(51, 255, 51));
-        setLayout(null);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new java.awt.GridBagLayout());
 
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
         panPrincipal.setLayout(null);
@@ -57,17 +58,17 @@ public class frmCompraGuardar extends javax.swing.JPanel {
         cmbNoOrden.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cmbNoOrden.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         panPrincipal.add(cmbNoOrden);
-        cmbNoOrden.setBounds(120, 110, 220, 40);
+        cmbNoOrden.setBounds(120, 60, 220, 40);
 
         cmbProducto.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cmbProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         panPrincipal.add(cmbProducto);
-        cmbProducto.setBounds(390, 110, 220, 40);
+        cmbProducto.setBounds(390, 60, 220, 40);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Cantidad");
         panPrincipal.add(jLabel1);
-        jLabel1.setBounds(730, 90, 100, 20);
+        jLabel1.setBounds(730, 40, 100, 20);
 
         txtCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -75,7 +76,7 @@ public class frmCompraGuardar extends javax.swing.JPanel {
             }
         });
         panPrincipal.add(txtCantidad);
-        txtCantidad.setBounds(660, 110, 210, 40);
+        txtCantidad.setBounds(660, 60, 210, 40);
 
         txtCosto.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -83,30 +84,30 @@ public class frmCompraGuardar extends javax.swing.JPanel {
             }
         });
         panPrincipal.add(txtCosto);
-        txtCosto.setBounds(120, 200, 220, 40);
+        txtCosto.setBounds(120, 150, 220, 40);
         panPrincipal.add(txtNoFactura);
-        txtNoFactura.setBounds(390, 200, 220, 40);
+        txtNoFactura.setBounds(390, 150, 220, 40);
         panPrincipal.add(txtSerie);
-        txtSerie.setBounds(660, 200, 210, 40);
+        txtSerie.setBounds(660, 150, 210, 40);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Costo");
         panPrincipal.add(jLabel2);
-        jLabel2.setBounds(200, 180, 90, 15);
+        jLabel2.setBounds(200, 130, 90, 15);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("No. de Factura");
         panPrincipal.add(jLabel3);
-        jLabel3.setBounds(450, 180, 110, 15);
+        jLabel3.setBounds(450, 130, 110, 15);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Serie");
         panPrincipal.add(jLabel4);
-        jLabel4.setBounds(740, 180, 50, 15);
+        jLabel4.setBounds(740, 130, 50, 15);
 
         btnIntermediario.setText("Intermediario");
         panPrincipal.add(btnIntermediario);
-        btnIntermediario.setBounds(410, 270, 160, 30);
+        btnIntermediario.setBounds(410, 220, 160, 30);
 
         tblIntermediario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -137,16 +138,22 @@ public class frmCompraGuardar extends javax.swing.JPanel {
         }
 
         panPrincipal.add(jScrollPane1);
-        jScrollPane1.setBounds(30, 350, 890, 270);
+        jScrollPane1.setBounds(30, 280, 890, 270);
         panPrincipal.add(jdcFecha);
-        jdcFecha.setBounds(660, 270, 210, 40);
+        jdcFecha.setBounds(660, 220, 210, 40);
 
         btnIngresar.setText("Ingresar");
         panPrincipal.add(btnIngresar);
-        btnIngresar.setBounds(410, 660, 160, 40);
+        btnIngresar.setBounds(410, 570, 160, 40);
 
-        add(panPrincipal);
-        panPrincipal.setBounds(0, 0, 960, 760);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 959;
+        gridBagConstraints.ipady = 639;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 4, 0);
+        add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadKeyTyped

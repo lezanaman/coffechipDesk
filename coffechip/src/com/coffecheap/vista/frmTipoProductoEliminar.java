@@ -26,6 +26,7 @@ public class frmTipoProductoEliminar extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         panPrincipal = new javax.swing.JPanel();
         lblIngreso = new javax.swing.JLabel();
@@ -38,10 +39,11 @@ public class frmTipoProductoEliminar extends javax.swing.JPanel {
         setLayout(new java.awt.GridBagLayout());
 
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
-        panPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panPrincipal.setLayout(null);
 
         lblIngreso.setText("Ingrese El Codigo a Eliminar");
-        panPrincipal.add(lblIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 190, -1));
+        panPrincipal.add(lblIngreso);
+        lblIngreso.setBounds(370, 20, 190, 14);
 
         txtCodigo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCodigo.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -49,11 +51,13 @@ public class frmTipoProductoEliminar extends javax.swing.JPanel {
                 txtCodigoKeyTyped(evt);
             }
         });
-        panPrincipal.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 210, 30));
+        panPrincipal.add(txtCodigo);
+        txtCodigo.setBounds(340, 40, 210, 30);
 
         btnEliminar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnEliminar.setText("Eliminar");
-        panPrincipal.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 110, -1));
+        panPrincipal.add(btnEliminar);
+        btnEliminar.setBounds(510, 110, 110, 31);
 
         tblTurno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -68,9 +72,17 @@ public class frmTipoProductoEliminar extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblTurno);
 
-        panPrincipal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 190, 920, 220));
+        panPrincipal.add(jScrollPane1);
+        jScrollPane1.setBounds(40, 170, 740, 220);
 
-        add(panPrincipal, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 819;
+        gridBagConstraints.ipady = 399;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(50, 20, 89, 25);
+        add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtCodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoKeyTyped

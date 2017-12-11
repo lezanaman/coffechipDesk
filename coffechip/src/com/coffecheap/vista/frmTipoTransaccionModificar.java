@@ -26,6 +26,7 @@ public class frmTipoTransaccionModificar extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         panPrincipal = new javax.swing.JPanel();
         lblCodigo = new javax.swing.JLabel();
@@ -40,13 +41,15 @@ public class frmTipoTransaccionModificar extends javax.swing.JPanel {
         setLayout(new java.awt.GridBagLayout());
 
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
-        panPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panPrincipal.setLayout(null);
 
         lblCodigo.setText("Id Tipo:");
-        panPrincipal.add(lblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 80, -1));
+        panPrincipal.add(lblCodigo);
+        lblCodigo.setBounds(290, 40, 80, 14);
 
         lblObservaciones.setText("Nombre Tipo:");
-        panPrincipal.add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 100, -1));
+        panPrincipal.add(lblObservaciones);
+        lblObservaciones.setBounds(280, 110, 100, 14);
 
         txtCodigoMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCodigoMod.setAutoscrolls(false);
@@ -55,14 +58,17 @@ public class frmTipoTransaccionModificar extends javax.swing.JPanel {
                 txtCodigoModKeyTyped(evt);
             }
         });
-        panPrincipal.add(txtCodigoMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 230, 40));
+        panPrincipal.add(txtCodigoMod);
+        txtCodigoMod.setBounds(410, 30, 230, 40);
 
         txtnombretipo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        panPrincipal.add(txtnombretipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 230, 40));
+        panPrincipal.add(txtnombretipo);
+        txtnombretipo.setBounds(410, 100, 230, 40);
 
         btnModificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnModificar.setText("Modificar");
-        panPrincipal.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 120, 40));
+        panPrincipal.add(btnModificar);
+        btnModificar.setBounds(520, 210, 120, 40);
 
         tblTurnoModificar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -77,9 +83,17 @@ public class frmTipoTransaccionModificar extends javax.swing.JPanel {
         ));
         scpPrincipal.setViewportView(tblTurnoModificar);
 
-        panPrincipal.add(scpPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 910, 200));
+        panPrincipal.add(scpPrincipal);
+        scpPrincipal.setBounds(10, 280, 910, 200);
 
-        add(panPrincipal, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 929;
+        gridBagConstraints.ipady = 489;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(20, 20, 24, 23);
+        add(panPrincipal, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtCodigoModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCodigoModKeyTyped

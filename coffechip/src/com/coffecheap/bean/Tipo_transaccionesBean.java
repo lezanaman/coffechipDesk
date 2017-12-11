@@ -51,7 +51,7 @@ public class Tipo_transaccionesBean {
 
     try {
       dao = new Tipo_transaccionesDao();
-      lstTipo_transacciones = dao.listar();
+//      lstTipo_transacciones = dao.listar();
     } catch (Exception e) {
       throw e;
     }

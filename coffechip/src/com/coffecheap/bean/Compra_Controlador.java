@@ -32,7 +32,6 @@ public class Compra_Controlador implements ActionListener {
     JTable table;
     int i;
     int producto;
-    
 
     public Compra_Controlador(frmCompraGuardar vistaguardar, frmCompraEliminar vistaeliminar, frmCompraModificar vistamodificar, CompraDao dao) {
         this.vistaguardar = vistaguardar;
@@ -60,7 +59,7 @@ public class Compra_Controlador implements ActionListener {
             compra.setCosto(Integer.parseInt(this.vistaguardar.txtCosto.getText()));
             compra.setNo_fac(Integer.parseInt(this.vistaguardar.txtNoFactura.getText()));
             compra.setSerie(this.vistaguardar.txtSerie.getText());
-            //compra.setFechaEntrega(formatofecha.format(this.vistaguardar.jdcFecha.getDate()));
+            compra.setFechaEntrega(formatofecha.format(this.vistaguardar.jdcFecha.getDate()));
             intermedio.add(new Compra(true, i, compra.getOcompras().getId_orden_compras(), compra.getProducto().getNombre(),
                     compra.getCantidad(), compra.getCosto(), compra.getNo_fac(), compra.getSerie(), compra.getFechaEntrega()));
             Limpiar();
@@ -102,32 +101,27 @@ public class Compra_Controlador implements ActionListener {
         try {
             dao = new CompraDao();
             for (int j = 0; j < intermedio.size(); j++) {
-                
+
                 if (this.vistaguardar.tblIntermediario.getModel().getValueAt(j, 0).equals(true)) {
                     int orden = intermedio.get(j).getOcompras().getId_orden_compras();
-                    int producto = intermedio.get(j).getProducto().getId_producto();
+                    String producto = intermedio.get(j).getProducto().getNombre();
                     int cantidad = intermedio.get(j).getCantidad();
                     int costo = intermedio.get(j).getCosto();
                     int factura = intermedio.get(j).getNo_fac();
                     String serie = intermedio.get(j).getSerie();
                     SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd");
-                    System.out.println("viendo datos: " + intermedio.get(orden));
-                   // String fecha = intermedio.get(j).getFechaEntrega();
-                    //System.out.println("fecha: " + fecha);
-                    //dao.Insertar(orden, producto, cantidad, costo, factura, serie, fecha);
-                    int productointer = dao.Operacion(intermedio.get(j).getProducto().getId_producto());
+                    String fecha = intermedio.get(j).getFechaEntrega();
+                    int codigoproducto = dao.CodigoProducto(producto);
+                    dao.Insertar(orden, codigoproducto, cantidad, costo, factura, serie, fecha.substring(6, 10) + "/" + fecha.substring(3, 5) + "/" + fecha.substring(0, 2));
+                    int productointer = dao.Operacion(codigoproducto);
                     int suma = productointer + cantidad;
-                    dao.ActualizacionProductos(intermedio.get(j).getProducto().getId_producto(), suma);
-                } 
-            }
+                    dao.ActualizacionProductos(codigoproducto, suma);
 
-            //intermedio.clear();
-        } catch (Exception e) {
-            try {
-                throw e;
-            } catch (Exception ex) {
-                Logger.getLogger(Compra_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
+            intermedio.clear();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
         }
     }
 
@@ -209,6 +203,8 @@ public class Compra_Controlador implements ActionListener {
         }
         if (e.getSource() == this.vistaguardar.btnIngresar) {
             Ingresar();
+            limpiarTabla();
+            mostrarTabla();
         }
     }
 

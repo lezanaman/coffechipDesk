@@ -40,13 +40,10 @@ public class frmTipoProductoModificar extends javax.swing.JPanel {
         setLayout(new java.awt.GridBagLayout());
 
         panPrincipal.setBackground(new java.awt.Color(255, 255, 255));
-        panPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblCodigo.setText("Id Tipo:");
-        panPrincipal.add(lblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 80, -1));
 
         lblObservaciones.setText("Nombre Tipo:");
-        panPrincipal.add(lblObservaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 100, -1));
 
         txtCodigoMod.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCodigoMod.setAutoscrolls(false);
@@ -55,14 +52,11 @@ public class frmTipoProductoModificar extends javax.swing.JPanel {
                 txtCodigoModKeyTyped(evt);
             }
         });
-        panPrincipal.add(txtCodigoMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 230, 40));
 
         txtnombretipo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        panPrincipal.add(txtnombretipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 230, 40));
 
         btnModificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnModificar.setText("Modificar");
-        panPrincipal.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 120, 40));
 
         tblTurnoModificar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -77,7 +71,51 @@ public class frmTipoProductoModificar extends javax.swing.JPanel {
         ));
         scpPrincipal.setViewportView(tblTurnoModificar);
 
-        panPrincipal.add(scpPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 910, 200));
+        javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
+        panPrincipal.setLayout(panPrincipalLayout);
+        panPrincipalLayout.setHorizontalGroup(
+            panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panPrincipalLayout.createSequentialGroup()
+                .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panPrincipalLayout.createSequentialGroup()
+                        .addGap(290, 290, 290)
+                        .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(txtCodigoMod, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panPrincipalLayout.createSequentialGroup()
+                        .addGap(280, 280, 280)
+                        .addComponent(lblObservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(txtnombretipo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panPrincipalLayout.createSequentialGroup()
+                        .addGap(520, 520, 520)
+                        .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panPrincipalLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(scpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 910, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(22, 22, 22))
+        );
+        panPrincipalLayout.setVerticalGroup(
+            panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panPrincipalLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panPrincipalLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblCodigo))
+                    .addComponent(txtCodigoMod, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panPrincipalLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblObservaciones))
+                    .addComponent(txtnombretipo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(70, 70, 70)
+                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         add(panPrincipal, new java.awt.GridBagConstraints());
     }// </editor-fold>//GEN-END:initComponents
