@@ -92,12 +92,12 @@ public class Plato_Controlador implements ActionListener {
                 this.plato.setPorciones(Integer.parseInt(this.vistaplatoguardar.txtPorciones.getText()));
                 this.plato.setDescripcion(this.vistaplatoguardar.txtDescripcion.getText());
                 
-                String respuesta = platodao.registrar(plato);
-                if (respuesta != null) {
-                    JOptionPane.showMessageDialog(null, respuesta);
-                    Limpiar();
+                //String respuesta = platodao.registrar(plato);
+                //if (respuesta != null) {
+                    //JOptionPane.showMessageDialog(null, respuesta);
+                    //Limpiar();
 
-                }
+                //}
             
 
         } catch (Exception e) {

@@ -35,18 +35,12 @@ public class MenuAdmin_Controlador implements MouseListener {
         vistamenu = menuadmindos;
 
         vistamenu.btnTurnoGuardar.addMouseListener(this);
-        vistamenu.lblTurnoGuardar.addMouseListener(this);
         vistamenu.btnTurnoEliminar.addMouseListener(this);
-        vistamenu.lblTurnoEliminar.addMouseListener(this);
         vistamenu.btnTurnoModificar.addMouseListener(this);
-        vistamenu.lblTurnoModificar.addMouseListener(this);
 
         vistamenu.btnCompraGuardar.addMouseListener(this);
-        vistamenu.lblCompraGuardar.addMouseListener(this);
         vistamenu.btnCompraEliminar.addMouseListener(this);
-        vistamenu.lblCompraEliminar.addMouseListener(this);
         vistamenu.btnCompraModificar.addMouseListener(this);
-        vistamenu.lblCompraModificar.addMouseListener(this);
 
         vistamenu.btnProveedorGuardar.addMouseListener(this);
         vistamenu.btnProveedorEliminar.addMouseListener(this);
