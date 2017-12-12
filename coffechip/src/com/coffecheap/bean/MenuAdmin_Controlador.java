@@ -39,12 +39,26 @@ public class MenuAdmin_Controlador implements MouseListener {
         vistamenu.btnTurnoModificar.addMouseListener(this);
 
         vistamenu.btnCompraGuardar.addMouseListener(this);
-        vistamenu.btnCompraEliminar.addMouseListener(this);
-        vistamenu.btnCompraModificar.addMouseListener(this);
 
         vistamenu.btnProveedorGuardar.addMouseListener(this);
         vistamenu.btnProveedorEliminar.addMouseListener(this);
         vistamenu.btnProveedorModificar.addMouseListener(this);
+        
+        vistamenu.btnClienteEliminar.addMouseListener(this);
+        vistamenu.btnClienteGuardar.addMouseListener(this);
+        vistamenu.btnClienteModificar.addMouseListener(this);
+        
+        vistamenu.btnProductoEliminar.addMouseListener(this);
+        vistamenu.btnProductoModificar.addMouseListener(this);
+        vistamenu.btnProveedorGuardar.addMouseListener(this);
+        
+        vistamenu.btnPlatoGuardar.addMouseListener(this);
+        vistamenu.btnPlatoEliminar.addMouseListener(this);
+        vistamenu.btnPlatoModificar.addMouseListener(this);
+        
+        vistamenu.btnTipoProductoEliminar.addMouseListener(this);
+        vistamenu.btnTipoProductoGuardar.addMouseListener(this);
+        vistamenu.btnTipoProductoModificar.addMouseListener(this);        
     }
 
     void setColor(JPanel panel) {
@@ -60,25 +74,28 @@ public class MenuAdmin_Controlador implements MouseListener {
         resetColor(vistamenu.btnTurnoModificar);
         resetColor(vistamenu.btnTurnoEliminar);
 
-        resetColor(vistamenu.btnCompraEliminar);
-        resetColor(vistamenu.btnCompraModificar);
         resetColor(vistamenu.btnCompraGuardar);
 
-        resetColor(vistamenu.btnClienteModificar);
-        resetColor(vistamenu.btnClienteEliminar);
-        resetColor(vistamenu.btnClienteGuardar);
-
-        resetColor(vistamenu.btnUsuarioGuardar);
-        resetColor(vistamenu.btnUsuarioEliminar);
-        resetColor(vistamenu.btnUsuarioModificar);
-
-        resetColor(vistamenu.btnEstadoMesaGuardar);
-        resetColor(vistamenu.btnEstadoMesaEliminar);
-        resetColor(vistamenu.btnEstadoMesaModificar);
-
+        
         resetColor(vistamenu.btnProveedorGuardar);
         resetColor(vistamenu.btnProveedorEliminar);
         resetColor(vistamenu.btnProveedorModificar);
+        
+        resetColor(vistamenu.btnClienteModificar);
+        resetColor(vistamenu.btnClienteEliminar);
+        resetColor(vistamenu.btnClienteGuardar);        
+        
+        resetColor(vistamenu.btnProductoGuardar);
+        resetColor(vistamenu.btnProductoEliminar);
+        resetColor(vistamenu.btnProductoModificar);
+        
+        resetColor(vistamenu.btnPlatoGuardar);
+        resetColor(vistamenu.btnPlatoEliminar);
+        resetColor(vistamenu.btnPlatoModificar);        
+        
+        resetColor(vistamenu.btnTipoProductoEliminar);
+        resetColor(vistamenu.btnTipoProductoGuardar);
+        resetColor(vistamenu.btnTipoProductoModificar);
     }
 
     @Override
@@ -88,50 +105,68 @@ public class MenuAdmin_Controlador implements MouseListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
-//        if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
-//
-//            this.Limpiar();
-//            setColor(vistamenu.btnTurnoGuardar);
-//            TurnoDao dao = new TurnoDao();
-//            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
-//            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
-//            frmTurnoModificar vistamodi = new frmTurnoModificar();
-//            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
-//            new CambiaPanel(this.vistamenu.panDatos, vistaturno);
-//        }
 
-   if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
+        if (e.getSource() == vistamenu.btnTipoProductoGuardar || e.getSource() == vistamenu.lblTipoProductoGuardar) {
+            this.Limpiar();
+            setColor(vistamenu.btnTipoProductoGuardar);
+            frmTipoProductoGuardar frm = new frmTipoProductoGuardar();
+            frmTipoProductoModificar frm2 = new frmTipoProductoModificar();
+            frmTipoProductoEliminar frm3 = new frmTipoProductoEliminar();
+            Tipo_productoDao dao = new Tipo_productoDao();
+            TipoProductoBean cons = new TipoProductoBean(frm3, dao, frm2, frm);
+            new CambiaPanel(this.vistamenu.panDatos, frm);
+        }
 
-            frmTipoProductoGuardar frm= new frmTipoProductoGuardar();
-            frmTipoProductoModificar frm2= new frmTipoProductoModificar();
-            frmTipoProductoEliminar frm3= new frmTipoProductoEliminar();
-            Tipo_productoDao dao= new Tipo_productoDao();
-            TipoProductoBean cons=new TipoProductoBean(frm3, dao, frm2, frm);
-            cons.MostrarD();
+        if (e.getSource() == vistamenu.btnTipoProductoModificar || e.getSource() == vistamenu.lblTipoProductoModificar) {
+            this.Limpiar();
+            setColor(vistamenu.btnTipoProductoModificar);
+            frmTipoProductoGuardar frm = new frmTipoProductoGuardar();
+            frmTipoProductoModificar frm2 = new frmTipoProductoModificar();
+            frmTipoProductoEliminar frm3 = new frmTipoProductoEliminar();
+            Tipo_productoDao dao = new Tipo_productoDao();
+            TipoProductoBean cons = new TipoProductoBean(frm3, dao, frm2, frm);
+            cons.MostrarDM();
             new CambiaPanel(this.vistamenu.panDatos, frm2);
-   }
+        }
 
+        if (e.getSource() == vistamenu.btnTipoProductoEliminar || e.getSource() == vistamenu.lblTipoProductoEliminar) {
+            this.Limpiar();
+            setColor(vistamenu.btnTipoProductoEliminar);
+            frmTipoProductoGuardar frm = new frmTipoProductoGuardar();
+            frmTipoProductoModificar frm2 = new frmTipoProductoModificar();
+            frmTipoProductoEliminar frm3 = new frmTipoProductoEliminar();
+            Tipo_productoDao dao = new Tipo_productoDao();
+            TipoProductoBean cons = new TipoProductoBean(frm3, dao, frm2, frm);
+            cons.MostrarD();
+            new CambiaPanel(this.vistamenu.panDatos, frm3);
+        }
 
+        if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
+            this.Limpiar();
+            setColor(vistamenu.btnTurnoGuardar);
+            TurnoDao dao = new TurnoDao();
+            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
+            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
+            frmTurnoModificar vistamodi = new frmTurnoModificar();
+            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
+            new CambiaPanel(this.vistamenu.panDatos, vistaturno);
+        }
 
+        if (e.getSource() == vistamenu.btnTurnoEliminar || e.getSource() == vistamenu.lblTurnoEliminar) {
+            this.Limpiar();
+            setColor(vistamenu.btnTurnoEliminar);
+            TurnoDao dao = new TurnoDao();
+            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
+            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
+            frmTurnoModificar vistamodi = new frmTurnoModificar();
+            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
+            controlador.MostrarD();
+            new CambiaPanel(this.vistamenu.panDatos, vistaturnodos);
+        }
 
-
-
-//             if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
-//
-//            this.Limpiar();
-//            setColor(vistamenu.btnTurnoGuardar);
-//            TurnoDao dao = new TurnoDao();
-//            frmTurnoGuardar vistaturno = new frmTurnoGuardar();
-//            frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
-//            frmTurnoModificar vistamodi = new frmTurnoModificar();
-//            Turno_Controlador controlador = new Turno_Controlador(vistaturno, vistaturnodos, vistamodi, dao);
-//            new CambiaPanel(this.vistamenu.panDatos, vistaturno);
-//        }
-//     
         if (e.getSource() == vistamenu.btnTurnoModificar || e.getSource() == vistamenu.lblTurnoModificar) {
             this.Limpiar();
             setColor(vistamenu.btnTurnoModificar);
-
             TurnoDao dao = new TurnoDao();
             frmTurnoGuardar vistaturno = new frmTurnoGuardar();
             frmTurnoEliminar vistaturnodos = new frmTurnoEliminar();
@@ -156,7 +191,6 @@ public class MenuAdmin_Controlador implements MouseListener {
         if (e.getSource() == vistamenu.btnProveedorEliminar || e.getSource() == vistamenu.lblProveedorEliminar) {
             this.Limpiar();
             setColor(vistamenu.btnProveedorEliminar);
-            
 
             ProveedorDao dao = new ProveedorDao();
             frmProveedorGuardar vistaguardar = new frmProveedorGuardar();
@@ -168,10 +202,9 @@ public class MenuAdmin_Controlador implements MouseListener {
         }
 
         if (e.getSource() == vistamenu.btnProveedorModificar || e.getSource() == vistamenu.lblProveedorModificar) {
-            
+
             this.Limpiar();
             setColor(vistamenu.btnProveedorModificar);
-
 
             ProveedorDao dao = new ProveedorDao();
             frmProveedorGuardar vistaguardar = new frmProveedorGuardar();
@@ -181,7 +214,7 @@ public class MenuAdmin_Controlador implements MouseListener {
             controlador.MostrarM();
             new CambiaPanel(this.vistamenu.panDatos, vistamodificar);
         }
-        
+
         if (e.getSource() == vistamenu.btnCompraGuardar || e.getSource() == vistamenu.lblCompraGuardar) {
             this.Limpiar();
             setColor(vistamenu.btnCompraGuardar);
@@ -193,7 +226,7 @@ public class MenuAdmin_Controlador implements MouseListener {
             controlador.Orden();
             controlador.Producto();
             new CambiaPanel(this.vistamenu.panDatos, vistaguardar);
-            
+
         }
 
     }

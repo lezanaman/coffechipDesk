@@ -18,23 +18,22 @@ import java.util.List;
 public class Tipo_productoDao extends Dao {
 
     public String registrar(Tipo_producto Tt) throws Exception {
-   String respuesta = null;
+        String respuesta = null;
         try {
             this.Conectar();
             PreparedStatement st = this.getCon().prepareStatement("insert into tipo_producto values(?);");
 
-           
             st.setString(1, Tt.getNombre());
 
             st.executeUpdate();
- respuesta = "Registro Exitoso";
+            respuesta = "Registro Exitoso";
         } catch (Exception ex) {
             throw ex;
         } finally {
             this.Desconecar();
-  
+
         }
-return respuesta;
+        return respuesta;
     }
 
     public ResultSet listar() throws Exception {
@@ -48,8 +47,6 @@ return respuesta;
 
         } catch (Exception ex) {
             throw ex;
-        } finally {
-            this.Desconecar();
         }
 
         return rs;
@@ -57,7 +54,7 @@ return respuesta;
     }
 
     public String modificar(Tipo_producto tt) throws Exception {
-         String respuesta=null;
+        String respuesta = null;
         try {
             this.Conectar();
             PreparedStatement st = this.getCon().prepareStatement("UPDATE  tipo_producto SET id_tipo=?, nombre_tipo=? WHERE id_tipo=?;");
@@ -67,19 +64,17 @@ return respuesta;
             st.setInt(3, tt.getId_tipo());
 
             st.executeUpdate();
-   respuesta = "Modicado Correctamente";
+            respuesta = "Modicado Correctamente";
         } catch (Exception ex) {
             throw ex;
         } finally {
             this.Desconecar();
- tt.setId_tipo(0);
+            tt.setId_tipo(0);
             tt.setNombre(null);
-            
-        }
-return respuesta;
-    }
 
-  
+        }
+        return respuesta;
+    }
 
     public String eliminar(Tipo_producto pac) throws Exception {
         String respuesta = null;

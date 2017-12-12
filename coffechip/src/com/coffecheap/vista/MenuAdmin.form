@@ -25,10 +25,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="panAtras" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="panEncabezado" max="32767" attributes="0"/>
-                  <Component id="panDatos" min="-2" pref="912" max="-2" attributes="0"/>
+                  <Component id="panDatos" pref="912" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -103,7 +103,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="panNombre" max="32767" attributes="0"/>
-              <Component id="jspMenuLateral" alignment="0" pref="253" max="32767" attributes="0"/>
+              <Component id="jspMenuLateral" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -111,7 +111,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="panNombre" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jspMenuLateral" pref="1501" max="32767" attributes="0"/>
+                  <Component id="jspMenuLateral" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -120,26 +120,25 @@
         <Container class="javax.swing.JPanel" name="panNombre">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="ff" red="33" type="rgb"/>
+              <Color blue="41" green="2f" red="24" type="rgb"/>
             </Property>
           </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="lblTitulo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
                       <Component id="lblTitulo" min="-2" pref="68" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -184,21 +183,19 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btnProductoModificar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnProductoGuardar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnProductoEliminar" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnCompraGuardar" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnClienteGuardar" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnClienteModificar" alignment="1" max="32767" attributes="0"/>
                       <Component id="btnClienteEliminar" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btnEstadoMesaGuardar" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnEstadoMesaModificar" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btnEstadoMesaEliminar" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btnUsuarioModificar" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnUsuarioGuardar" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnUsuarioEliminar" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btnCompraGuardar" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnCompraModificar" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btnCompraEliminar" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btnReservaGuardar" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnReservaModificar" alignment="1" max="32767" attributes="0"/>
-                      <Component id="btnReservaEliminar" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnPlatoGuardar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnPlatoModificar" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnPlatoEliminar" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnOrdenGuardar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnOrdenModificar" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnOrdenEliminar" alignment="1" max="32767" attributes="0"/>
                       <Component id="btnRecetaGuardar" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnRecetaModificar" alignment="1" max="32767" attributes="0"/>
                       <Component id="btnRecetaEliminar" alignment="1" max="32767" attributes="0"/>
@@ -208,26 +205,29 @@
                       <Component id="btnProveedorGuardar" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnProveedorModificar" alignment="1" max="32767" attributes="0"/>
                       <Component id="btnProveedorEliminar" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnTipoProductoGuardar" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnTipoProductoModificar" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnTipoProductoEliminar" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="29" pref="29" max="-2" attributes="0"/>
-                                  <Component id="lblUsuarios" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblProducto" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   <Component id="lblCompra" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lblCliente" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblEstadoMesa" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblPlato" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                  <Component id="lblReserva" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblOrdenCompras" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
@@ -241,8 +241,12 @@
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                   <Component id="lblProveedor" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Component id="lblTipoProducto" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="118" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -250,21 +254,17 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Component id="lblUsuarios" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblProducto" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnUsuarioGuardar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnProductoGuardar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnUsuarioModificar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnProductoModificar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnUsuarioEliminar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnProductoEliminar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="lblCompra" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btnCompraGuardar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnCompraModificar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnCompraEliminar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="lblCliente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -274,21 +274,21 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btnClienteEliminar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="lblEstadoMesa" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPlato" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnEstadoMesaGuardar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPlatoGuardar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnEstadoMesaModificar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPlatoModificar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnEstadoMesaEliminar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPlatoEliminar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="lblReserva" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblOrdenCompras" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnReservaGuardar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnOrdenGuardar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnReservaModificar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnOrdenModificar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="btnReservaEliminar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnOrdenEliminar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="lblReceta" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -305,7 +305,15 @@
                           <Component id="btnTurnoModificar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btnTurnoEliminar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                          <EmptySpace pref="42" max="32767" attributes="0"/>
+                          <Component id="lblTipoProducto" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btnTipoProductoGuardar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnTipoProductoModificar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btnTipoProductoEliminar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                           <Component id="lblProveedor" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnProveedorGuardar" min="-2" max="-2" attributes="0"/>
@@ -313,13 +321,13 @@
                           <Component id="btnProveedorModificar" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btnProveedorEliminar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblUsuarios">
+                <Component class="javax.swing.JLabel" name="lblProducto">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -330,10 +338,10 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Usuarios"/>
+                    <Property name="text" type="java.lang.String" value="Producto"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JPanel" name="btnUsuarioGuardar">
+                <Container class="javax.swing.JPanel" name="btnProductoGuardar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -349,7 +357,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="lblUsuariosGuardar" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="lblProductoGuardar" min="-2" pref="54" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -359,7 +367,7 @@
                           <Component id="jPanel6" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblUsuariosGuardar" max="32767" attributes="0"/>
+                              <Component id="lblProductoGuardar" max="32767" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -384,7 +392,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblUsuariosGuardar">
+                    <Component class="javax.swing.JLabel" name="lblProductoGuardar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -403,7 +411,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="btnUsuarioModificar">
+                <Container class="javax.swing.JPanel" name="btnProductoModificar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -419,8 +427,8 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="lblUsuariosModificar" min="-2" pref="86" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="lblProductoModificar" min="-2" pref="86" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -429,7 +437,7 @@
                           <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblUsuariosModificar" max="32767" attributes="0"/>
+                              <Component id="lblProductoModificar" max="32767" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -454,7 +462,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblUsuariosModificar">
+                    <Component class="javax.swing.JLabel" name="lblProductoModificar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -473,7 +481,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="btnUsuarioEliminar">
+                <Container class="javax.swing.JPanel" name="btnProductoEliminar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -489,7 +497,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="lblUsuariosEliminar" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="lblProductoEliminar" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -499,7 +507,7 @@
                           <Component id="jPanel8" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblUsuariosEliminar" max="32767" attributes="0"/>
+                              <Component id="lblProductoEliminar" max="32767" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -524,7 +532,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblUsuariosEliminar">
+                    <Component class="javax.swing.JLabel" name="lblProductoEliminar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -617,146 +625,6 @@
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Guardar"/>
-                      </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                      </AuxValues>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="btnCompraModificar">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="41" green="2f" red="25" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                  </AuxValues>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="panDecor2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="lblCompraModificar" min="-2" pref="76" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="panDecor2" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblCompraModificar" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Container class="javax.swing.JPanel" name="panDecor2">
-                      <Properties>
-                        <Property name="opaque" type="boolean" value="false"/>
-                      </Properties>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                    </Container>
-                    <Component class="javax.swing.JLabel" name="lblCompraModificar">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="12" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Modificar"/>
-                      </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                      </AuxValues>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="btnCompraEliminar">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="41" green="2f" red="25" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                  </AuxValues>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="panDecor3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="lblCompraEliminar" min="-2" pref="76" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="panDecor3" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblCompraEliminar" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Container class="javax.swing.JPanel" name="panDecor3">
-                      <Properties>
-                        <Property name="opaque" type="boolean" value="false"/>
-                      </Properties>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                    </Container>
-                    <Component class="javax.swing.JLabel" name="lblCompraEliminar">
-                      <Properties>
-                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                        </Property>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="12" style="1"/>
-                        </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Eliminar"/>
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -985,7 +853,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="lblEstadoMesa">
+                <Component class="javax.swing.JLabel" name="lblPlato">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Viner Hand ITC" size="18" style="1"/>
@@ -993,10 +861,10 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Estado Mesa"/>
+                    <Property name="text" type="java.lang.String" value="Plato"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JPanel" name="btnEstadoMesaGuardar">
+                <Container class="javax.swing.JPanel" name="btnPlatoGuardar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -1012,7 +880,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="lblEstadoMesaGuardar" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="lblPlatoGuardar" min="-2" pref="54" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1022,7 +890,7 @@
                           <Component id="jPanel15" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblEstadoMesaGuardar" max="32767" attributes="0"/>
+                              <Component id="lblPlatoGuardar" max="32767" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1047,7 +915,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblEstadoMesaGuardar">
+                    <Component class="javax.swing.JLabel" name="lblPlatoGuardar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -1066,7 +934,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="btnEstadoMesaModificar">
+                <Container class="javax.swing.JPanel" name="btnPlatoModificar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -1082,7 +950,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="lblEstadoMesaModificar" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="lblPlatoModificar" min="-2" pref="76" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1092,7 +960,7 @@
                           <Component id="jPanel14" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblEstadoMesaModificar" max="32767" attributes="0"/>
+                              <Component id="lblPlatoModificar" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1117,7 +985,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblEstadoMesaModificar">
+                    <Component class="javax.swing.JLabel" name="lblPlatoModificar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -1136,7 +1004,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="btnEstadoMesaEliminar">
+                <Container class="javax.swing.JPanel" name="btnPlatoEliminar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -1152,7 +1020,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="lblEstadoMesaEliminar" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="lblPlatoEliminar" min="-2" pref="76" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1162,7 +1030,7 @@
                           <Component id="jPanel10" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblEstadoMesaEliminar" max="32767" attributes="0"/>
+                              <Component id="lblPlatoEliminar" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1187,7 +1055,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblEstadoMesaEliminar">
+                    <Component class="javax.swing.JLabel" name="lblPlatoEliminar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -1206,7 +1074,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="lblReserva">
+                <Component class="javax.swing.JLabel" name="lblOrdenCompras">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Viner Hand ITC" size="18" style="1"/>
@@ -1214,10 +1082,10 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Reserva"/>
+                    <Property name="text" type="java.lang.String" value="Orden Compras"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JPanel" name="btnReservaGuardar">
+                <Container class="javax.swing.JPanel" name="btnOrdenGuardar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -1233,7 +1101,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                              <Component id="lblReservaGuardar" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="lblOrdenGuardar" min="-2" pref="54" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1243,7 +1111,7 @@
                           <Component id="jPanel16" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblReservaGuardar" max="32767" attributes="0"/>
+                              <Component id="lblOrdenGuardar" max="32767" attributes="0"/>
                               <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1268,7 +1136,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblReservaGuardar">
+                    <Component class="javax.swing.JLabel" name="lblOrdenGuardar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -1287,7 +1155,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="btnReservaModificar">
+                <Container class="javax.swing.JPanel" name="btnOrdenModificar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -1303,7 +1171,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="lblReservaModificar" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="lblOrdenModificar" min="-2" pref="76" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1313,7 +1181,7 @@
                           <Component id="jPanel17" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblReservaModificar" max="32767" attributes="0"/>
+                              <Component id="lblOrdenModificar" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1338,7 +1206,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblReservaModificar">
+                    <Component class="javax.swing.JLabel" name="lblOrdenModificar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -1357,7 +1225,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="btnReservaEliminar">
+                <Container class="javax.swing.JPanel" name="btnOrdenEliminar">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="41" green="2f" red="25" type="rgb"/>
@@ -1373,7 +1241,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="lblReservaEliminar" min="-2" pref="76" max="-2" attributes="0"/>
+                              <Component id="lblOrdenEliminar" min="-2" pref="76" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1383,7 +1251,7 @@
                           <Component id="jPanel11" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblReservaEliminar" max="32767" attributes="0"/>
+                              <Component id="lblOrdenEliminar" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1408,7 +1276,7 @@
                         </DimensionLayout>
                       </Layout>
                     </Container>
-                    <Component class="javax.swing.JLabel" name="lblReservaEliminar">
+                    <Component class="javax.swing.JLabel" name="lblOrdenEliminar">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -2088,6 +1956,227 @@
                       <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Proveedor"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="btnTipoProductoEliminar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="41" green="2f" red="25" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jPanel28" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="lblTipoProductoEliminar" min="-2" pref="76" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jPanel28" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lblTipoProductoEliminar" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="jPanel28">
+                      <Properties>
+                        <Property name="opaque" type="boolean" value="false"/>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="lblTipoProductoEliminar">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="btnTipoProductoModificar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="41" green="2f" red="25" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jPanel29" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="lblTipoProductoModificar" min="-2" pref="76" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jPanel29" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lblTipoProductoModificar" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="jPanel29">
+                      <Properties>
+                        <Property name="opaque" type="boolean" value="false"/>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="lblTipoProductoModificar">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="btnTipoProductoGuardar">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="41" green="2f" red="25" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jPanel30" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="lblTipoProductoGuardar" min="-2" pref="54" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jPanel30" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="lblTipoProductoGuardar" max="32767" attributes="0"/>
+                              <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="jPanel30">
+                      <Properties>
+                        <Property name="opaque" type="boolean" value="false"/>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                    </Container>
+                    <Component class="javax.swing.JLabel" name="lblTipoProductoGuardar">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Guardar"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="lblTipoProducto">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Viner Hand ITC" size="18" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Tipo Producto"/>
                   </Properties>
                 </Component>
               </SubComponents>
