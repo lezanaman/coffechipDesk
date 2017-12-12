@@ -199,7 +199,6 @@ public class MenuAdmin_Controlador implements MouseListener {
             frmProveedorModificar vistamodificar = new frmProveedorModificar();
             Proveedor_Controlador controlador = new Proveedor_Controlador(vistaguardar, vistamodificar, vistaeliminar, dao);
             new CambiaPanel(this.vistamenu.panDatos, vistaguardar);
-
         }
 
         if (e.getSource() == vistamenu.btnProveedorEliminar || e.getSource() == vistamenu.lblProveedorEliminar) {
