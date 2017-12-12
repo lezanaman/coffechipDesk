@@ -34,7 +34,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
         txtIdPlato = new javax.swing.JTextField();
         btnModificar = new javax.swing.JButton();
         scpPrincipal = new javax.swing.JScrollPane();
-        tblTurnoModificar = new javax.swing.JTable();
+        tblPlato = new javax.swing.JTable();
         lblPrecio_Plato = new javax.swing.JLabel();
         txtttt = new javax.swing.JTextField();
         lblPorciones = new javax.swing.JLabel();
@@ -76,7 +76,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
         btnModificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnModificar.setText("Modificar");
 
-        tblTurnoModificar.setModel(new javax.swing.table.DefaultTableModel(
+        tblPlato.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -88,7 +88,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
                 "Id Plato", "Nombre del Platillo", "Precio Plato", "Porciones", "Descripcion del Plato"
             }
         ));
-        scpPrincipal.setViewportView(tblTurnoModificar);
+        scpPrincipal.setViewportView(tblPlato);
 
         lblPrecio_Plato.setText("Precio Plato");
 
@@ -192,7 +192,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnModificar;
+    public javax.swing.JButton btnModificar;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblId_Plato;
     private javax.swing.JLabel lblNombre_Platillo;
@@ -200,10 +200,10 @@ public class frmPlatoModificar extends javax.swing.JPanel {
     private javax.swing.JLabel lblPrecio_Plato;
     private javax.swing.JPanel panPrincipal;
     private javax.swing.JScrollPane scpPrincipal;
-    private javax.swing.JTable tblTurnoModificar;
+    public javax.swing.JTable tblPlato;
     private javax.swing.JTextField txtDescripcion;
-    private javax.swing.JTextField txtIdPlato;
-    private javax.swing.JTextField txtNombrePlatillo;
+    public javax.swing.JTextField txtIdPlato;
+    public javax.swing.JTextField txtNombrePlatillo;
     private javax.swing.JTextField txtPorciones;
     private javax.swing.JTextField txtttt;
     // End of variables declaration//GEN-END:variables

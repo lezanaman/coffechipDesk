@@ -32,7 +32,7 @@ public class frmPlatoEliminar extends javax.swing.JPanel {
         txtIdPlato = new javax.swing.JTextField();
         btnEliminar = new javax.swing.JButton();
         scpPrincipal = new javax.swing.JScrollPane();
-        tblTurnoModificar = new javax.swing.JTable();
+        tblPlato = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.GridBagLayout());
@@ -52,7 +52,7 @@ public class frmPlatoEliminar extends javax.swing.JPanel {
         btnEliminar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnEliminar.setText("Eliminar");
 
-        tblTurnoModificar.setModel(new javax.swing.table.DefaultTableModel(
+        tblPlato.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -64,7 +64,7 @@ public class frmPlatoEliminar extends javax.swing.JPanel {
                 "Id Plato", "Nombre del Platillo", "Precio Plato", "Porciones", "Descripcion del Plato"
             }
         ));
-        scpPrincipal.setViewportView(tblTurnoModificar);
+        scpPrincipal.setViewportView(tblPlato);
 
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);
@@ -111,7 +111,7 @@ public class frmPlatoEliminar extends javax.swing.JPanel {
     private javax.swing.JLabel lblId_Plato;
     private javax.swing.JPanel panPrincipal;
     private javax.swing.JScrollPane scpPrincipal;
-    public javax.swing.JTable tblTurnoModificar;
+    public javax.swing.JTable tblPlato;
     public javax.swing.JTextField txtIdPlato;
     // End of variables declaration//GEN-END:variables
 }
