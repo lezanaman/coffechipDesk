@@ -76,7 +76,6 @@ public class MenuAdmin_Controlador implements MouseListener {
 
         resetColor(vistamenu.btnCompraGuardar);
 
-        
         resetColor(vistamenu.btnProveedorGuardar);
         resetColor(vistamenu.btnProveedorEliminar);
         resetColor(vistamenu.btnProveedorModificar);
@@ -96,6 +95,16 @@ public class MenuAdmin_Controlador implements MouseListener {
         resetColor(vistamenu.btnTipoProductoEliminar);
         resetColor(vistamenu.btnTipoProductoGuardar);
         resetColor(vistamenu.btnTipoProductoModificar);
+        
+        resetColor(vistamenu.btnOrdenGuardar);
+        resetColor(vistamenu.btnOrdenEliminar);
+        resetColor(vistamenu.btnOrdenModificar);
+        
+        resetColor(vistamenu.btnRecetaGuardar);
+        resetColor(vistamenu.btnRecetaEliminar);
+        resetColor(vistamenu.btnRecetaModificar);
+        
+        
     }
 
     @Override
@@ -106,6 +115,7 @@ public class MenuAdmin_Controlador implements MouseListener {
     @Override
     public void mousePressed(MouseEvent e) {
 
+        //Aqui va todoso los if de TIPO PRODUCTO
         if (e.getSource() == vistamenu.btnTipoProductoGuardar || e.getSource() == vistamenu.lblTipoProductoGuardar) {
             this.Limpiar();
             setColor(vistamenu.btnTipoProductoGuardar);
@@ -141,6 +151,8 @@ public class MenuAdmin_Controlador implements MouseListener {
             new CambiaPanel(this.vistamenu.panDatos, frm3);
         }
 
+        
+        //Aqui va todos los if de TURNO
         if (e.getSource() == vistamenu.btnTurnoGuardar || e.getSource() == vistamenu.lblTurnoGuardar) {
             this.Limpiar();
             setColor(vistamenu.btnTurnoGuardar);
@@ -176,6 +188,8 @@ public class MenuAdmin_Controlador implements MouseListener {
             new CambiaPanel(this.vistamenu.panDatos, vistamodi);
         }
 
+        
+        //Aqui estan todos los if de PROVEEDOR
         if (e.getSource() == vistamenu.btnProveedorGuardar || e.getSource() == vistamenu.lblProveedorGuardar) {
             this.Limpiar();
             setColor(vistamenu.btnProveedorGuardar);
@@ -215,6 +229,8 @@ public class MenuAdmin_Controlador implements MouseListener {
             new CambiaPanel(this.vistamenu.panDatos, vistamodificar);
         }
 
+        
+        // Aqui va el if de COMPRA
         if (e.getSource() == vistamenu.btnCompraGuardar || e.getSource() == vistamenu.lblCompraGuardar) {
             this.Limpiar();
             setColor(vistamenu.btnCompraGuardar);
@@ -226,9 +242,69 @@ public class MenuAdmin_Controlador implements MouseListener {
             controlador.Orden();
             controlador.Producto();
             new CambiaPanel(this.vistamenu.panDatos, vistaguardar);
-
         }
-
+        
+        
+        //Aqui va todos los if de CLIENTE
+        if (e.getSource() == vistamenu.btnClienteEliminar || e.getSource() == vistamenu.lblClienteEliminar) {
+            
+        }
+        
+        if (e.getSource() == vistamenu.btnClienteGuardar || e.getSource() == vistamenu.lblClienteGuardar) {
+            
+        }
+        
+        if (e.getSource() == vistamenu.btnClienteModificar || e.getSource() == vistamenu.lblClienteModificar) {
+            
+        }
+        
+        
+        //Aqui va todos los if de RECETA
+        
+        if (e.getSource() == vistamenu.btnRecetaGuardar || e.getSource() == vistamenu.lblRecetaGuardar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnRecetaEliminar || e.getSource() == vistamenu.lblRecetaEliminar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnRecetaModificar || e.getSource() == vistamenu.lblRecetaModificar) {
+            
+        }
+        
+        //Aqui va todos los if de ORDEN COMPRAS
+        
+        if (e.getSource() == vistamenu.btnOrdenGuardar || e.getSource() == vistamenu.lblOrdenGuardar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnOrdenEliminar || e.getSource() == vistamenu.lblOrdenEliminar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnOrdenModificar || e.getSource() == vistamenu.lblOrdenModificar) {
+            
+        }
+        
+        //Aqui va todos los if de PRODUCTO
+        if (e.getSource() == vistamenu.btnProductoGuardar || e.getSource()==vistamenu.lblProductoGuardar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnProductoEliminar || e.getSource() == vistamenu.lblProductoEliminar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnProductoModificar || e.getSource() == vistamenu.lblProductoModificar) {
+            
+        }
+        
+        //Aqui va todos los if de PLATO
+        if (e.getSource() == vistamenu.btnPlatoGuardar || e.getSource() == vistamenu.lblPlatoGuardar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnPlatoEliminar || e.getSource() == vistamenu.lblPlatoEliminar) {
+            
+        }
+        if (e.getSource() == vistamenu.btnPlatoModificar || e.getSource() == vistamenu.lblPlatoModificar) {
+            
+        }
+        
     }
 
     @Override
