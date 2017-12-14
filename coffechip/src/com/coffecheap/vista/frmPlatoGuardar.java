@@ -185,7 +185,30 @@ public class frmPlatoGuardar extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescripcionActionPerformed
 
+   private void txtIdPlatoKeyTyped(java.awt.event.KeyEvent evt) {                                    
+        char c = evt.getKeyChar();
 
+        if (c < '0' || c > '9') {
+            evt.consume();
+    }              
+    }                                   
+
+    private void txtPrecioKeyTyped(java.awt.event.KeyEvent evt) {                                   
+        char c = evt.getKeyChar();
+
+        if (c < '0' || c > '9') {
+            evt.consume();
+    }              
+    }                                  
+
+    private void txtPorcionesKeyTyped(java.awt.event.KeyEvent evt) {                                      
+       char c = evt.getKeyChar();
+
+        if (c < '0' || c > '9') {
+            evt.consume();
+    }              
+    }   
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnGuardar;
     private javax.swing.JLabel lblDescripcion;

@@ -72,6 +72,11 @@ public class frmPlatoModificar extends javax.swing.JPanel {
                 txtIdPlatoActionPerformed(evt);
             }
         });
+        txtIdPlato.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIdPlatoKeyTyped(evt);
+            }
+        });
 
         btnModificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnModificar.setText("Modificar");
@@ -97,8 +102,24 @@ public class frmPlatoModificar extends javax.swing.JPanel {
                 txtPrecioActionPerformed(evt);
             }
         });
+        txtPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPrecioKeyTyped(evt);
+            }
+        });
 
         lblPorciones.setText("Porciones:");
+
+        txtPorciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPorcionesActionPerformed(evt);
+            }
+        });
+        txtPorciones.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPorcionesKeyTyped(evt);
+            }
+        });
 
         lblDescripcion.setText("Descripcion del Plato");
 
@@ -171,15 +192,11 @@ public class frmPlatoModificar extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNombrePlatilloKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombrePlatilloKeyTyped
-        char c = evt.getKeyChar();
-
-        if (c < '0' || c > '9') {
-            evt.consume();
-        }
+   
     }//GEN-LAST:event_txtNombrePlatilloKeyTyped
 
     private void txtIdPlatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPlatoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtIdPlatoActionPerformed
 
     private void txtNombrePlatilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombrePlatilloActionPerformed
@@ -187,8 +204,36 @@ public class frmPlatoModificar extends javax.swing.JPanel {
     }//GEN-LAST:event_txtNombrePlatilloActionPerformed
 
     private void txtPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtPrecioActionPerformed
+
+    private void txtPorcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPorcionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPorcionesActionPerformed
+
+    private void txtIdPlatoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdPlatoKeyTyped
+        char c = evt.getKeyChar();
+
+        if (c < '0' || c > '9') {
+            evt.consume();
+    }              
+    }//GEN-LAST:event_txtIdPlatoKeyTyped
+
+    private void txtPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPrecioKeyTyped
+        char c = evt.getKeyChar();
+
+        if (c < '0' || c > '9') {
+            evt.consume();
+    }              
+    }//GEN-LAST:event_txtPrecioKeyTyped
+
+    private void txtPorcionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPorcionesKeyTyped
+       char c = evt.getKeyChar();
+
+        if (c < '0' || c > '9') {
+            evt.consume();
+    }              
+    }//GEN-LAST:event_txtPorcionesKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
