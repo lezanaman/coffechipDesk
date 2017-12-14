@@ -50,13 +50,13 @@ public class Plato_Controlador implements ActionListener {
         tblPlato = this.vistaplatoeliminar.tblPlato;
         tblPlato.setModel(dfm);
 
-        dfm.setColumnIdentifiers(new Object[]{"Id del Plato", "Nombre del Platillo", "Precio0", "Porciones", "Descripcion"});
+        dfm.setColumnIdentifiers(new Object[]{"Id del Plato", "Nombre del Platillo", "Precio0", "Porciones", "Descripcion","Tipo Platillo"});
 
         try {
             rs = platodao.VerDatos();
 
             while (rs.next()) {
-                dfm.addRow(new Object[]{rs.getInt("id_plato"), rs.getString("nombre_platillo"), rs.getDouble("precio_plato"),rs.getInt("porciones"),rs.getString("descripcion_plato")});
+                dfm.addRow(new Object[]{rs.getInt("id_plato"), rs.getString("nombre_platillo"), rs.getDouble("precio_plato"),rs.getInt("porciones"),rs.getString("descripcion_plato"), rs.getInt("id_tipo")});
             }
         } catch (Exception ex) {
             System.out.println(ex);
@@ -69,13 +69,13 @@ public class Plato_Controlador implements ActionListener {
         tblPlato = this.vistaplatomodificar.tblPlato;
         tblPlato.setModel(dfm);
 
-        dfm.setColumnIdentifiers(new Object[]{"Id del Plato", "Nombre del Platillo", "Precio0", "Porciones", "Descripcion"});
+        dfm.setColumnIdentifiers(new Object[]{"Id del Plato", "Nombre del Platillo", "Precio0", "Porciones", "Descripcion","Tipo Platillo"});
 
         try {
             rs = platodao.VerDatos();
 
             while (rs.next()) {
-                dfm.addRow(new Object[]{rs.getInt("id_plato"), rs.getString("nombre_platillo"), rs.getDouble("precio_plato"),rs.getInt("porciones"),rs.getString("descripcion_plato")});
+                dfm.addRow(new Object[]{rs.getInt("id_plato"), rs.getString("nombre_platillo"), rs.getDouble("precio_plato"),rs.getInt("porciones"),rs.getString("descripcion_plato"), rs.getInt("id_tipo")});
             }
         } catch (Exception ex) {
             System.out.println(ex);
@@ -86,12 +86,12 @@ public class Plato_Controlador implements ActionListener {
 
         try {
 
-                this.plato.setId_plato(Integer.parseInt(this.vistaplatoguardar.txtIdPlato.getText()));
+                
                 this.plato.setNombre(this.vistaplatoguardar.txtNombrePlatillo.getText());
                 this.plato.setPrecio(Double.parseDouble(this.vistaplatoguardar.txtPrecio.getText()));
                 this.plato.setPorciones(Integer.parseInt(this.vistaplatoguardar.txtPorciones.getText()));
                 this.plato.setDescripcion(this.vistaplatoguardar.txtDescripcion.getText());
-                
+                this.plato.getTipoPlato().setId(Integer.parseInt(this.vistaplatoguardar.txtTipoPlato.getText()));
                 String respuesta = platodao.registrar(plato);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
@@ -120,6 +120,7 @@ public class Plato_Controlador implements ActionListener {
                 this.plato.setPrecio(Double.parseDouble(this.vistaplatomodificar.txtPrecio.getText()));
                 this.plato.setPorciones(Integer.parseInt(this.vistaplatomodificar.txtPorciones.getText()));
                 this.plato.setDescripcion(this.vistaplatomodificar.txtDescripcion.getText());
+                this.plato.getTipoPlato().setId(Integer.parseInt(this.vistaplatomodificar.txtTipoPlato.getText()));
                 String respuesta = platodao.modificar(plato);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
@@ -184,7 +185,7 @@ public class Plato_Controlador implements ActionListener {
                 this.vistaplatomodificar.txtPrecio.setText(null);
                 this.vistaplatomodificar.txtPorciones.setText(null);
                 this.vistaplatomodificar.txtDescripcion.setText(null);
-                this.vistaplatoguardar.txtIdPlato.setText(null);
+                this.vistaplatoguardar.txtTipoPlato.setText(null);
                 this.vistaplatoguardar.txtNombrePlatillo.setText(null);
                 this.vistaplatoguardar.txtPrecio.setText(null);
                 this.vistaplatoguardar.txtPorciones.setText(null);

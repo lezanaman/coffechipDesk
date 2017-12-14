@@ -41,6 +41,8 @@ public class frmPlatoModificar extends javax.swing.JPanel {
         txtPorciones = new javax.swing.JTextField();
         lblDescripcion = new javax.swing.JLabel();
         txtDescripcion = new javax.swing.JTextField();
+        lblTipoPlato = new javax.swing.JLabel();
+        txtTipoPlato = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.GridBagLayout());
@@ -83,14 +85,14 @@ public class frmPlatoModificar extends javax.swing.JPanel {
 
         tblPlato.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Id Plato", "Nombre del Platillo", "Precio Plato", "Porciones", "Descripcion del Plato"
+                "Id Plato", "Nombre del Platillo", "Precio Plato", "Porciones", "Descripcion del Plato", "Tipo Plato"
             }
         ));
         scpPrincipal.setViewportView(tblPlato);
@@ -123,42 +125,45 @@ public class frmPlatoModificar extends javax.swing.JPanel {
 
         lblDescripcion.setText("Descripcion del Plato");
 
+        lblTipoPlato.setText("Tipo Plato:");
+
         javax.swing.GroupLayout panPrincipalLayout = new javax.swing.GroupLayout(panPrincipal);
         panPrincipal.setLayout(panPrincipalLayout);
         panPrincipalLayout.setHorizontalGroup(
             panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panPrincipalLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 910, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panPrincipalLayout.createSequentialGroup()
-                        .addGap(520, 520, 520)
-                        .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panPrincipalLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblDescripcion)
+                            .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblNombre_Platillo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblId_Plato, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblTipoPlato))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 910, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panPrincipalLayout.createSequentialGroup()
-                                .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblDescripcion)
-                                    .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblNombre_Platillo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblId_Plato, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(panPrincipalLayout.createSequentialGroup()
-                                        .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(panPrincipalLayout.createSequentialGroup()
-                                                .addComponent(txtNombrePlatillo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(lblPorciones))
-                                            .addGroup(panPrincipalLayout.createSequentialGroup()
-                                                .addComponent(txtIdPlato, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(91, 91, 91)
-                                                .addComponent(lblPrecio_Plato)))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtPrecio)
-                                            .addComponent(txtPorciones, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
-                                    .addComponent(txtDescripcion))))))
+                                .addComponent(txtTipoPlato, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(280, 280, 280)
+                                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(panPrincipalLayout.createSequentialGroup()
+                                    .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(panPrincipalLayout.createSequentialGroup()
+                                            .addComponent(txtNombrePlatillo, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(lblPorciones))
+                                        .addGroup(panPrincipalLayout.createSequentialGroup()
+                                            .addComponent(txtIdPlato, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(91, 91, 91)
+                                            .addComponent(lblPrecio_Plato)))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtPrecio)
+                                        .addComponent(txtPorciones, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
+                                .addComponent(txtDescripcion)))))
                 .addGap(22, 22, 22))
         );
         panPrincipalLayout.setVerticalGroup(
@@ -181,8 +186,13 @@ public class frmPlatoModificar extends javax.swing.JPanel {
                 .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblDescripcion))
-                .addGap(57, 57, 57)
-                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panPrincipalLayout.createSequentialGroup()
+                        .addComponent(lblTipoPlato)
+                        .addGap(16, 16, 16)
+                        .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTipoPlato, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -243,6 +253,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
     private javax.swing.JLabel lblNombre_Platillo;
     private javax.swing.JLabel lblPorciones;
     private javax.swing.JLabel lblPrecio_Plato;
+    private javax.swing.JLabel lblTipoPlato;
     private javax.swing.JPanel panPrincipal;
     private javax.swing.JScrollPane scpPrincipal;
     public javax.swing.JTable tblPlato;
@@ -251,5 +262,6 @@ public class frmPlatoModificar extends javax.swing.JPanel {
     public javax.swing.JTextField txtNombrePlatillo;
     public javax.swing.JTextField txtPorciones;
     public javax.swing.JTextField txtPrecio;
+    public javax.swing.JTextField txtTipoPlato;
     // End of variables declaration//GEN-END:variables
 }

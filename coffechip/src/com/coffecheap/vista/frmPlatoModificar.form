@@ -37,46 +37,46 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="520" pref="520" max="-2" attributes="0"/>
-                          <Component id="btnModificar" min="-2" pref="120" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="scpPrincipal" min="-2" pref="910" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lblDescripcion" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblNombre_Platillo" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="lblId_Plato" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="lblTipoPlato" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="scpPrincipal" min="-2" pref="910" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="lblDescripcion" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblNombre_Platillo" min="-2" pref="100" max="-2" attributes="0"/>
-                                          <Component id="lblId_Plato" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="txtNombrePlatillo" min="-2" pref="230" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="lblPorciones" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="txtIdPlato" min="-2" pref="230" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                                                  <Component id="lblPrecio_Plato" min="-2" max="-2" attributes="0"/>
-                                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="txtTipoPlato" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="280" max="-2" attributes="0"/>
+                                  <Component id="btnModificar" min="-2" pref="120" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="txtNombrePlatillo" min="-2" pref="230" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="lblPorciones" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="txtPrecio" max="32767" attributes="0"/>
-                                              <Component id="txtPorciones" pref="193" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="txtIdPlato" min="-2" pref="230" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                                              <Component id="lblPrecio_Plato" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="txtDescripcion" max="32767" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtPrecio" max="32767" attributes="0"/>
+                                          <Component id="txtPorciones" pref="193" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
+                                  <Component id="txtDescripcion" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -109,8 +109,15 @@
                       <Component id="txtDescripcion" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="lblDescripcion" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                  <Component id="btnModificar" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="lblTipoPlato" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <Component id="btnModificar" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="txtTipoPlato" min="-2" pref="36" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="scpPrincipal" min="-2" pref="105" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -181,16 +188,22 @@
             <Component class="javax.swing.JTable" name="tblPlato">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="5" rowCount="5">
+                  <Table columnCount="6" rowCount="5">
                     <Column editable="true" title="Id Plato" type="java.lang.Object"/>
                     <Column editable="true" title="Nombre del Platillo" type="java.lang.Object"/>
                     <Column editable="true" title="Precio Plato" type="java.lang.Object"/>
                     <Column editable="true" title="Porciones" type="java.lang.Object"/>
                     <Column editable="true" title="Descripcion del Plato" type="java.lang.Object"/>
+                    <Column editable="true" title="Tipo Plato" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -262,6 +275,16 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtDescripcion">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblTipoPlato">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tipo Plato:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtTipoPlato">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>

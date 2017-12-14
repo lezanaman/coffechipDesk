@@ -24,19 +24,24 @@ public class PlatoDao extends Dao {
         String respuesta = null;
     try {
       this.Conectar();
-      PreparedStatement st = this.getCon().prepareStatement("insert into plato values(?,?,?,?,?);");
-      st.setInt(1, plat.getId_plato());
-      st.setString(2, plat.getNombre());
-      st.setDouble(3, plat.getPrecio());
-      st.setInt(4, plat.getPorciones());    
-      st.setString(5, plat.getDescripcion());
+      PreparedStatement st = this.getCon().prepareStatement("insert into plato(nombre_platillo,precio_plato,porciones,descripcion_plato,id_tipo) values(?,?,?,?,?)");
+            st.setString(1, plat.getNombre());
+            st.setDouble(2, plat.getPrecio());
+            st.setInt(3, plat.getPorciones());
+            st.setString(4, plat.getDescripcion());
+            st.setInt(5, plat.getTipoPlato().getId());
       st.executeUpdate();
       respuesta = "Registro Exitoso";
     } catch (Exception ex) {
       throw ex;
     } finally {
       this.Desconecar();
-
+      plat.setId_plato(0);
+      plat.setNombre(null);
+      plat.setPrecio(0.0);
+      plat.setPorciones(0);
+      plat.setDescripcion(null);
+      plat.getTipoPlato().setId(0);
     }
     return respuesta;
   }
@@ -73,7 +78,7 @@ public class PlatoDao extends Dao {
         plat.setPrecio(rs.getDouble("precio_plato"));
         plat.setPorciones(rs.getInt("porciones"));
         plat.setDescripcion(rs.getString("descripcion_plato"));
-        
+        plat.getTipoPlato().setId(rs.getInt("id_tipo"));
         
         
         lista.add(plat);
@@ -94,14 +99,16 @@ public class PlatoDao extends Dao {
     String respuesta;
     try {
       this.Conectar();
-      PreparedStatement st = this.getCon().prepareStatement("UPDATE  plato SET id_plato=?, nombre_platillo=?, precio_plato=?, porciones=?, descripcion_plato=? WHERE id_plato=?;");
+      PreparedStatement st = this.getCon().prepareStatement("UPDATE  plato SET  nombre_platillo=?, precio_plato=?, porciones=?, descripcion_plato=?, id_tipo=? WHERE id_plato=?;");
 
-      st.setInt(1, plat.getId_plato());
-      st.setString(2, plat.getNombre());
-      st.setDouble(3, plat.getPrecio());
-      st.setInt(4, plat.getPorciones());    
-      st.setString(5, plat.getDescripcion());
+     
+      st.setString(1, plat.getNombre());
+      st.setDouble(2, plat.getPrecio());
+      st.setInt(3, plat.getPorciones());    
+      st.setString(4, plat.getDescripcion());
+      st.setInt(5, plat.getTipoPlato().getId());
       st.setInt(6, plat.getId_plato());
+      
       st.executeUpdate();
       respuesta="Modificado correctamente";
 
@@ -109,7 +116,12 @@ public class PlatoDao extends Dao {
       throw ex;
     } finally {
       this.Desconecar();
-
+      plat.setId_plato(0);
+      plat.setNombre(null);
+      plat.setPrecio(0.0);
+      plat.setPorciones(0);
+      plat.setDescripcion(null);
+      plat.getTipoPlato().setId(0);
     }
     return respuesta;
   }
@@ -127,7 +139,7 @@ public class PlatoDao extends Dao {
       throw ex;
     } finally {
       this.Desconecar();
-
+      plat.setId_plato(0);
     }
     return respuesta;
   }

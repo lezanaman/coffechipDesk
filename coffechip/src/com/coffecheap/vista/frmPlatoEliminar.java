@@ -54,14 +54,14 @@ public class frmPlatoEliminar extends javax.swing.JPanel {
 
         tblPlato.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Id Plato", "Nombre del Platillo", "Precio Plato", "Porciones", "Descripcion del Plato"
+                "Id Plato", "Nombre del Platillo", "Precio Plato", "Porciones", "Descripcion del Plato", "Tipo Plato"
             }
         ));
         scpPrincipal.setViewportView(tblPlato);
