@@ -92,12 +92,12 @@ public class Plato_Controlador implements ActionListener {
                 this.plato.setPorciones(Integer.parseInt(this.vistaplatoguardar.txtPorciones.getText()));
                 this.plato.setDescripcion(this.vistaplatoguardar.txtDescripcion.getText());
                 
-                //String respuesta = platodao.registrar(plato);
-                //if (respuesta != null) {
-                    //JOptionPane.showMessageDialog(null, respuesta);
+                String respuesta = platodao.registrar(plato);
+                if (respuesta != null) {
+                    JOptionPane.showMessageDialog(null, respuesta);
                     //Limpiar();
 
-                //}
+                }
             
 
         } catch (Exception e) {
@@ -108,6 +108,31 @@ public class Plato_Controlador implements ActionListener {
             }
         }
        
+    }
+    
+    
+        public void ModificarD() {
+        try {
+
+            
+                this.turno.setId_turno(Integer.parseInt(this.vistaturnomodi.txtCodigoMod.getText()));
+                this.turno.setHorario_turno(this.vistaturnomodi.txtHorarioMod.getText());
+                this.turno.setObservaciones(this.vistaturnomodi.txtObservacionesMod.getText());
+                String respuesta = turnodao.Modificar(turno);
+                if (respuesta != null) {
+                    JOptionPane.showMessageDialog(null, respuesta);
+                    Limpiar();
+
+                }
+            }
+
+        } catch (Exception e) {
+            try {
+                throw e;
+            } catch (Exception ex) {
+                Logger.getLogger(Turno_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
     
     @Override

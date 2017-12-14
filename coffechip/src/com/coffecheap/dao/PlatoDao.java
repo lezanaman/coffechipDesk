@@ -17,8 +17,10 @@ import java.util.List;
  * @author medev
  */
 public class PlatoDao extends Dao {
-    public void registrar(Plato plat) throws Exception {
-
+    
+    
+    public String registrar(Plato plat) throws Exception {
+        String respuesta = null;
     try {
       this.Conectar();
       PreparedStatement st = this.getCon().prepareStatement("insert into plato values(?,?,?,?,?);");
@@ -28,7 +30,7 @@ public class PlatoDao extends Dao {
       st.setInt(4, plat.getPorciones());    
       st.setString(5, plat.getDescripcion());
         
-
+        respuesta = "Registro Exitoso";
       st.executeUpdate();
 
     } catch (Exception ex) {
@@ -37,7 +39,7 @@ public class PlatoDao extends Dao {
       this.Desconecar();
 
     }
-
+    return respuesta;
   }
 
   public List<Plato> listar() throws Exception {
@@ -73,8 +75,9 @@ public class PlatoDao extends Dao {
 
   }
 
-  public void modificar(Plato plat) throws Exception {
+  public String modificar(Plato plat) throws Exception {
     System.out.println("*******************************************************modificar dao");
+    String respuesta;
     try {
       this.Conectar();
       PreparedStatement st = this.getCon().prepareStatement("UPDATE  plato SET id_plato=?, nombre_platillo=?, precio_plato=?, porciones=?, descripcion_plato=? WHERE id_plato=?;");
@@ -86,7 +89,7 @@ public class PlatoDao extends Dao {
       st.setString(5, plat.getDescripcion());
       st.setInt(6, plat.getId_plato());
       st.executeUpdate();
-
+      respuesta="Modificado correctamente";
 
     } catch (Exception ex) {
       throw ex;
@@ -94,23 +97,24 @@ public class PlatoDao extends Dao {
       this.Desconecar();
 
     }
-
+    return respuesta;
   }
 
-  public void eliminar(Plato plat) throws Exception {
+  public String eliminar(Plato plat) throws Exception {
     System.out.println("*******************************************************eliminar dao");
+    String respuesta;
     try {
       this.Conectar();
       PreparedStatement st = this.getCon().prepareStatement("DELETE FROM plato WHERE id_plato=?;");
       st.setInt(1, plat.getId_plato());
       st.executeUpdate();
-
+      respuesta="Eliminado Correctamente";
     } catch (Exception ex) {
       throw ex;
     } finally {
       this.Desconecar();
 
     }
-
+    return respuesta;
   }
 }
