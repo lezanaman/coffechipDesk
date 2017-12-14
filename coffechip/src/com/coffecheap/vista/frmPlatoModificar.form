@@ -71,7 +71,7 @@
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="txtttt" max="32767" attributes="0"/>
+                                              <Component id="txtPrecio" max="32767" attributes="0"/>
                                               <Component id="txtPorciones" pref="193" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -92,7 +92,7 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="txtIdPlato" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="lblPrecio_Plato" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtttt" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtPrecio" alignment="0" max="32767" attributes="0"/>
                       <Component id="lblId_Plato" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -232,10 +232,13 @@
             <Property name="text" type="java.lang.String" value="Precio Plato"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtttt">
+        <Component class="javax.swing.JTextField" name="txtPrecio">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttttActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPrecioActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPorciones">
           <Properties>
@@ -243,6 +246,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtPorciones">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="lblDescripcion">
           <Properties>
@@ -250,6 +256,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtDescripcion">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

@@ -36,7 +36,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
         scpPrincipal = new javax.swing.JScrollPane();
         tblPlato = new javax.swing.JTable();
         lblPrecio_Plato = new javax.swing.JLabel();
-        txtttt = new javax.swing.JTextField();
+        txtPrecio = new javax.swing.JTextField();
         lblPorciones = new javax.swing.JLabel();
         txtPorciones = new javax.swing.JTextField();
         lblDescripcion = new javax.swing.JLabel();
@@ -92,9 +92,9 @@ public class frmPlatoModificar extends javax.swing.JPanel {
 
         lblPrecio_Plato.setText("Precio Plato");
 
-        txtttt.addActionListener(new java.awt.event.ActionListener() {
+        txtPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txttttActionPerformed(evt);
+                txtPrecioActionPerformed(evt);
             }
         });
 
@@ -135,7 +135,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
                                                 .addComponent(lblPrecio_Plato)))
                                         .addGap(18, 18, 18)
                                         .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtttt)
+                                            .addComponent(txtPrecio)
                                             .addComponent(txtPorciones, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
                                     .addComponent(txtDescripcion))))))
                 .addGap(22, 22, 22))
@@ -147,7 +147,7 @@ public class frmPlatoModificar extends javax.swing.JPanel {
                 .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtIdPlato, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblPrecio_Plato)
-                    .addComponent(txtttt)
+                    .addComponent(txtPrecio)
                     .addComponent(lblId_Plato))
                 .addGap(18, 18, 18)
                 .addGroup(panPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -186,9 +186,9 @@ public class frmPlatoModificar extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombrePlatilloActionPerformed
 
-    private void txttttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttttActionPerformed
+    private void txtPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txttttActionPerformed
+    }//GEN-LAST:event_txtPrecioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -201,10 +201,10 @@ public class frmPlatoModificar extends javax.swing.JPanel {
     private javax.swing.JPanel panPrincipal;
     private javax.swing.JScrollPane scpPrincipal;
     public javax.swing.JTable tblPlato;
-    private javax.swing.JTextField txtDescripcion;
+    public javax.swing.JTextField txtDescripcion;
     public javax.swing.JTextField txtIdPlato;
     public javax.swing.JTextField txtNombrePlatillo;
-    private javax.swing.JTextField txtPorciones;
-    private javax.swing.JTextField txtttt;
+    public javax.swing.JTextField txtPorciones;
+    public javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
 }

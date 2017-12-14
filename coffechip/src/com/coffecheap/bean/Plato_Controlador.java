@@ -111,20 +111,22 @@ public class Plato_Controlador implements ActionListener {
     }
     
     
-        public void ModificarD() {
+        public void Modificar() {
         try {
 
             
-                this.turno.setId_turno(Integer.parseInt(this.vistaturnomodi.txtCodigoMod.getText()));
-                this.turno.setHorario_turno(this.vistaturnomodi.txtHorarioMod.getText());
-                this.turno.setObservaciones(this.vistaturnomodi.txtObservacionesMod.getText());
-                String respuesta = turnodao.Modificar(turno);
+                this.plato.setId_plato(Integer.parseInt(this.vistaplatomodificar.txtIdPlato.getText()));
+                this.plato.setNombre(this.vistaplatomodificar.txtNombrePlatillo.getText());
+                this.plato.setPrecio(Double.parseDouble(this.vistaplatomodificar.txtPrecio.getText()));
+                this.plato.setPorciones(Integer.parseInt(this.vistaplatomodificar.txtPorciones.getText()));
+                this.plato.setDescripcion(this.vistaplatomodificar.txtDescripcion.getText());
+                String respuesta = platodao.modificar(plato);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
-                    Limpiar();
+                    //Limpiar();
 
                 }
-            }
+            
 
         } catch (Exception e) {
             try {
@@ -134,7 +136,29 @@ public class Plato_Controlador implements ActionListener {
             }
         }
     }
-    
+        
+        
+    public void Eliminar() {
+
+        try {
+            
+            
+                this.plato.setId_plato(Integer.parseInt(this.vistaplatomodificar.txtIdPlato.getText()));
+                String respuesta = platodao.eliminar(plato);
+                if (respuesta != null) {
+                    JOptionPane.showMessageDialog(null, respuesta);
+                    //Limpiar();
+
+                }
+            
+        } catch (Exception e) {
+            try {
+                throw e;
+            } catch (Exception ex) {
+                Logger.getLogger(Turno_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
