@@ -53,7 +53,7 @@ public class Plato_Controlador implements ActionListener {
         dfm.setColumnIdentifiers(new Object[]{"Id del Plato", "Nombre del Platillo", "Precio0", "Porciones", "Descripcion"});
 
         try {
-            rs = (ResultSet) platodao.listar();
+            rs = platodao.VerDatos();
 
             while (rs.next()) {
                 dfm.addRow(new Object[]{rs.getInt("id_plato"), rs.getString("nombre_platillo"), rs.getDouble("precio_plato"),rs.getInt("porciones"),rs.getString("descripcion_plato")});
@@ -72,7 +72,7 @@ public class Plato_Controlador implements ActionListener {
         dfm.setColumnIdentifiers(new Object[]{"Id del Plato", "Nombre del Platillo", "Precio0", "Porciones", "Descripcion"});
 
         try {
-            rs = (ResultSet) platodao.listar();
+            rs = platodao.VerDatos();
 
             while (rs.next()) {
                 dfm.addRow(new Object[]{rs.getInt("id_plato"), rs.getString("nombre_platillo"), rs.getDouble("precio_plato"),rs.getInt("porciones"),rs.getString("descripcion_plato")});
@@ -95,7 +95,7 @@ public class Plato_Controlador implements ActionListener {
                 String respuesta = platodao.registrar(plato);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
-                    //Limpiar();
+                    Limpiar();
 
                 }
             
@@ -104,7 +104,7 @@ public class Plato_Controlador implements ActionListener {
             try {
                 throw e;
             } catch (Exception ex) {
-                Logger.getLogger(Turno_Controlador.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(null,"no esta guardando");
             }
         }
        
@@ -123,7 +123,7 @@ public class Plato_Controlador implements ActionListener {
                 String respuesta = platodao.modificar(plato);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
-                    //Limpiar();
+                    Limpiar();
 
                 }
             
@@ -143,11 +143,11 @@ public class Plato_Controlador implements ActionListener {
         try {
             
             
-                this.plato.setId_plato(Integer.parseInt(this.vistaplatomodificar.txtIdPlato.getText()));
+                this.plato.setId_plato(Integer.parseInt(this.vistaplatoeliminar.txtIdPlato.getText()));
                 String respuesta = platodao.eliminar(plato);
                 if (respuesta != null) {
                     JOptionPane.showMessageDialog(null, respuesta);
-                    //Limpiar();
+                    Limpiar();
 
                 }
             
@@ -160,8 +160,39 @@ public class Plato_Controlador implements ActionListener {
         }
     }
     @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == vistaplatoguardar.btnGuardar) {
+            Guardar();
+        }
+
+        if (e.getSource() == vistaplatoeliminar.btnEliminar) {
+            Eliminar();
+            MostrarEliminar();
+        }
+
+        if (e.getSource() == vistaplatomodificar.btnModificar) {
+            Modificar();
+            MostrarModificar();
+        }
+
+    }
+
+    public void Limpiar() {
+                this.vistaplatomodificar.txtIdPlato.setText(null);
+                this.vistaplatomodificar.txtNombrePlatillo.setText(null);
+                this.vistaplatomodificar.txtPrecio.setText(null);
+                this.vistaplatomodificar.txtPorciones.setText(null);
+                this.vistaplatomodificar.txtDescripcion.setText(null);
+                this.vistaplatoguardar.txtIdPlato.setText(null);
+                this.vistaplatoguardar.txtNombrePlatillo.setText(null);
+                this.vistaplatoguardar.txtPrecio.setText(null);
+                this.vistaplatoguardar.txtPorciones.setText(null);
+                this.vistaplatoguardar.txtDescripcion.setText(null);
+                this.vistaplatoeliminar.txtIdPlato.setText(null);
+               
+       
+        
     }
     
 }

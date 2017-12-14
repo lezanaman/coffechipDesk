@@ -20,6 +20,7 @@ public class PlatoDao extends Dao {
     
     
     public String registrar(Plato plat) throws Exception {
+        System.out.println("*******Guardado Exitoso");
         String respuesta = null;
     try {
       this.Conectar();
@@ -29,10 +30,8 @@ public class PlatoDao extends Dao {
       st.setDouble(3, plat.getPrecio());
       st.setInt(4, plat.getPorciones());    
       st.setString(5, plat.getDescripcion());
-        
-        respuesta = "Registro Exitoso";
       st.executeUpdate();
-
+      respuesta = "Registro Exitoso";
     } catch (Exception ex) {
       throw ex;
     } finally {
@@ -41,7 +40,22 @@ public class PlatoDao extends Dao {
     }
     return respuesta;
   }
+    
+    
+  public ResultSet VerDatos() throws Exception {
+        ResultSet rs;
 
+        try {
+            this.Conectar();
+            PreparedStatement st = this.getCon().prepareStatement("select * from plato");
+            rs = st.executeQuery();
+        } catch (Exception e) {
+            throw e;
+        }
+        return rs;
+    }
+  
+  
   public List<Plato> listar() throws Exception {
     List<Plato> lista;
     ResultSet rs;

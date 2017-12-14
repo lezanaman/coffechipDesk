@@ -1,6 +1,7 @@
 package com.coffecheap.bean;
 
 import com.coffecheap.dao.CompraDao;
+import com.coffecheap.dao.PlatoDao;
 import com.coffecheap.dao.ProveedorDao;
 import com.coffecheap.dao.Tipo_productoDao;
 import com.coffecheap.dao.TurnoDao;
@@ -8,6 +9,9 @@ import com.coffecheap.vista.MenuAdmin;
 import com.coffecheap.vista.frmCompraEliminar;
 import com.coffecheap.vista.frmCompraGuardar;
 import com.coffecheap.vista.frmCompraModificar;
+import com.coffecheap.vista.frmPlatoEliminar;
+import com.coffecheap.vista.frmPlatoGuardar;
+import com.coffecheap.vista.frmPlatoModificar;
 import com.coffecheap.vista.frmProveedorEliminar;
 import com.coffecheap.vista.frmProveedorGuardar;
 import com.coffecheap.vista.frmProveedorModificar;
@@ -284,7 +288,7 @@ public class MenuAdmin_Controlador implements MouseListener {
         
         //Aqui va todos los if de PRODUCTO
         if (e.getSource() == vistamenu.btnProductoGuardar || e.getSource()==vistamenu.lblProductoGuardar) {
-            
+                    
         }
         if (e.getSource() == vistamenu.btnProductoEliminar || e.getSource() == vistamenu.lblProductoEliminar) {
             
@@ -295,13 +299,34 @@ public class MenuAdmin_Controlador implements MouseListener {
         
         //Aqui va todos los if de PLATO
         if (e.getSource() == vistamenu.btnPlatoGuardar || e.getSource() == vistamenu.lblPlatoGuardar) {
-            
+            this.Limpiar();
+            setColor(vistamenu.btnPlatoGuardar);
+            PlatoDao dao = new PlatoDao();
+            frmPlatoGuardar platoguardar = new frmPlatoGuardar();
+            frmPlatoModificar platomodificar = new frmPlatoModificar();
+            frmPlatoEliminar platoeliminar = new frmPlatoEliminar();
+            Plato_Controlador controlador = new Plato_Controlador( platoeliminar, platoguardar, platomodificar, dao);
+            new CambiaPanel(this.vistamenu.panDatos, platoguardar);
         }
         if (e.getSource() == vistamenu.btnPlatoEliminar || e.getSource() == vistamenu.lblPlatoEliminar) {
-            
+            this.Limpiar();
+            setColor(vistamenu.btnPlatoEliminar);
+            PlatoDao dao = new PlatoDao();
+            frmPlatoGuardar platoguardar = new frmPlatoGuardar();
+            frmPlatoModificar platomodificar = new frmPlatoModificar();
+            frmPlatoEliminar platoeliminar = new frmPlatoEliminar();
+            Plato_Controlador controlador = new Plato_Controlador( platoeliminar, platoguardar, platomodificar, dao);
+            new CambiaPanel(this.vistamenu.panDatos, platoeliminar);
         }
         if (e.getSource() == vistamenu.btnPlatoModificar || e.getSource() == vistamenu.lblPlatoModificar) {
-            
+            this.Limpiar();
+            setColor(vistamenu.btnPlatoModificar);
+            PlatoDao dao = new PlatoDao();
+            frmPlatoGuardar platoguardar = new frmPlatoGuardar();
+            frmPlatoModificar platomodificar = new frmPlatoModificar();
+            frmPlatoEliminar platoeliminar = new frmPlatoEliminar();
+            Plato_Controlador controlador = new Plato_Controlador( platoeliminar, platoguardar, platomodificar, dao);
+            new CambiaPanel(this.vistamenu.panDatos, platomodificar);
         }
         
     }
